@@ -293,21 +293,30 @@ export const SnapToStock: React.FC = () => {
             <p className="text-xs text-ink-muted max-w-xs mx-auto">
               {errorMessage}
             </p>
-            <div className="flex gap-2 justify-center pt-2">
+            <div className="flex flex-col gap-2 pt-2 max-w-xs mx-auto">
               <button
                 type="button"
                 onClick={() => setSnapState('capture')}
-                className="px-5 py-2.5 rounded-xl bg-brand text-white font-bold text-xs flex items-center gap-1.5"
+                className="w-full min-h-[44px] px-4 py-2.5 rounded-xl bg-brand text-white font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 shadow-xs"
               >
                 <RefreshCw className="w-3.5 h-3.5" />
-                <span>Try Again</span>
+                <span>Try Again / दूसरी फोटो लें</span>
               </button>
+
+              <button
+                type="button"
+                onClick={handleLoadSampleBill}
+                className="w-full min-h-[44px] px-4 py-2.5 rounded-xl border border-line bg-canvas hover:bg-line/20 text-ink font-semibold text-xs flex items-center justify-center gap-1.5 active:scale-95"
+              >
+                <span>📄 Test Sample Bill (डेमो बिल देखें)</span>
+              </button>
+
               <button
                 type="button"
                 onClick={() => navigate('/stock/new')}
-                className="px-4 py-2.5 rounded-xl border border-line text-ink font-semibold text-xs"
+                className="w-full py-2 text-ink-muted hover:text-ink font-semibold text-xs"
               >
-                Add Manually
+                Add Manually / हाथ से जोड़ें →
               </button>
             </div>
           </div>

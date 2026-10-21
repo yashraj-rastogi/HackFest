@@ -38,9 +38,15 @@ export type SmartAddResult = z.infer<typeof SmartAddSchema>;
 export function cleanJsonOutput(raw: string): string {
   let cleaned = raw.trim();
   // Strip ```json and ``` markdown code blocks if present
-  if (cleaned.startsWith('```')) {
-    cleaned = cleaned.replace(/^```(?:json)?\s*/i, '');
-    cleaned = cleaned.replace(/\s*```$/, '');
+  if (cleaned.includes('```')) {
+    const match = cleaned.match(/```(?:json)?\s*([\s\S]*?)\s*```/i);
+    if (match) cleaned = match[1].trim();
+  }
+  // If there's reasoning text before or after the JSON, slice from first '{' to last '}'
+  const firstBrace = cleaned.indexOf('{');
+  const lastBrace = cleaned.lastIndexOf('}');
+  if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+    return cleaned.slice(firstBrace, lastBrace + 1).trim();
   }
   return cleaned.trim();
 }
@@ -58,9 +64,9 @@ export async function callGeminiApi(
     throw new Error('GEMINI_API_KEY environment variable is not configured');
   }
 
-  const primaryModel = process.env.GEMMA_MODEL || 'gemini-1.5-flash';
-  const fallbackModel = process.env.GEMMA_FALLBACK_MODEL || 'gemini-2.0-flash';
-  const timeoutMs = Number(process.env.GEMMA_TIMEOUT_MS) || 15000;
+  const primaryModel = process.env.GEMMA_MODEL || 'gemma-4-26b-a4b-it';
+  const fallbackModel = process.env.GEMMA_FALLBACK_MODEL || 'gemma-4-31b-it';
+  const timeoutMs = Number(process.env.GEMMA_TIMEOUT_MS) || 20000;
 
   const parts: any[] = [{ text: prompt }];
   if (base64Data) {

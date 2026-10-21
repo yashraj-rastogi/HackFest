@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import fs from 'fs';
+import dns from 'node:dns';
+
+dns.setDefaultResultOrder('ipv4first');
 
 function gemmaDevApiPlugin() {
   return {
@@ -56,77 +59,132 @@ function gemmaDevApiPlugin() {
                 if (match) apiKey = match[1].trim();
               }
 
-              let extractedData: any = null;
+              if (!apiKey) {
+                res.statusCode = 500;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(JSON.stringify({ ok: false, error: 'GEMINI_API_KEY not configured in .env' }));
+                return;
+              }
 
-              if (apiKey && imageBase64) {
-                try {
-                  const prompt = `You are reading a photo for a small shop owner in India who wants to add stock to an inventory app.
+              if (!imageBase64) {
+                res.statusCode = 400;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(JSON.stringify({ ok: false, error: 'Missing image data' }));
+                return;
+              }
+
+              const prompt = `You are reading a photo for a small shop owner in India who wants to add stock to an inventory app.
 The photo may be a printed distributor bill or invoice, a handwritten list or notebook page, a shelf, or a product box.
 Context: shop_type = ${shopType}; app_language = ${lang}.
-Return ONLY valid JSON:
+TASK: List every product line you can read, one entry per product.
+RULES:
+- Output ONLY valid JSON. No markdown fences, no thinking reasoning, no commentary.
+- Do not invent items. If an item cannot be read, do not include it.
+- "raw_text": line as written.
+- "name_guess": clean product name.
+- "quantity": number or null.
+- "unit": one of "kg","g","l","ml","pcs","dozen","packet","box","carton" or null.
+- "confidence": 0 to 1.
+JSON shape:
 {
   "document_type": "printed_bill",
   "items": [
-    { "raw_text": string, "name_guess": string, "quantity": number | null, "unit": "kg"|"g"|"l"|"ml"|"pcs"|"dozen"|"packet"|"box"|"carton"|null, "confidence": number }
+    { "raw_text": string, "name_guess": string, "quantity": number | null, "unit": string | null, "confidence": number }
   ],
   "warnings": [string]
 }`;
-                  const cleanBase64 = imageBase64.replace(/^data:image\/[a-z]+;base64,/, '');
-                  const controller = new AbortController();
-                  const timer = setTimeout(() => controller.abort(), 6000);
+              const cleanBase64 = imageBase64.replace(/^data:image\/[a-z]+;base64,/, '');
+              const controller = new AbortController();
+              const timer = setTimeout(() => controller.abort(), 25000);
 
-                  const model = process.env.GEMMA_MODEL || 'gemini-1.5-flash';
-                  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                      contents: [{
-                        role: 'user',
-                        parts: [
-                          { text: prompt },
-                          { inline_data: { mime_type: mimeType, data: cleanBase64 } }
-                        ]
-                      }],
-                      generationConfig: { temperature: 0, maxOutputTokens: 2048 }
-                    }),
-                    signal: controller.signal,
-                  });
-                  clearTimeout(timer);
+              const model = process.env.GEMMA_MODEL || 'gemma-4-26b-a4b-it';
+              const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  contents: [{
+                    role: 'user',
+                    parts: [
+                      { text: prompt },
+                      { inline_data: { mime_type: mimeType, data: cleanBase64 } }
+                    ]
+                  }],
+                  generationConfig: { temperature: 0.1, maxOutputTokens: 2048 }
+                }),
+                signal: controller.signal,
+              });
+              clearTimeout(timer);
 
-                  if (response.ok) {
-                    const json = (await response.json()) as any;
-                    let text = json.candidates?.[0]?.content?.parts?.[0]?.text || '';
-                    if (text.startsWith('```')) {
-                      text = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
-                    }
-                    extractedData = JSON.parse(text);
-                  }
-                } catch {
-                  // Fall back gracefully on network timeout
-                }
+              if (!response.ok) {
+                const errText = await response.text();
+                console.error(`Gemma 4 API error (${response.status}):`, errText);
+                res.statusCode = response.status === 429 ? 429 : 502;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(JSON.stringify({
+                  ok: false,
+                  error: response.status === 429
+                    ? 'Abhi quota limit reach ho gayi hai, kripya thodi der baad try karein'
+                    : `Gemma model error (${response.status})`
+                }));
+                return;
               }
 
-              if (!extractedData || !extractedData.items || extractedData.items.length === 0) {
-                extractedData = {
-                  document_type: 'printed_bill',
-                  items: [
-                    { raw_text: 'Sugar 50kg bag M-30', name_guess: 'Sugar', quantity: 50, unit: 'kg', confidence: 0.96 },
-                    { raw_text: 'Sharbati Atta 10kg x 3', name_guess: 'Atta', quantity: 30, unit: 'kg', confidence: 0.93 },
-                    { raw_text: 'Fortune Refined 1L x 15', name_guess: 'Refined Oil Fortune', quantity: 15, unit: 'l', confidence: 0.89 },
-                    { raw_text: 'Maggi noodles 24pcs box', name_guess: 'Maggi', quantity: 24, unit: 'pcs', confidence: 0.95 },
-                    { raw_text: 'Parle-G 1 carton', name_guess: 'Parle-G', quantity: 30, unit: 'pcs', confidence: 0.84 },
-                    { raw_text: 'Tata Salt 1kg x 10', name_guess: 'Salt Tata', quantity: 10, unit: 'kg', confidence: 0.97 }
-                  ],
-                  warnings: ['Processed via smart vision pipeline with inventory matcher'],
-                };
+              const json = (await response.json()) as any;
+              let text = json.candidates?.[0]?.content?.parts?.[0]?.text || '';
+              if (text.includes('```')) {
+                const m = text.match(/```(?:json)?\s*([\s\S]*?)\s*```/i);
+                if (m) text = m[1].trim();
+              }
+              const firstBrace = text.indexOf('{');
+              const lastBrace = text.lastIndexOf('}');
+              if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+                text = text.slice(firstBrace, lastBrace + 1).trim();
+              }
+
+              let extractedData: any = null;
+              try {
+                extractedData = JSON.parse(text);
+              } catch (parseErr) {
+                console.error('Failed to parse Gemma output as JSON:', text);
+                res.statusCode = 502;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(JSON.stringify({
+                  ok: false,
+                  error: 'Photo saaf nahi hai. Kripya dobara seedhi photo kheenchein ya haath se add karein.',
+                }));
+                return;
+              }
+
+              if (Array.isArray(extractedData.items)) {
+                extractedData.items = extractedData.items.filter(
+                  (i: any) => i.name_guess && String(i.name_guess).trim().length > 0
+                );
+              }
+
+              if (!extractedData.items || extractedData.items.length === 0) {
+                res.statusCode = 422;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(JSON.stringify({
+                  ok: false,
+                  error: 'Photo mein koi saaf product nahi dikha. Kripya achhi roshni mein photo kheenchein ya Demo Bill use karein.',
+                }));
+                return;
               }
 
               res.setHeader('Content-Type', 'application/json');
               res.end(JSON.stringify({ ok: true, data: extractedData }));
             } catch (err: any) {
+              console.error('Error processing photo:', err);
               res.statusCode = 500;
               res.setHeader('Content-Type', 'application/json');
-              res.end(JSON.stringify({ ok: false, error: err.message || 'Error processing photo' }));
+              res.end(JSON.stringify({
+                ok: false,
+                error: err.name === 'AbortError'
+                  ? 'Request timed out. Please check internet connection.'
+                  : err.message || 'Error processing photo',
+              }));
             }
           });
           return;

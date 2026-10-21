@@ -13,7 +13,7 @@ describe('PWA Notifications Service', () => {
     shopId: 'local',
     names: { hi: 'टाटा नमक', en: 'Tata Salt', hinglish: 'Tata Salt' },
     aliases: ['namak', 'salt'],
-    category: 'spices_oil',
+    category: 'spices',
     baseUnit: 'g',
     defaultSaleQty: 1000,
     chips: [500, 1000, 2000],

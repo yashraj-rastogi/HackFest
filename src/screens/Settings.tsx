@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from '../i18n';
-import type { Lang } from '../db/schema';
+import type { Lang, ShopType } from '../db/schema';
 import { getSetting, setSetting } from '../db/repos';
 import { generateDemoData, clearDemoData } from '../seed/generateDemo';
 import { AppShell } from '../components/AppShell';
@@ -16,6 +16,7 @@ import {
   RotateCcw,
   Bell,
   BellRing,
+  Store,
 } from 'lucide-react';
 import {
   getNotificationPermission,
@@ -28,6 +29,7 @@ export const Settings: React.FC = () => {
   const navigate = useNavigate();
   const { lang, setLang, t } = useTranslation();
   const [shopName, setShopName] = useState('');
+  const [shopType, setShopType] = useState<ShopType>('kirana');
   const [demoStatus, setDemoStatus] = useState<string>('');
   const [isPersisted, setIsPersisted] = useState<boolean>(false);
   const [storageUsage, setStorageUsage] = useState<string>('');
@@ -37,6 +39,7 @@ export const Settings: React.FC = () => {
 
   useEffect(() => {
     getSetting<string>('shopName', '').then(setShopName);
+    getSetting<ShopType>('shopType', 'kirana').then(setShopType);
     setIsNotifSupported(isNotificationSupported());
     setNotifPermission(getNotificationPermission());
 
@@ -60,17 +63,25 @@ export const Settings: React.FC = () => {
     await setSetting('shopName', shopName.trim());
   };
 
+  const handleShopTypeChange = async (type: ShopType) => {
+    triggerHaptic(12);
+    setShopType(type);
+    await setSetting('shopType', type);
+  };
+
   const handleLangChange = async (newLang: Lang) => {
     triggerHaptic(12);
     await setLang(newLang);
   };
 
-  const handleSeedDemo = async () => {
+  const handleSeedDemo = async (targetType?: ShopType) => {
+    const typeToSeed = targetType || shopType;
     triggerHaptic(20);
-    setDemoStatus('Seeding 60 days of demo transactions...');
-    await generateDemoData();
+    setShopType(typeToSeed);
+    setDemoStatus(`Seeding 60 days of demo transactions for ${typeToSeed}...`);
+    await generateDemoData(typeToSeed);
     triggerSuccessHaptic();
-    setDemoStatus(t('settings.demoSeeded'));
+    setDemoStatus(`${t('settings.demoSeeded')} (${typeToSeed})`);
     setTimeout(() => setDemoStatus(''), 4000);
   };
 
@@ -163,6 +174,44 @@ export const Settings: React.FC = () => {
           </div>
         </div>
 
+        {/* Store Category & Type */}
+        <div className="p-4 rounded-3xl bg-surface border border-line shadow-xs space-y-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2 text-xs font-bold text-ink-muted uppercase tracking-wider">
+              <Store className="w-4 h-4 text-brand-dark" />
+              <span>Store Category & Type</span>
+            </div>
+            <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-brand-soft text-brand-dark uppercase tracking-wider">
+              {shopType}
+            </span>
+          </div>
+
+          <div className="grid grid-cols-2 gap-2">
+            {[
+              { id: 'kirana', emoji: '🏪', label: t('shopType.kirana') },
+              { id: 'stationery', emoji: '✏️', label: t('shopType.stationery') },
+              { id: 'hardware', emoji: '🔧', label: t('shopType.hardware') },
+              { id: 'general', emoji: '📦', label: t('shopType.general') },
+            ].map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => handleShopTypeChange(item.id as ShopType)}
+                className={`p-3 rounded-2xl border text-left flex items-start gap-2.5 transition-all ${
+                  shopType === item.id
+                    ? 'bg-brand-soft border-brand text-brand-dark font-bold shadow-xs'
+                    : 'bg-canvas border-line text-ink font-medium hover:border-brand/30'
+                }`}
+              >
+                <span className="text-xl">{item.emoji}</span>
+                <div className="text-xs leading-snug">
+                  <div className="font-bold">{item.label}</div>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+
         {/* Wholesale Suppliers Shortcut */}
         <button
           type="button"
@@ -245,19 +294,51 @@ export const Settings: React.FC = () => {
 
         {/* Demo Data Management */}
         <div className="p-4 rounded-3xl bg-surface border border-line shadow-xs space-y-3">
-          <div className="flex items-center gap-2 text-xs font-bold text-ink-muted uppercase tracking-wider">
-            <Database className="w-4 h-4 text-blue" />
-            <span>{t('settings.demoData')}</span>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2 text-xs font-bold text-ink-muted uppercase tracking-wider">
+              <Database className="w-4 h-4 text-blue" />
+              <span>{t('settings.demoData')}</span>
+            </div>
+            <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-brand-soft text-brand-dark uppercase tracking-wider">
+              {shopType}
+            </span>
           </div>
 
           <p className="text-xs text-ink-muted leading-relaxed">
-            Generate 60 days of realistic sales, fast movers, dead stock, and suppliers for testing.
+            Generate 60 days of realistic sales, restocks, suppliers, and dead stock matched to your shop category.
           </p>
+
+          {/* Quick Category Seed Selection */}
+          <div className="space-y-1.5 pt-1">
+            <div className="text-[11px] font-bold text-ink-muted uppercase tracking-wider">Seed Specific Category:</div>
+            <div className="grid grid-cols-4 gap-1.5">
+              {[
+                { id: 'kirana', emoji: '🏪', label: 'Kirana' },
+                { id: 'stationery', emoji: '✏️', label: 'Books' },
+                { id: 'hardware', emoji: '🔧', label: 'Hardware' },
+                { id: 'general', emoji: '📦', label: 'General' },
+              ].map((cat) => (
+                <button
+                  key={cat.id}
+                  type="button"
+                  onClick={() => handleSeedDemo(cat.id as ShopType)}
+                  className={`py-2 px-1 rounded-xl border text-center transition-all ${
+                    shopType === cat.id
+                      ? 'bg-brand text-white border-brand shadow-xs font-bold'
+                      : 'bg-canvas text-ink border-line hover:border-brand/30 font-medium'
+                  }`}
+                >
+                  <div className="text-base">{cat.emoji}</div>
+                  <div className="text-[10px] mt-0.5 leading-tight">{cat.label}</div>
+                </button>
+              ))}
+            </div>
+          </div>
 
           <div className="grid grid-cols-2 gap-2.5 pt-1">
             <button
               type="button"
-              onClick={handleSeedDemo}
+              onClick={() => handleSeedDemo(shopType)}
               className="min-h-[48px] px-3 py-2.5 rounded-xl bg-brand text-white font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 shadow-xs"
             >
               <span>+ {t('settings.seedDemo')}</span>
