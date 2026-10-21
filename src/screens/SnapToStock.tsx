@@ -1,11 +1,12 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { db, type ShopType } from '../db/schema';
+import { db, type ShopType, type Item } from '../db/schema';
 import { recordStockIn } from '../db/ledger';
 import { getSetting } from '../db/repos';
 import { parseBillPhoto, type ExtractedBillItem } from '../services/gemmaClient';
 import { matchBillItemsToInventory, type MatchedBillRow } from '../domain/billMatching';
+import { generateId } from '../lib/uuid';
 import { useTranslation } from '../i18n';
 import { AppShell } from '../components/AppShell';
 import { triggerHaptic, triggerSuccessHaptic } from '../lib/haptics';
@@ -128,11 +129,41 @@ export const SnapToStock: React.FC = () => {
 
   const handleConfirmAll = async () => {
     triggerHaptic(20);
-    const confirmedRows = extractedRows.filter((r) => r.matchedItem && r.convertedBaseQty && r.convertedBaseQty > 0);
+    const validRows = extractedRows.filter((r) => r.convertedBaseQty && r.convertedBaseQty > 0);
 
-    for (const row of confirmedRows) {
-      if (row.matchedItem && row.convertedBaseQty) {
-        await recordStockIn(row.matchedItem.id, row.convertedBaseQty, 'gemma');
+    for (const row of validRows) {
+      let itemId = row.matchedItem?.id;
+
+      if (!itemId) {
+        // Product is new from the bill -> auto-create in inventory
+        const unit = row.extractedUnit?.toLowerCase() || 'pcs';
+        const isGram = unit === 'kg' || unit === 'g';
+        const isMilli = unit === 'l' || unit === 'ml';
+        const baseUnit = isGram ? 'g' : isMilli ? 'ml' : 'pcs';
+
+        const newItem: Item = {
+          id: generateId(),
+          shopId: 'local',
+          names: {
+            hi: row.nameGuess,
+            en: row.nameGuess,
+            hinglish: row.nameGuess,
+          },
+          aliases: [row.nameGuess.toLowerCase()],
+          category: 'other',
+          emoji: '📦',
+          baseUnit,
+          defaultSaleQty: isGram || isMilli ? 1000 : 1,
+          chips: isGram || isMilli ? [500, 1000, 2000, 5000] : [1, 2, 5, 10],
+          minQty: isGram || isMilli ? 5000 : 10,
+          createdAt: Date.now(),
+        };
+        await db.items.put(newItem);
+        itemId = newItem.id;
+      }
+
+      if (itemId && row.convertedBaseQty) {
+        await recordStockIn(itemId, row.convertedBaseQty, 'gemma');
       }
     }
 
@@ -140,7 +171,7 @@ export const SnapToStock: React.FC = () => {
     navigate('/stock');
   };
 
-  const confirmedCount = extractedRows.filter((r) => r.matchedItem && r.convertedBaseQty && r.convertedBaseQty > 0).length;
+  const confirmedCount = extractedRows.filter((r) => r.convertedBaseQty && r.convertedBaseQty > 0).length;
 
   return (
     <AppShell

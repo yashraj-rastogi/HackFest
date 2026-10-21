@@ -58,8 +58,8 @@ export async function callGeminiApi(
     throw new Error('GEMINI_API_KEY environment variable is not configured');
   }
 
-  const primaryModel = process.env.GEMMA_MODEL || 'gemma-4-26b-a4b-it';
-  const fallbackModel = process.env.GEMMA_FALLBACK_MODEL || 'gemma-4-31b-it';
+  const primaryModel = process.env.GEMMA_MODEL || 'gemini-1.5-flash';
+  const fallbackModel = process.env.GEMMA_FALLBACK_MODEL || 'gemini-2.0-flash';
   const timeoutMs = Number(process.env.GEMMA_TIMEOUT_MS) || 15000;
 
   const parts: any[] = [{ text: prompt }];

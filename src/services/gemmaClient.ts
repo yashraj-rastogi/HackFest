@@ -69,7 +69,14 @@ export async function parseBillPhoto(
       }),
     });
 
-    const result = await response.json();
+    const text = await response.text();
+    let result: any = null;
+    try {
+      result = JSON.parse(text);
+    } catch {
+      throw new Error(text.startsWith('<') ? 'API server offline or route not found' : text);
+    }
+
     return result;
   } catch (error: any) {
     console.error('parseBillPhoto network error:', error);
