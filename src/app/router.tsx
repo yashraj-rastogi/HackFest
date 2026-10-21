@@ -11,6 +11,7 @@ import { ShopType } from '../screens/ShopType';
 import { PickItems } from '../screens/PickItems';
 import { ShelfWalk } from '../screens/ShelfWalk';
 import { Suppliers } from '../screens/Suppliers';
+import { SnapToStock } from '../screens/SnapToStock';
 
 export const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
   { path: '/stock', element: <ManageStock /> },
   { path: '/stock/new', element: <AddProduct /> },
   { path: '/stock/:id', element: <ProductDetails /> },
+  { path: '/snap', element: <SnapToStock /> },
   { path: '/lists', element: <Lists /> },
   { path: '/more', element: <Settings /> },
   { path: '/settings/suppliers', element: <Suppliers /> },

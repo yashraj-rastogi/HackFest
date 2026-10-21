@@ -121,15 +121,26 @@ export const ManageStock: React.FC = () => {
           </button>
         </div>
 
-        {/* In-flow Add Product Button */}
-        <button
-          type="button"
-          onClick={() => navigate('/stock/new')}
-          className="w-full min-h-[50px] py-3 px-4 rounded-2xl border border-dashed border-brand bg-brand-soft/40 hover:bg-brand-soft text-brand-dark font-bold text-sm flex items-center justify-center gap-2 active:scale-98 transition-all"
-        >
-          <Plus className="w-5 h-5 stroke-[2.5]" />
-          <span>{t('stock.addProduct')}</span>
-        </button>
+        {/* Action Buttons: Add Product & Photo to Stock */}
+        <div className="grid grid-cols-2 gap-2.5">
+          <button
+            type="button"
+            onClick={() => navigate('/snap')}
+            className="min-h-[50px] py-2.5 px-3 rounded-2xl bg-gradient-to-r from-brand-soft to-sky/80 border border-brand/30 text-brand-dark font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 shadow-xs"
+          >
+            <span>📸</span>
+            <span>{t('action.addFromPhoto')}</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => navigate('/stock/new')}
+            className="min-h-[50px] py-2.5 px-3 rounded-2xl border border-dashed border-line bg-surface hover:bg-canvas text-ink font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 shadow-xs"
+          >
+            <Plus className="w-4 h-4 stroke-[2.5]" />
+            <span>{t('stock.addProduct')}</span>
+          </button>
+        </div>
 
         {/* Product List */}
         <div className="space-y-2.5 pt-1">

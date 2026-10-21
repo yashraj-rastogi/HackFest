@@ -5,7 +5,8 @@ import { generateId } from '../lib/uuid';
 import { useTranslation } from '../i18n';
 import { AppShell } from '../components/AppShell';
 import { triggerHaptic } from '../lib/haptics';
-import { ArrowLeft, Plus } from 'lucide-react';
+import { ArrowLeft, Plus, Sparkles, Loader2 } from 'lucide-react';
+import { suggestItem } from '../services/gemmaClient';
 
 export const AddProduct: React.FC = () => {
   const navigate = useNavigate();
@@ -17,6 +18,8 @@ export const AddProduct: React.FC = () => {
   const [baseUnit, setBaseUnit] = useState<BaseUnit>('g');
   const [defaultSaleQty, setDefaultSaleQty] = useState<number>(1000);
   const [minQty, setMinQty] = useState<number>(5000);
+  const [suggesting, setSuggesting] = useState(false);
+  const [namesI18n, setNamesI18n] = useState<{ hi?: string; en?: string; hinglish?: string }>({});
 
   const emojiList = ['🌾', '🍬', '🍚', '🧈', '🥫', '🟡', '🌶️', '🍿', '🍪', '☕', '🥛', '🧼', '🧺', '📓', '🖊️', '🔩', '🔧', '💡', '📦'];
 
@@ -28,6 +31,24 @@ export const AddProduct: React.FC = () => {
     } else if (u === 'g' || u === 'ml') {
       setDefaultSaleQty(1000);
       setMinQty(5000);
+    }
+  };
+
+  const handleSmartSuggest = async () => {
+    if (!name.trim()) return;
+    triggerHaptic(10);
+    setSuggesting(true);
+    try {
+      const data = await suggestItem(name.trim());
+      if (data) {
+        if (data.category) setCategory(data.category as Category);
+        if (data.base_unit) handleUnitChange(data.base_unit as BaseUnit);
+        if (data.names) {
+          setNamesI18n(data.names);
+        }
+      }
+    } finally {
+      setSuggesting(false);
     }
   };
 
@@ -45,9 +66,9 @@ export const AddProduct: React.FC = () => {
       id: generateId(),
       shopId: 'local',
       names: {
-        hi: name.trim(),
-        en: name.trim(),
-        hinglish: name.trim(),
+        hi: namesI18n.hi || name.trim(),
+        en: namesI18n.en || name.trim(),
+        hinglish: namesI18n.hinglish || name.trim(),
       },
       aliases: [name.trim().toLowerCase()],
       category,
@@ -79,9 +100,26 @@ export const AddProduct: React.FC = () => {
       <form onSubmit={handleSave} className="space-y-4 pb-20">
         {/* Name input */}
         <div className="p-4 rounded-3xl bg-surface border border-line space-y-2">
-          <label className="block text-xs font-bold text-ink-muted uppercase tracking-wider">
-            Product Name (सामान का नाम) *
-          </label>
+          <div className="flex items-center justify-between">
+            <label className="block text-xs font-bold text-ink-muted uppercase tracking-wider">
+              Product Name (सामान का नाम) *
+            </label>
+            {name.trim().length > 2 && (
+              <button
+                type="button"
+                onClick={handleSmartSuggest}
+                disabled={suggesting}
+                className="text-[11px] font-bold text-lilac flex items-center gap-1 active:scale-95 disabled:opacity-50"
+              >
+                {suggesting ? (
+                  <Loader2 className="w-3 h-3 animate-spin" />
+                ) : (
+                  <Sparkles className="w-3 h-3" />
+                )}
+                <span>Gemma Auto-Fill</span>
+              </button>
+            )}
+          </div>
           <input
             type="text"
             required
