@@ -73,6 +73,85 @@ npm run preview
 
 ---
 
+## 📱 Features by Phase
+
+### Phase 1: Core Notebook Replacement (100% Offline)
+- **One-Tap Sale:** Press the 56px **+** button to log a sale in 1 second with 8-second undo snackbar.
+- **Fractional Units:** Supports ½ kg, ¼ kg, ¾ kg, dozen, and custom base units (`g`, `ml`, `pcs`).
+- **Append-Only Ledger:** Stock is calculated from baseline counts and non-voided delta movements.
+- **Fast 10-Second Setup:** Pick from curated 15-item starter packs or full catalogues for Kirana, Stationery, and Hardware.
+- **Trilingual:** Complete support for हिन्दी, English, and Hinglish.
+
+### Phase 2A: Smart Reorders & WhatsApp Ordering
+- **Exponential Sell-Rate (`sellRate.ts`):** Calculates 28-day sales velocity with a 10-day half-life.
+- **Reorder Suggestions:** Automatically rounds up to supplier wholesale pack sizes (e.g. 50 kg bags).
+- **1-Tap WhatsApp PO (`share.ts`):** Groups reorder lists by supplier and generates pre-filled WhatsApp messages with `wa.me` links.
+
+### Phase 2B: Google Gemma 4 Snap-to-Stock & Smart Add
+- **Distributor Invoice & Shelf Photo Extraction:** Serverless endpoint (`/api/gemma/parse-bill`) extracts items, units, and quantities with Zod validation.
+- **Offline Resilient:** If the shopkeeper takes a photo without internet, it queues to IndexedDB (`photoQueue`) and processes automatically when back online.
+- **Zero Hallucinations:** Extracted rows are matched against current inventory using Fuse.js and displayed in an interactive review sheet with amber warning indicators.
+- **Smart Add (`/api/gemma/suggest-item`):** Type any product name (e.g. "Dant Kanti 100g") and Gemma suggests standard Indian spellings, category, and units.
+
+### Phase 2C: Offline Barcode Scanning
+- **Hardware-Accelerated Detection:** Uses the native `BarcodeDetector` API on Android Chrome with a lazy-loaded `@zxing/library` fallback for desktop/iOS.
+- **Learn-Once Barcode Linking:** Scan an unknown barcode once, link it to an existing or new product, and all future scans recognize it instantly with zero typing.
+- **Dual Mode:** In "Becha" mode, scanning logs a sale; in "Stock" mode, it opens item management.
+
+---
+
+## 🤖 Google Gemma 4 Architecture
+
+```
+[Phone PWA Camera / Gallery]
+           │
+           ▼
+[Client-Side Canvas Resize (< 600 KB)]
+           │
+           ├── If Offline: Saved to IndexedDB `photoQueue`
+           └── If Online: POST to Vercel Serverless Function `/api/gemma/parse-bill`
+                                  │
+                                  ▼
+                   [Gemini API / Gemma 4 Multimodal]
+                                  │
+                                  ▼
+                     [Zod Schema Validation]
+                                  │
+                                  ▼
+                [Trilingual Inventory Matching (Fuse.js)]
+                                  │
+                                  ▼
+             [Shopkeeper Review & Explicit 1-Tap Save]
+```
+
+> **Safety & Integrity Rules:**  
+> 1. Gemma is called *only* through serverless API routes; API keys are never exposed to the client.  
+> 2. Gemma outputs *never* directly write to inventory without human review and confirmation.  
+> 3. Gemma is *never* used for mathematical calculations (reorder math is pure deterministic TypeScript).
+
+---
+
+## ✈️ Testing Offline (Aeroplane Mode)
+
+KiranaSaathi is designed to work completely without an internet connection:
+1. Open the app in your mobile browser or install it as a PWA.
+2. Turn on **Aeroplane Mode** (disconnect Wi-Fi and mobile data).
+3. Test the core workflows:
+   - Run shop setup or add new items.
+   - Record sales with one tap and test the 8-second undo.
+   - Adjust stock, mark items as "Khatam", and inspect the "Mangwana Hai" reorder list.
+   - Scan physical barcodes with the camera.
+   - Reopen the app from the home screen while still offline.
+
+---
+
+## 🔮 Post-Hackathon Roadmap
+
+- **Batch & Expiry Date Tracking:** Alert shopkeepers before dairy and packaged goods expire.
+- **Multi-Device Local Sync:** Sync between the owner's phone and a counter helper tablet using WebRTC/CRDTs.
+- **Audio Voice Sales:** "Ek kilo cheeni aur do packet Maggi" speech-to-sale with on-device Gemma.
+- **Customer Self-Scan & UPI Display:** Display static QR code for customer UPI confirmation.
+
 ## 📜 Credits & Attributions
 
 In accordance with hackathon guidelines, all external libraries, icons, fonts, and frameworks used in KiranaSaathi are gratefully acknowledged:
