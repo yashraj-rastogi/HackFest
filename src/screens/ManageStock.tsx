@@ -12,12 +12,13 @@ import { ProductRow } from '../components/ProductRow';
 import { SearchField } from '../components/SearchField';
 import { QuickActionSheet } from '../components/QuickActionSheet';
 import { Plus } from 'lucide-react';
+import { notifyLowOrOutOfStock } from '../services/notifications';
 
 type StockFilter = 'all' | 'low' | 'noMovement';
 
 export const ManageStock: React.FC = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { lang, t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState<StockFilter>('all');
   const [activeSheetItem, setActiveSheetItem] = useState<Item | null>(null);
@@ -187,6 +188,7 @@ export const ManageStock: React.FC = () => {
           }}
           onRecordKhatam={async (item) => {
             await recordKhatam(item.id, 'chips');
+            notifyLowOrOutOfStock(item, 0, lang);
           }}
           onRecordMissed={async (item) => {
             await recordMissed(item.id, 1, 'chips');

@@ -14,6 +14,7 @@ import { CategoryChips } from '../components/CategoryChips';
 import { UndoSnackbar, type UndoPayload } from '../components/UndoSnackbar';
 import { QuickActionSheet } from '../components/QuickActionSheet';
 import { RotateCcw } from 'lucide-react';
+import { notifyLowOrOutOfStock } from '../services/notifications';
 
 export const RecordSale: React.FC = () => {
   const navigate = useNavigate();
@@ -104,6 +105,14 @@ export const RecordSale: React.FC = () => {
 
     const localizedName = item.names[lang] || item.names.hi || item.names.en;
     const formattedQty = formatQty(saleQty, item.baseUnit, lang);
+
+    // Check if this sale caused low or out-of-stock
+    const currentMoves = movementsByItem.get(item.id) || [];
+    const updatedMoves = [...currentMoves, movement];
+    const updatedState = getStockState(updatedMoves);
+    if (updatedState.qty !== null && updatedState.qty <= item.minQty) {
+      notifyLowOrOutOfStock(item, updatedState.qty, lang);
+    }
 
     setUndoPayload({
       movementId: movement.id,
@@ -209,6 +218,7 @@ export const RecordSale: React.FC = () => {
           }}
           onRecordKhatam={async (item) => {
             await recordKhatam(item.id, 'chips');
+            notifyLowOrOutOfStock(item, 0, lang);
           }}
           onRecordMissed={async (item) => {
             await recordMissed(item.id, 1, 'chips');

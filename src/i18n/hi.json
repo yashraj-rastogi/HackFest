@@ -99,6 +99,12 @@
   "settings.clearDemo": "डेमो डेटा हटाएं",
   "settings.demoSeeded": "60 दिन के इतिहास के साथ डेमो डेटा तैयार",
   "settings.demoCleared": "डेमो डेटा हटा दिया गया",
+  "settings.notifications": "स्टॉक अलर्ट और सूचनाएं",
+  "settings.notificationsDesc": "सामान खत्म होने या कम होने पर तुरंत फोन पर अलर्ट पाएं",
+  "settings.enableNotifications": "अलर्ट चालू करें",
+  "settings.testNotification": "टेस्ट नोटिफिकेशन भेजें",
+  "settings.notificationsActive": "अलर्ट चालू हैं ✓",
+  "settings.notificationsBlocked": "ब्राउज़र में सूचनाएं बंद हैं",
   "settings.about": "किराना साथी के बारे में",
   "settings.credits": "ओपन सोर्स आभार",
   

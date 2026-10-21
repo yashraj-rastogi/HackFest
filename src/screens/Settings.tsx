@@ -14,7 +14,15 @@ import {
   HardDrive,
   CheckCircle2,
   RotateCcw,
+  Bell,
+  BellRing,
 } from 'lucide-react';
+import {
+  getNotificationPermission,
+  requestNotificationPermission,
+  sendTestNotification,
+  isNotificationSupported,
+} from '../services/notifications';
 
 export const Settings: React.FC = () => {
   const navigate = useNavigate();
@@ -23,9 +31,14 @@ export const Settings: React.FC = () => {
   const [demoStatus, setDemoStatus] = useState<string>('');
   const [isPersisted, setIsPersisted] = useState<boolean>(false);
   const [storageUsage, setStorageUsage] = useState<string>('');
+  const [isNotifSupported, setIsNotifSupported] = useState<boolean>(true);
+  const [notifPermission, setNotifPermission] = useState<string>('default');
+  const [testStatus, setTestStatus] = useState<string>('');
 
   useEffect(() => {
     getSetting<string>('shopName', '').then(setShopName);
+    setIsNotifSupported(isNotificationSupported());
+    setNotifPermission(getNotificationPermission());
 
     // Check storage persistence
     if (typeof navigator !== 'undefined' && navigator.storage) {
@@ -68,6 +81,24 @@ export const Settings: React.FC = () => {
       setDemoStatus(t('settings.demoCleared'));
       setTimeout(() => setDemoStatus(''), 4000);
     }
+  };
+
+  const handleRequestNotification = async () => {
+    triggerHaptic(15);
+    const granted = await requestNotificationPermission();
+    setNotifPermission(granted ? 'granted' : 'denied');
+  };
+
+  const handleTestNotification = async () => {
+    triggerHaptic(15);
+    const success = await sendTestNotification(lang);
+    if (success) {
+      setTestStatus(t('settings.notificationsActive'));
+    } else {
+      setTestStatus(t('settings.notificationsBlocked'));
+    }
+    setNotifPermission(getNotificationPermission());
+    setTimeout(() => setTestStatus(''), 4000);
   };
 
   const handleRequestPersistence = async () => {
@@ -149,6 +180,68 @@ export const Settings: React.FC = () => {
           </div>
           <span className="text-brand-dark font-bold text-xs">Manage →</span>
         </button>
+
+        {/* Stock Alerts & Push Notifications */}
+        <div className="p-4 rounded-3xl bg-surface border border-line shadow-xs space-y-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2 text-xs font-bold text-ink-muted uppercase tracking-wider">
+              <BellRing className="w-4 h-4 text-brand-dark" />
+              <span>{t('settings.notifications')}</span>
+            </div>
+            <span
+              className={`text-[11px] font-bold px-2 py-0.5 rounded-full ${
+                !isNotifSupported
+                  ? 'bg-ink-muted/10 text-ink-muted'
+                  : notifPermission === 'granted'
+                  ? 'bg-success/10 text-success'
+                  : notifPermission === 'denied'
+                  ? 'bg-danger/10 text-danger'
+                  : 'bg-warning/10 text-warning'
+              }`}
+            >
+              {!isNotifSupported
+                ? 'N/A'
+                : notifPermission === 'granted'
+                ? t('settings.notificationsActive')
+                : notifPermission === 'denied'
+                ? 'Blocked'
+                : 'Off'}
+            </span>
+          </div>
+
+          <p className="text-xs text-ink-muted leading-relaxed">
+            {t('settings.notificationsDesc')}
+          </p>
+
+          <div className="pt-1">
+            {notifPermission !== 'granted' ? (
+              <button
+                type="button"
+                onClick={handleRequestNotification}
+                className="w-full min-h-[46px] px-3 py-2.5 rounded-xl bg-brand text-white font-bold text-xs flex items-center justify-center gap-2 active:scale-95 shadow-xs"
+              >
+                <Bell className="w-4 h-4" />
+                <span>{t('settings.enableNotifications')}</span>
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={handleTestNotification}
+                className="w-full min-h-[46px] px-3 py-2.5 rounded-xl border border-line bg-canvas hover:bg-line/20 text-ink font-semibold text-xs flex items-center justify-center gap-2 active:scale-95"
+              >
+                <BellRing className="w-4 h-4 text-brand-dark" />
+                <span>{t('settings.testNotification')}</span>
+              </button>
+            )}
+          </div>
+
+          {testStatus && (
+            <div className="p-2.5 rounded-xl bg-brand-soft text-brand-dark text-xs font-semibold flex items-center gap-2 animate-fade-in">
+              <CheckCircle2 className="w-4 h-4 shrink-0" />
+              <span>{testStatus}</span>
+            </div>
+          )}
+        </div>
 
         {/* Demo Data Management */}
         <div className="p-4 rounded-3xl bg-surface border border-line shadow-xs space-y-3">

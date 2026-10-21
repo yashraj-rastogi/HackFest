@@ -17,6 +17,7 @@ import {
   CheckCircle2,
   PlusCircle,
 } from 'lucide-react';
+import { updateAppBadge } from '../services/notifications';
 
 export const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -93,6 +94,11 @@ export const Home: React.FC = () => {
 
     return { lowStockCount: lowCount, noMovementCount: deadCount };
   }, [items, movementsByItem]);
+
+  // Sync PWA App Badge with running-low item count
+  useEffect(() => {
+    updateAppBadge(lowStockCount);
+  }, [lowStockCount]);
 
   return (
     <AppShell headerSubtitle={shopName || t('app.subtitle')}>
