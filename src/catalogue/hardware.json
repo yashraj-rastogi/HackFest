@@ -1,0 +1,743 @@
+[
+  {
+    "id": "hardware.screw_wood_1inch",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "🔩",
+    "names": {
+      "hi": "लकड़ी का पेंच 1 इंच (पैकेट)",
+      "en": "Wood Screws 1 Inch (Pack of 25)",
+      "hinglish": "Lakdi Pech 1 Inch"
+    },
+    "aliases": [
+      "screw",
+      "wood screw",
+      "pech"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "minQty": 10,
+    "packSize": 50
+  },
+  {
+    "id": "hardware.screw_drywall_1.5inch",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "🔩",
+    "names": {
+      "hi": "ड्राइवॉल काला पेच 1.5 इंच",
+      "en": "Drywall Black Screws 1.5 Inch (25pk)",
+      "hinglish": "Drywall Pech 1.5 Inch"
+    },
+    "aliases": [
+      "black screw",
+      "drywall screw",
+      "pech"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 50
+  },
+  {
+    "id": "hardware.nail_wire_2inch",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "🔨",
+    "names": {
+      "hi": "तार की कील 2 इंच (दीवार)",
+      "en": "Wire Nails 2 Inch (Kheel)",
+      "hinglish": "Tar Kheel 2 Inch"
+    },
+    "aliases": [
+      "kheel",
+      "nail",
+      "lohe ki kheel",
+      "wall nail"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 250,
+    "chips": [
+      100,
+      250,
+      500,
+      1000
+    ],
+    "minQty": 1000,
+    "packSize": 10000
+  },
+  {
+    "id": "hardware.nail_concrete_1.5inch",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "🔨",
+    "names": {
+      "hi": "कंक्रीट स्टील कील 1.5 इंच",
+      "en": "Concrete Hardened Steel Nails (10pk)",
+      "hinglish": "Concrete Steel Kheel"
+    },
+    "aliases": [
+      "concrete nail",
+      "steel kheel"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 50
+  },
+  {
+    "id": "hardware.gitti_wall_plug_6mm",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "🧱",
+    "names": {
+      "hi": "प्लास्टिक गिट्टी 6mm (पैकेट)",
+      "en": "Plastic Wall Plugs / Rawl Gitti 6mm (20pk)",
+      "hinglish": "Plastic Gitti 6mm Pack"
+    },
+    "aliases": [
+      "gitti",
+      "wall plug",
+      "rawl plug"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 15,
+    "packSize": 60
+  },
+  {
+    "id": "hardware.teflon_tape_plumbing",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "🚰",
+    "names": {
+      "hi": "टेफ्लॉन टेप (नल फिटिंग)",
+      "en": "PTFE Teflon Thread Seal Tape",
+      "hinglish": "Teflon Tape Nal Fit"
+    },
+    "aliases": [
+      "teflon tape",
+      "thread seal",
+      "water tape"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 12,
+    "packSize": 48
+  },
+  {
+    "id": "hardware.m_seal_epoxy_regular",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "🧪",
+    "names": {
+      "hi": "एम-सील रेगुलर (90g)",
+      "en": "Pidilite M-Seal Regular Epoxy Putty",
+      "hinglish": "M Seal Regular Pack"
+    },
+    "aliases": [
+      "m seal",
+      "epoxy",
+      "leakage seal"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "hardware.fevikwik_1g",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "⚡",
+    "names": {
+      "hi": "फेविक्विक ₹5 (इंस्टेंट गोंद)",
+      "en": "Pidilite Fevikwik Instant Adhesive 1g",
+      "hinglish": "Fevikwik 1g Chhota"
+    },
+    "aliases": [
+      "fevikwik",
+      "instant glue",
+      "super glue"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "minQty": 25,
+    "packSize": 100
+  },
+  {
+    "id": "hardware.araldite_standard_36g",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "🧪",
+    "names": {
+      "hi": "एराल्डाइट स्टैंडर्ड (इपॉक्सी जोड़)",
+      "en": "Araldite Standard Epoxy Adhesive 36g",
+      "hinglish": "Araldite Jod 36g"
+    },
+    "aliases": [
+      "araldite",
+      "epoxy glue"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 4,
+    "packSize": 16
+  },
+  {
+    "id": "hardware.insulation_tape_steelgrip",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "🔌",
+    "names": {
+      "hi": "इन्सुलेशन टेप काला (Steelgrip)",
+      "en": "Steelgrip PVC Electrical Insulation Tape",
+      "hinglish": "Black Insulation Tape"
+    },
+    "aliases": [
+      "electrical tape",
+      "wire tape",
+      "black tape"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 15,
+    "packSize": 60
+  },
+  {
+    "id": "hardware.sandpaper_regmar_120",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "📄",
+    "names": {
+      "hi": "रेगमार / सैंडपेपर 120 नंबर",
+      "en": "Emery Sandpaper Sheet 120 Grit",
+      "hinglish": "Regmar Sheet 120 No"
+    },
+    "aliases": [
+      "regmar",
+      "sandpaper",
+      "emery paper"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 50
+  },
+  {
+    "id": "hardware.hex_nut_bolt_quarter",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "🔩",
+    "names": {
+      "hi": "नट-बोल्ट 1/4 x 1 इंच",
+      "en": "Hex Nut and Bolt Set 1/4 x 1 inch (10pk)",
+      "hinglish": "Nut Bolt Set 1/4 Inch"
+    },
+    "aliases": [
+      "nut bolt",
+      "bolt nut"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "hardware.washer_flat_quarter",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "⭕",
+    "names": {
+      "hi": "वाशर 1/4 इंच (पैकेट)",
+      "en": "Flat MS Washers 1/4 inch (25pk)",
+      "hinglish": "Washer 1/4 Inch Pack"
+    },
+    "aliases": [
+      "washer",
+      "flat washer"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 8,
+    "packSize": 32
+  },
+  {
+    "id": "hardware.cable_tie_zip_8inch",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "🔗",
+    "names": {
+      "hi": "केबल टाई / ज़िप टाई 8 इंच (50 पीस)",
+      "en": "Nylon Cable Zip Ties 8 Inch (50pk)",
+      "hinglish": "Cable Tie Zip Tie Pack"
+    },
+    "aliases": [
+      "cable tie",
+      "zip tie"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 5,
+    "packSize": 20
+  },
+  {
+    "id": "hardware.wd40_spray_32g",
+    "pack": "hardware",
+    "category": "hardware_fasteners",
+    "emoji": "🛢️",
+    "names": {
+      "hi": "WD-40 जंगरोधी स्प्रे (32g)",
+      "en": "WD-40 Multi-Use Rust Spray 32g",
+      "hinglish": "WD40 Spray 32g"
+    },
+    "aliases": [
+      "wd40",
+      "rust spray",
+      "lubricant"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 4,
+    "packSize": 16
+  },
+  {
+    "id": "hardware.bulb_led_9w_philips",
+    "pack": "hardware",
+    "category": "electrical",
+    "emoji": "💡",
+    "names": {
+      "hi": "फिलिप्स 9W LED बल्ब",
+      "en": "Philips 9-Watt LED Bulb B22",
+      "hinglish": "Philips 9W LED Bulb"
+    },
+    "aliases": [
+      "led bulb",
+      "bulb",
+      "philips bulb",
+      "9w led"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "hardware.bulb_led_12w_syska",
+    "pack": "hardware",
+    "category": "electrical",
+    "emoji": "💡",
+    "names": {
+      "hi": "सिस्का 12W LED बल्ब",
+      "en": "Syska 12-Watt LED Bulb B22",
+      "hinglish": "Syska 12W LED Bulb"
+    },
+    "aliases": [
+      "syska bulb",
+      "12w led",
+      "bada bulb"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      3
+    ],
+    "minQty": 6,
+    "packSize": 24
+  },
+  {
+    "id": "hardware.switch_modular_6a_anchor",
+    "pack": "hardware",
+    "category": "electrical",
+    "emoji": "🔘",
+    "names": {
+      "hi": "एंकर रोमा 6A स्विच",
+      "en": "Anchor Roma Modular 6A 1-Way Switch",
+      "hinglish": "Anchor Roma 6A Switch"
+    },
+    "aliases": [
+      "switch",
+      "anchor switch",
+      "roma switch",
+      "light switch"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 12,
+    "packSize": 48
+  },
+  {
+    "id": "hardware.socket_modular_6a_anchor",
+    "pack": "hardware",
+    "category": "electrical",
+    "emoji": "🔌",
+    "names": {
+      "hi": "एंकर रोमा 6A सॉकेट",
+      "en": "Anchor Roma 6A 3-Pin Socket",
+      "hinglish": "Anchor Roma 6A Socket"
+    },
+    "aliases": [
+      "socket",
+      "plug socket",
+      "3 pin socket"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 8,
+    "packSize": 32
+  },
+  {
+    "id": "hardware.plug_top_3pin_16a",
+    "pack": "hardware",
+    "category": "electrical",
+    "emoji": "🔌",
+    "names": {
+      "hi": "16A पावर प्लग टॉप (गीजर/AC)",
+      "en": "16A Heavy 3-Pin Power Plug Top",
+      "hinglish": "16A Power Plug Top"
+    },
+    "aliases": [
+      "power plug",
+      "16a plug",
+      "geyser plug"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 6,
+    "packSize": 24
+  },
+  {
+    "id": "hardware.plug_top_3pin_6a",
+    "pack": "hardware",
+    "category": "electrical",
+    "emoji": "🔌",
+    "names": {
+      "hi": "6A 3-पिन प्लग टॉप",
+      "en": "6A Standard 3-Pin Plug Top",
+      "hinglish": "6A Plug Top"
+    },
+    "aliases": [
+      "plug top",
+      "3 pin plug"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "hardware.tester_electrical_taparia",
+    "pack": "hardware",
+    "category": "electrical",
+    "emoji": "⚡",
+    "names": {
+      "hi": "टपारिया लाइन टेस्टर 500V",
+      "en": "Taparia Line Voltage Neon Tester 500V",
+      "hinglish": "Taparia Line Tester"
+    },
+    "aliases": [
+      "tester",
+      "line tester",
+      "current tester"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 5,
+    "packSize": 20
+  },
+  {
+    "id": "hardware.screwdriver_taparia_two_in_one",
+    "pack": "hardware",
+    "category": "hardware_tools",
+    "emoji": "🪛",
+    "names": {
+      "hi": "टपारिया टू-इन-वन पेचकस",
+      "en": "Taparia 2-in-1 Reversible Screwdriver",
+      "hinglish": "Taparia Two in One Pechkas"
+    },
+    "aliases": [
+      "pechkas",
+      "screwdriver",
+      "taparia screwdriver"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 4,
+    "packSize": 16
+  },
+  {
+    "id": "hardware.pliers_taparia_combination",
+    "pack": "hardware",
+    "category": "hardware_tools",
+    "emoji": "🔧",
+    "names": {
+      "hi": "टपारिया प्लास 8 इंच",
+      "en": "Taparia Combination Pliers 8 Inch",
+      "hinglish": "Taparia Plaas 8 Inch"
+    },
+    "aliases": [
+      "plaas",
+      "pliers",
+      "cutting pliers"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 4,
+    "packSize": 16
+  },
+  {
+    "id": "hardware.hammer_claw_steel_half_kg",
+    "pack": "hardware",
+    "category": "hardware_tools",
+    "emoji": "🔨",
+    "names": {
+      "hi": "हथौड़ा आधा किलो (स्टील)",
+      "en": "Claw Hammer 500g Hardened Steel",
+      "hinglish": "Hathauda Half KG"
+    },
+    "aliases": [
+      "hathoda",
+      "hammer",
+      "kheel nikalne wala hathoda"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 3,
+    "packSize": 12
+  },
+  {
+    "id": "hardware.measuring_tape_freemans_3m",
+    "pack": "hardware",
+    "category": "hardware_tools",
+    "emoji": "📏",
+    "names": {
+      "hi": "फ्रीमैन नापने का फीता (3 मीटर)",
+      "en": "Freemans Steel Measuring Tape 3m",
+      "hinglish": "Freemans Feeta 3m"
+    },
+    "aliases": [
+      "feeta",
+      "measuring tape",
+      "inch tape"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 5,
+    "packSize": 20
+  },
+  {
+    "id": "hardware.cutter_knife_snap_off",
+    "pack": "hardware",
+    "category": "hardware_tools",
+    "emoji": "🔪",
+    "names": {
+      "hi": "कटर चाकू (स्नैप-ऑफ ब्लेड)",
+      "en": "Snap-Off Utility Cutter Knife",
+      "hinglish": "Cutter Chaku Knife"
+    },
+    "aliases": [
+      "cutter",
+      "utility knife",
+      "box cutter"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 8,
+    "packSize": 32
+  },
+  {
+    "id": "hardware.spanner_adjustable_taparia_8",
+    "pack": "hardware",
+    "category": "hardware_tools",
+    "emoji": "🔧",
+    "names": {
+      "hi": "सिलाई रिंच 8 इंच (Adjustable)",
+      "en": "Taparia 8 Inch Adjustable Spanner",
+      "hinglish": "Silai Rinch 8 Inch"
+    },
+    "aliases": [
+      "rinch",
+      "spanner",
+      "adjustable spanner"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 3,
+    "packSize": 12
+  },
+  {
+    "id": "hardware.wire_copper_1sqmm_havells",
+    "pack": "hardware",
+    "category": "electrical",
+    "emoji": "〰️",
+    "names": {
+      "hi": "हैवेल्स कॉपर वायर 1 sq.mm (मीटर)",
+      "en": "Havells 1.0 sq.mm Single Core Wire (m)",
+      "hinglish": "Havells 1mm Copper Wire Meter"
+    },
+    "aliases": [
+      "wire",
+      "copper wire",
+      "bijli tar"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      5,
+      10,
+      20
+    ],
+    "minQty": 30,
+    "packSize": 100
+  },
+  {
+    "id": "hardware.multipin_universal_adapter",
+    "pack": "hardware",
+    "category": "electrical",
+    "emoji": "🔌",
+    "names": {
+      "hi": "मल्टीपिन सॉकेट अडैप्टर (3-way)",
+      "en": "Universal 3-Way Multi-Plug Adapter",
+      "hinglish": "Multipin Universal Adapter"
+    },
+    "aliases": [
+      "multi plug",
+      "multipin",
+      "universal adapter"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 8,
+    "packSize": 32
+  }
+]

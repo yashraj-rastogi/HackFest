@@ -1,0 +1,992 @@
+[
+  {
+    "id": "stationery.classmate_notebook_ruled",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📓",
+    "names": {
+      "hi": "क्लासमेट कॉपी (सिंगल लाइन 172p)",
+      "en": "Classmate Notebook Ruled 172p",
+      "hinglish": "Classmate Copy Ruled"
+    },
+    "aliases": [
+      "copy",
+      "notebook",
+      "classmate copy",
+      "register"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "minQty": 12,
+    "packSize": 60
+  },
+  {
+    "id": "stationery.classmate_notebook_unruled",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📓",
+    "names": {
+      "hi": "क्लासमेट प्लेन कॉपी 172p",
+      "en": "Classmate Notebook Plain Unruled",
+      "hinglish": "Classmate Copy Plain"
+    },
+    "aliases": [
+      "plain copy",
+      "unruled notebook"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 8,
+    "packSize": 40
+  },
+  {
+    "id": "stationery.register_long_ruled",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📋",
+    "names": {
+      "hi": "लॉन्ग रजिस्टर (रूलदार 200p)",
+      "en": "Long Register Ruled 200p",
+      "hinglish": "Long Register Ruled"
+    },
+    "aliases": [
+      "register",
+      "bada register",
+      "office register"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 10,
+    "packSize": 50
+  },
+  {
+    "id": "stationery.drawing_book_a4",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "🎨",
+    "names": {
+      "hi": "ड्राइंग बुक (A4)",
+      "en": "Drawing Book A4 Plain",
+      "hinglish": "Drawing Book A4"
+    },
+    "aliases": [
+      "drawing book",
+      "art book",
+      "sketch book"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      3
+    ],
+    "minQty": 6,
+    "packSize": 30
+  },
+  {
+    "id": "stationery.scrap_book_colored",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📒",
+    "names": {
+      "hi": "स्क्रैप बुक रंगीन",
+      "en": "Scrap Book Color Pages",
+      "hinglish": "Scrap Book Colored"
+    },
+    "aliases": [
+      "scrap book",
+      "activity book"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 5,
+    "packSize": 25
+  },
+  {
+    "id": "stationery.practical_file_physics",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📂",
+    "names": {
+      "hi": "प्रैक्टिकल फाइल (इंटरलीव्ड)",
+      "en": "Practical Record File Interleaved",
+      "hinglish": "Practical File Copy"
+    },
+    "aliases": [
+      "practical file",
+      "lab record"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 8,
+    "packSize": 40
+  },
+  {
+    "id": "stationery.a4_copier_paper_ream",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📄",
+    "names": {
+      "hi": "A4 फोटोकॉपी पेपर (JK Copier रीम)",
+      "en": "JK Copier A4 Paper 500 Sheets",
+      "hinglish": "JK Copier A4 Paper"
+    },
+    "aliases": [
+      "a4 paper",
+      "photocopy paper",
+      "jk copier",
+      "xerox paper"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 5,
+    "packSize": 20
+  },
+  {
+    "id": "stationery.sticky_notes_yellow",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📝",
+    "names": {
+      "hi": "स्टिकी नोट्स (पीले)",
+      "en": "Sticky Notes Yellow 3x3",
+      "hinglish": "Sticky Notes Yellow"
+    },
+    "aliases": [
+      "sticky notes",
+      "post it"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 6,
+    "packSize": 24
+  },
+  {
+    "id": "stationery.exam_pad_clip",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📋",
+    "names": {
+      "hi": "एग्जाम क्लिप बोर्ड / पैड",
+      "en": "Exam Writing Clip Board",
+      "hinglish": "Exam Board Clip Pad"
+    },
+    "aliases": [
+      "exam pad",
+      "clip board",
+      "writing pad"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 5,
+    "packSize": 20
+  },
+  {
+    "id": "stationery.graph_book_10mm",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📐",
+    "names": {
+      "hi": "ग्राफ कॉपी (10mm)",
+      "en": "Graph Notebook 10mm",
+      "hinglish": "Graph Copy"
+    },
+    "aliases": [
+      "graph book",
+      "graph paper copy"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 8,
+    "packSize": 32
+  },
+  {
+    "id": "stationery.envelope_yellow_a4",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "✉️",
+    "names": {
+      "hi": "पीला लिफाफा (A4)",
+      "en": "Yellow Document Envelope A4",
+      "hinglish": "A4 Peela Lifafa"
+    },
+    "aliases": [
+      "lifafa",
+      "envelope",
+      "document cover"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      5,
+      10,
+      20
+    ],
+    "minQty": 30,
+    "packSize": 150
+  },
+  {
+    "id": "stationery.envelope_white_small",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "✉️",
+    "names": {
+      "hi": "सफेद छोटा लिफाफा (मनी)",
+      "en": "Small White Letter Envelope",
+      "hinglish": "Chhota Lifafa White"
+    },
+    "aliases": [
+      "lifafa",
+      "money envelope"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "minQty": 50,
+    "packSize": 250
+  },
+  {
+    "id": "stationery.chart_paper_assorted",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📜",
+    "names": {
+      "hi": "चार्ट पेपर (रंगीन)",
+      "en": "Chart Paper Colored Sheet",
+      "hinglish": "Chart Paper Sheet"
+    },
+    "aliases": [
+      "chart paper",
+      "project sheet"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "minQty": 20,
+    "packSize": 100
+  },
+  {
+    "id": "stationery.glaze_paper_pack",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "✨",
+    "names": {
+      "hi": "ग्लेज़ पेपर पैकेट (क्राफ्ट)",
+      "en": "Glaze Craft Paper Multi Pack",
+      "hinglish": "Glaze Paper Pack"
+    },
+    "aliases": [
+      "glaze paper",
+      "origami paper",
+      "craft paper"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 50
+  },
+  {
+    "id": "stationery.carbon_paper_blue",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📑",
+    "names": {
+      "hi": "कार्बन पेपर (नीला)",
+      "en": "Kores Blue Carbon Paper Sheet",
+      "hinglish": "Carbon Paper Blue"
+    },
+    "aliases": [
+      "carbon paper",
+      "kores carbon"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      5,
+      10
+    ],
+    "minQty": 20,
+    "packSize": 100
+  },
+  {
+    "id": "stationery.dairy_note_pocket",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📓",
+    "names": {
+      "hi": "पॉकेट डायरी",
+      "en": "Pocket Mini Notebook Diary",
+      "hinglish": "Pocket Diary"
+    },
+    "aliases": [
+      "pocket dairy",
+      "chhoti diary"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 5,
+    "packSize": 25
+  },
+  {
+    "id": "stationery.spiral_notebook_a5",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "🌀",
+    "names": {
+      "hi": "स्पाइरल नोटबुक (A5)",
+      "en": "Spiral Bound Notebook A5",
+      "hinglish": "Spiral Copy A5"
+    },
+    "aliases": [
+      "spiral copy",
+      "spiral register"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 6,
+    "packSize": 24
+  },
+  {
+    "id": "stationery.project_paper_ruled",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📄",
+    "names": {
+      "hi": "प्रोजेक्ट पेपर (एक तरफ लाइन)",
+      "en": "One Side Ruled Project Sheets Pack",
+      "hinglish": "Project Paper Sheet Pack"
+    },
+    "aliases": [
+      "project paper",
+      "assignment sheet"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 50
+  },
+  {
+    "id": "stationery.folder_plastic_l_shape",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📁",
+    "names": {
+      "hi": "प्लास्टिक L-शेप फोल्डर",
+      "en": "Plastic L-Type Document Folder",
+      "hinglish": "Plastic Folder File"
+    },
+    "aliases": [
+      "file",
+      "folder",
+      "l folder",
+      "document file"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 15,
+    "packSize": 60
+  },
+  {
+    "id": "stationery.cobra_spring_file",
+    "pack": "stationery",
+    "category": "stationery_paper",
+    "emoji": "📁",
+    "names": {
+      "hi": "कोबरा स्प्रिंग फाइल",
+      "en": "Cobra Spring Lever File",
+      "hinglish": "Cobra Spring File"
+    },
+    "aliases": [
+      "cobra file",
+      "spring file",
+      "office file"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 12,
+    "packSize": 48
+  },
+  {
+    "id": "stationery.pen_cello_butterflow",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "🖊️",
+    "names": {
+      "hi": "सेलो बटरफ्लो बॉल पेन (नीला)",
+      "en": "Cello Butterflow Blue Ball Pen",
+      "hinglish": "Cello Butterflow Pen Blue"
+    },
+    "aliases": [
+      "ball pen",
+      "cello pen",
+      "butterflow",
+      "blue pen"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "minQty": 20,
+    "packSize": 100
+  },
+  {
+    "id": "stationery.pen_cello_butterflow_black",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "🖊️",
+    "names": {
+      "hi": "सेलो बटरफ्लो (काला पेन)",
+      "en": "Cello Butterflow Black Ball Pen",
+      "hinglish": "Cello Butterflow Pen Black"
+    },
+    "aliases": [
+      "black pen",
+      "butterflow black"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 50
+  },
+  {
+    "id": "stationery.pen_octane_gel_blue",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "🖋️",
+    "names": {
+      "hi": "क्लासमेट ऑक्टेन जेल पेन (नीला)",
+      "en": "Classmate Octane Gel Pen Blue",
+      "hinglish": "Octane Gel Pen Blue"
+    },
+    "aliases": [
+      "gel pen",
+      "octane",
+      "classmate pen"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 15,
+    "packSize": 60
+  },
+  {
+    "id": "stationery.pen_octane_gel_black",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "🖋️",
+    "names": {
+      "hi": "क्लासमेट ऑक्टेन जेल पेन (काला)",
+      "en": "Classmate Octane Gel Pen Black",
+      "hinglish": "Octane Gel Pen Black"
+    },
+    "aliases": [
+      "black gel pen",
+      "octane black"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "stationery.pen_reynolds_045",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "🖊️",
+    "names": {
+      "hi": "रेनॉल्ड्स 045 ट्रेडिशनल पेन",
+      "en": "Reynolds 045 Fine Carbure Ball Pen",
+      "hinglish": "Reynolds 045 Pen"
+    },
+    "aliases": [
+      "reynolds 045",
+      "sasta ball pen"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "minQty": 25,
+    "packSize": 100
+  },
+  {
+    "id": "stationery.pen_use_and_throw",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "🖊️",
+    "names": {
+      "hi": "यूज एंड थ्रो पेन (₹3/₹5)",
+      "en": "Use and Throw Ball Pen",
+      "hinglish": "Use and Throw Pen"
+    },
+    "aliases": [
+      "use and throw",
+      "sasta pen"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      5,
+      10,
+      20
+    ],
+    "minQty": 30,
+    "packSize": 150
+  },
+  {
+    "id": "stationery.pencil_apsara_platinum",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "✏️",
+    "names": {
+      "hi": "अप्सरा प्लैटिनम पेंसिल (पैकेट)",
+      "en": "Apsara Platinum Extra Dark Pencils (10pk)",
+      "hinglish": "Apsara Platinum Pencil Pack"
+    },
+    "aliases": [
+      "apsara pencil",
+      "pencil pack",
+      "extra dark"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 8,
+    "packSize": 32
+  },
+  {
+    "id": "stationery.pencil_natraj_classic",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "✏️",
+    "names": {
+      "hi": "नटराज पेंसिल (10 पीस डिब्बी)",
+      "en": "Natraj 621 Red Black Pencils (10pk)",
+      "hinglish": "Natraj Pencil Dibbi"
+    },
+    "aliases": [
+      "natraj pencil",
+      "red black pencil"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 8,
+    "packSize": 32
+  },
+  {
+    "id": "stationery.eraser_apsara_non_dust",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "🧼",
+    "names": {
+      "hi": "अप्सरा नॉन-डस्ट रबर (इरेज़र)",
+      "en": "Apsara Non Dust Eraser",
+      "hinglish": "Apsara Rubber Eraser"
+    },
+    "aliases": [
+      "rubber",
+      "eraser",
+      "apsara rubber"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "minQty": 20,
+    "packSize": 80
+  },
+  {
+    "id": "stationery.sharpener_apsara",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "🔪",
+    "names": {
+      "hi": "कटर / शार्पनर (अप्सरा)",
+      "en": "Apsara Long Point Sharpener",
+      "hinglish": "Apsara Cuttar Sharpener"
+    },
+    "aliases": [
+      "sharpener",
+      "cuttar",
+      "pencil sharpener"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "minQty": 20,
+    "packSize": 80
+  },
+  {
+    "id": "stationery.scale_camlin_15cm",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "📏",
+    "names": {
+      "hi": "कैमलिन प्लास्टिक स्केल 15cm",
+      "en": "Camlin Plastic Ruler 15cm",
+      "hinglish": "Camlin Scale 15cm"
+    },
+    "aliases": [
+      "scale",
+      "ruler",
+      "foot",
+      "patari"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 12,
+    "packSize": 48
+  },
+  {
+    "id": "stationery.scale_steel_30cm",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "📏",
+    "names": {
+      "hi": "स्टील फुटा 30cm (1 फुट)",
+      "en": "Stainless Steel Ruler 30cm (12inch)",
+      "hinglish": "Steel Scale 30cm"
+    },
+    "aliases": [
+      "steel scale",
+      "steel ruler",
+      "foot scale"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 5,
+    "packSize": 20
+  },
+  {
+    "id": "stationery.fevistick_8g",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "🧴",
+    "names": {
+      "hi": "फेविस्टिक गोंद (8g)",
+      "en": "Pidilite Fevistik Glue Stick 8g",
+      "hinglish": "Fevistick Gond 8g"
+    },
+    "aliases": [
+      "fevistick",
+      "glue stick",
+      "gond"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "stationery.fevicol_mr_50g",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "🧴",
+    "names": {
+      "hi": "फेविकोल MR क्राफ्ट गोंद 50g",
+      "en": "Pidilite Fevicol MR Squeeze 50g",
+      "hinglish": "Fevicol MR Gond 50g"
+    },
+    "aliases": [
+      "fevicol",
+      "white glue",
+      "craft glue"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 8,
+    "packSize": 32
+  },
+  {
+    "id": "stationery.scissors_student_small",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "✂️",
+    "names": {
+      "hi": "स्टूडेंट कैंची (छोटी)",
+      "en": "Student Craft Safety Scissors",
+      "hinglish": "Student Kainchi Small"
+    },
+    "aliases": [
+      "scissor",
+      "kainchi",
+      "scissors"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 4,
+    "packSize": 16
+  },
+  {
+    "id": "stationery.geometry_box_camlin",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "📐",
+    "names": {
+      "hi": "कैमलिन ज्यामिति बॉक्स (कंपास)",
+      "en": "Camlin Scholar Geometry Box",
+      "hinglish": "Camlin Geometry Box"
+    },
+    "aliases": [
+      "geometry box",
+      "compass box",
+      "prakar"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 4,
+    "packSize": 16
+  },
+  {
+    "id": "stationery.crayons_doms_12shade",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "🖍️",
+    "names": {
+      "hi": "डोम्स वैक्स क्रायॉन (12 शेड)",
+      "en": "Doms Plastic Crayons 12 Shades",
+      "hinglish": "Doms Crayon Color"
+    },
+    "aliases": [
+      "crayon",
+      "wax color",
+      "drawing color"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 6,
+    "packSize": 24
+  },
+  {
+    "id": "stationery.sketch_pens_luxor_12",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "🖌️",
+    "names": {
+      "hi": "लक्सर स्केच पेन (12 रंग)",
+      "en": "Luxor Color Sketch Pens 12pk",
+      "hinglish": "Luxor Sketch Pen 12 Color"
+    },
+    "aliases": [
+      "sketch pen",
+      "marker color"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 6,
+    "packSize": 24
+  },
+  {
+    "id": "stationery.permanent_marker_camlin",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "🖊️",
+    "names": {
+      "hi": "कैमलिन परमानेंट मार्कर (काला)",
+      "en": "Camlin Permanent Marker Black",
+      "hinglish": "Camlin Permanent Marker Black"
+    },
+    "aliases": [
+      "marker",
+      "permanent marker",
+      "black marker"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 8,
+    "packSize": 32
+  },
+  {
+    "id": "stationery.whiteboard_marker_blue",
+    "pack": "stationery",
+    "category": "stationery_writing",
+    "emoji": "🖊️",
+    "names": {
+      "hi": "व्हाइटबोर्ड मार्कर (नीला)",
+      "en": "Camlin Whiteboard Marker Blue",
+      "hinglish": "Whiteboard Marker Blue"
+    },
+    "aliases": [
+      "whiteboard marker",
+      "board marker"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 8,
+    "packSize": 32
+  }
+]

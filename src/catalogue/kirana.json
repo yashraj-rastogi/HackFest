@@ -1,0 +1,2791 @@
+[
+  {
+    "id": "kirana.sugar",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "🍬",
+    "names": {
+      "hi": "चीनी",
+      "en": "Sugar",
+      "hinglish": "Cheeni"
+    },
+    "aliases": [
+      "shakkar",
+      "sakkar",
+      "sugar",
+      "cheeni",
+      "meetha"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 1000,
+    "chips": [
+      250,
+      500,
+      1000,
+      2000,
+      5000
+    ],
+    "minQty": 5000,
+    "packSize": 50000
+  },
+  {
+    "id": "kirana.atta_sharbati",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "🌾",
+    "names": {
+      "hi": "आटा (शरबती)",
+      "en": "Wheat Flour (Atta)",
+      "hinglish": "Atta Sharbati"
+    },
+    "aliases": [
+      "aata",
+      "atta",
+      "gehu ka aata",
+      "wheat flour"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 5000,
+    "chips": [
+      1000,
+      2000,
+      5000,
+      10000
+    ],
+    "minQty": 10000,
+    "packSize": 50000
+  },
+  {
+    "id": "kirana.atta_chakki",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "🌾",
+    "names": {
+      "hi": "चक्की आटा",
+      "en": "Chakki Atta",
+      "hinglish": "Chakki Atta"
+    },
+    "aliases": [
+      "chakki aata",
+      "aashirvaad aata",
+      "atta"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 5000,
+    "chips": [
+      1000,
+      2000,
+      5000,
+      10000
+    ],
+    "minQty": 10000,
+    "packSize": 50000
+  },
+  {
+    "id": "kirana.maida",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "🍚",
+    "names": {
+      "hi": "मैदा",
+      "en": "All Purpose Flour (Maida)",
+      "hinglish": "Maida"
+    },
+    "aliases": [
+      "refined flour",
+      "maida"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 500,
+    "chips": [
+      250,
+      500,
+      1000
+    ],
+    "minQty": 2000,
+    "packSize": 25000
+  },
+  {
+    "id": "kirana.sooji",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "🌾",
+    "names": {
+      "hi": "सूजी / रवा",
+      "en": "Semolina (Sooji)",
+      "hinglish": "Sooji Rawa"
+    },
+    "aliases": [
+      "suji",
+      "rawa",
+      "rava",
+      "semolina"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 500,
+    "chips": [
+      250,
+      500,
+      1000
+    ],
+    "minQty": 2000,
+    "packSize": 20000
+  },
+  {
+    "id": "kirana.besan",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "🟡",
+    "names": {
+      "hi": "बेसन",
+      "en": "Gram Flour (Besan)",
+      "hinglish": "Besan"
+    },
+    "aliases": [
+      "chana aata",
+      "besan",
+      "gram flour"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 500,
+    "chips": [
+      250,
+      500,
+      1000
+    ],
+    "minQty": 2000,
+    "packSize": 25000
+  },
+  {
+    "id": "kirana.rice_basmati",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "🍚",
+    "names": {
+      "hi": "बासमती चावल",
+      "en": "Basmati Rice",
+      "hinglish": "Basmati Chawal"
+    },
+    "aliases": [
+      "basmati chawal",
+      "rice",
+      "chawal"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 1000,
+    "chips": [
+      500,
+      1000,
+      2000,
+      5000
+    ],
+    "minQty": 5000,
+    "packSize": 30000
+  },
+  {
+    "id": "kirana.rice_kolam",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "🍚",
+    "names": {
+      "hi": "कोलम चावल",
+      "en": "Kolam / Regular Rice",
+      "hinglish": "Kolam Chawal"
+    },
+    "aliases": [
+      "kolam chawal",
+      "chawal",
+      "regular rice"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 1000,
+    "chips": [
+      1000,
+      2000,
+      5000,
+      10000
+    ],
+    "minQty": 10000,
+    "packSize": 50000
+  },
+  {
+    "id": "kirana.poha",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "🥣",
+    "names": {
+      "hi": "पोहा",
+      "en": "Flattened Rice (Poha)",
+      "hinglish": "Poha"
+    },
+    "aliases": [
+      "chuda",
+      "chivda",
+      "poha",
+      "aval"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 500,
+    "chips": [
+      250,
+      500,
+      1000
+    ],
+    "minQty": 2000,
+    "packSize": 20000
+  },
+  {
+    "id": "kirana.sabudana",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "⚪",
+    "names": {
+      "hi": "साबूदाना",
+      "en": "Tapioca Pearls (Sabudana)",
+      "hinglish": "Sabudana"
+    },
+    "aliases": [
+      "sago",
+      "sabudana",
+      "vrat ka chawal"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 500,
+    "chips": [
+      250,
+      500,
+      1000
+    ],
+    "minQty": 1500,
+    "packSize": 15000
+  },
+  {
+    "id": "kirana.salt_tata",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "🧂",
+    "names": {
+      "hi": "टाटा नमक",
+      "en": "Tata Salt",
+      "hinglish": "Tata Namak"
+    },
+    "aliases": [
+      "namak",
+      "salt",
+      "tata namak"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 1000,
+    "chips": [
+      1000,
+      2000
+    ],
+    "minQty": 4000,
+    "packSize": 25000
+  },
+  {
+    "id": "kirana.salt_sendha",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "🧂",
+    "names": {
+      "hi": "सेंधा नमक",
+      "en": "Rock Salt (Sendha Namak)",
+      "hinglish": "Sendha Namak"
+    },
+    "aliases": [
+      "rock salt",
+      "lahori namak",
+      "vrat namak"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 500,
+    "chips": [
+      250,
+      500,
+      1000
+    ],
+    "minQty": 1000,
+    "packSize": 10000
+  },
+  {
+    "id": "kirana.salt_kala",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "🧂",
+    "names": {
+      "hi": "काला नमक",
+      "en": "Black Salt",
+      "hinglish": "Kala Namak"
+    },
+    "aliases": [
+      "black salt",
+      "kala namak"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 250,
+    "chips": [
+      100,
+      250,
+      500
+    ],
+    "minQty": 500,
+    "packSize": 5000
+  },
+  {
+    "id": "kirana.jaggery_gur",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "🟤",
+    "names": {
+      "hi": "गुड़",
+      "en": "Jaggery (Gur)",
+      "hinglish": "Gud"
+    },
+    "aliases": [
+      "gur",
+      "gud",
+      "jaggery"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 1000,
+    "chips": [
+      500,
+      1000,
+      2000
+    ],
+    "minQty": 3000,
+    "packSize": 20000
+  },
+  {
+    "id": "kirana.dalia",
+    "pack": "kirana",
+    "category": "staples",
+    "emoji": "🌾",
+    "names": {
+      "hi": "दलिया",
+      "en": "Broken Wheat (Dalia)",
+      "hinglish": "Daliya"
+    },
+    "aliases": [
+      "dalia",
+      "broken wheat",
+      "lapsi"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 500,
+    "chips": [
+      250,
+      500,
+      1000
+    ],
+    "minQty": 1500,
+    "packSize": 15000
+  },
+  {
+    "id": "kirana.mustard_oil",
+    "pack": "kirana",
+    "category": "oil_ghee",
+    "emoji": "🟡",
+    "names": {
+      "hi": "सरसों का तेल",
+      "en": "Mustard Oil",
+      "hinglish": "Sarson Tel"
+    },
+    "aliases": [
+      "sarson tel",
+      "mustard oil",
+      "kachi ghani"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 1000,
+    "chips": [
+      500,
+      1000,
+      2000,
+      5000
+    ],
+    "minQty": 5000,
+    "packSize": 15000
+  },
+  {
+    "id": "kirana.refined_oil_fortune",
+    "pack": "kirana",
+    "category": "oil_ghee",
+    "emoji": "🌻",
+    "names": {
+      "hi": "रिफाइंड तेल (फॉर्च्यून)",
+      "en": "Refined Sunflower Oil",
+      "hinglish": "Refined Tel Fortune"
+    },
+    "aliases": [
+      "refined tel",
+      "sunflower oil",
+      "fortune oil"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 1000,
+    "chips": [
+      500,
+      1000,
+      2000,
+      5000
+    ],
+    "minQty": 5000,
+    "packSize": 15000
+  },
+  {
+    "id": "kirana.soyabean_oil",
+    "pack": "kirana",
+    "category": "oil_ghee",
+    "emoji": "🌱",
+    "names": {
+      "hi": "सोयाबीन तेल",
+      "en": "Soyabean Oil",
+      "hinglish": "Soyabean Tel"
+    },
+    "aliases": [
+      "soyabean oil",
+      "tel"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 1000,
+    "chips": [
+      1000,
+      2000,
+      5000
+    ],
+    "minQty": 3000,
+    "packSize": 15000
+  },
+  {
+    "id": "kirana.groundnut_oil",
+    "pack": "kirana",
+    "category": "oil_ghee",
+    "emoji": "🥜",
+    "names": {
+      "hi": "मूंगफली तेल",
+      "en": "Groundnut Oil",
+      "hinglish": "Moongphali Tel"
+    },
+    "aliases": [
+      "peanut oil",
+      "groundnut oil",
+      "sing tel"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 1000,
+    "chips": [
+      1000,
+      2000,
+      5000
+    ],
+    "minQty": 2000,
+    "packSize": 15000
+  },
+  {
+    "id": "kirana.desi_ghee_amul",
+    "pack": "kirana",
+    "category": "oil_ghee",
+    "emoji": "🧈",
+    "names": {
+      "hi": "अमूल देसी घी",
+      "en": "Amul Desi Ghee",
+      "hinglish": "Amul Desi Ghee"
+    },
+    "aliases": [
+      "amul ghee",
+      "ghee",
+      "desi ghee"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 1000,
+    "chips": [
+      200,
+      500,
+      1000
+    ],
+    "minQty": 2000,
+    "packSize": 12000
+  },
+  {
+    "id": "kirana.desi_ghee_patanjali",
+    "pack": "kirana",
+    "category": "oil_ghee",
+    "emoji": "🧈",
+    "names": {
+      "hi": "पतंजलि गाय घी",
+      "en": "Patanjali Cow Ghee",
+      "hinglish": "Patanjali Cow Ghee"
+    },
+    "aliases": [
+      "patanjali ghee",
+      "cow ghee",
+      "ghee"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 1000,
+    "chips": [
+      200,
+      500,
+      1000
+    ],
+    "minQty": 2000,
+    "packSize": 12000
+  },
+  {
+    "id": "kirana.dalda_vanaspati",
+    "pack": "kirana",
+    "category": "oil_ghee",
+    "emoji": "🥫",
+    "names": {
+      "hi": "डालडा वनस्पति",
+      "en": "Vanaspati Ghee (Dalda)",
+      "hinglish": "Dalda Ghee"
+    },
+    "aliases": [
+      "dalda",
+      "vanaspati"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 500,
+    "chips": [
+      500,
+      1000
+    ],
+    "minQty": 1000,
+    "packSize": 10000
+  },
+  {
+    "id": "kirana.til_oil",
+    "pack": "kirana",
+    "category": "oil_ghee",
+    "emoji": "🪔",
+    "names": {
+      "hi": "तिल का तेल (पूजा)",
+      "en": "Sesame / Puja Oil",
+      "hinglish": "Til Tel Puja"
+    },
+    "aliases": [
+      "til tel",
+      "pooja oil",
+      "sesame oil"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 500,
+    "chips": [
+      200,
+      500,
+      1000
+    ],
+    "minQty": 1000,
+    "packSize": 10000
+  },
+  {
+    "id": "kirana.coconut_oil_edible",
+    "pack": "kirana",
+    "category": "oil_ghee",
+    "emoji": "🥥",
+    "names": {
+      "hi": "नारियल तेल (खाने का)",
+      "en": "Edible Coconut Oil",
+      "hinglish": "Nariyal Tel Khana"
+    },
+    "aliases": [
+      "coconut oil",
+      "nariyal tel"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 500,
+    "chips": [
+      200,
+      500,
+      1000
+    ],
+    "minQty": 1000,
+    "packSize": 10000
+  },
+  {
+    "id": "kirana.olive_oil",
+    "pack": "kirana",
+    "category": "oil_ghee",
+    "emoji": "🫒",
+    "names": {
+      "hi": "जैतून का तेल",
+      "en": "Olive Oil",
+      "hinglish": "Jaitun Tel"
+    },
+    "aliases": [
+      "olive oil",
+      "figaro"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 500,
+    "chips": [
+      250,
+      500
+    ],
+    "minQty": 500,
+    "packSize": 5000
+  },
+  {
+    "id": "kirana.dal_toor",
+    "pack": "kirana",
+    "category": "pulses",
+    "emoji": "🟡",
+    "names": {
+      "hi": "अरहर / तूर दाल",
+      "en": "Toor Dal (Arhar)",
+      "hinglish": "Arhar / Toor Dal"
+    },
+    "aliases": [
+      "toor dal",
+      "arhar dal",
+      "tuvar dal"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 1000,
+    "chips": [
+      250,
+      500,
+      1000,
+      2000
+    ],
+    "minQty": 3000,
+    "packSize": 30000
+  },
+  {
+    "id": "kirana.dal_moong_dhuli",
+    "pack": "kirana",
+    "category": "pulses",
+    "emoji": "🟡",
+    "names": {
+      "hi": "मूंग धुली दाल",
+      "en": "Moong Dal (Yellow)",
+      "hinglish": "Moong Dhuli Dal"
+    },
+    "aliases": [
+      "moong dhuli",
+      "yellow moong"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 500,
+    "chips": [
+      250,
+      500,
+      1000
+    ],
+    "minQty": 2000,
+    "packSize": 25000
+  },
+  {
+    "id": "kirana.dal_moong_chilka",
+    "pack": "kirana",
+    "category": "pulses",
+    "emoji": "🟢",
+    "names": {
+      "hi": "मूंग छिलका दाल",
+      "en": "Moong Dal Chilka",
+      "hinglish": "Moong Chilka Dal"
+    },
+    "aliases": [
+      "moong chilka",
+      "green moong split"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 500,
+    "chips": [
+      250,
+      500,
+      1000
+    ],
+    "minQty": 2000,
+    "packSize": 25000
+  },
+  {
+    "id": "kirana.dal_chana",
+    "pack": "kirana",
+    "category": "pulses",
+    "emoji": "🟡",
+    "names": {
+      "hi": "चना दाल",
+      "en": "Chana Dal",
+      "hinglish": "Chana Dal"
+    },
+    "aliases": [
+      "chana dal",
+      "bengal gram dal"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 1000,
+    "chips": [
+      500,
+      1000,
+      2000
+    ],
+    "minQty": 3000,
+    "packSize": 30000
+  },
+  {
+    "id": "kirana.dal_urad_dhuli",
+    "pack": "kirana",
+    "category": "pulses",
+    "emoji": "⚪",
+    "names": {
+      "hi": "उड़द धुली दाल",
+      "en": "Urad Dal White",
+      "hinglish": "Urad Dhuli Dal"
+    },
+    "aliases": [
+      "urad dhuli",
+      "white urad"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 500,
+    "chips": [
+      250,
+      500,
+      1000
+    ],
+    "minQty": 2000,
+    "packSize": 25000
+  },
+  {
+    "id": "kirana.dal_urad_kali",
+    "pack": "kirana",
+    "category": "pulses",
+    "emoji": "⚫",
+    "names": {
+      "hi": "उड़द काली साबुत",
+      "en": "Urad Dal Whole Black",
+      "hinglish": "Urad Kali Dal"
+    },
+    "aliases": [
+      "urad kali",
+      "maa ki dal",
+      "black urad"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 500,
+    "chips": [
+      250,
+      500,
+      1000
+    ],
+    "minQty": 2000,
+    "packSize": 25000
+  },
+  {
+    "id": "kirana.dal_masoor_malka",
+    "pack": "kirana",
+    "category": "pulses",
+    "emoji": "🟠",
+    "names": {
+      "hi": "मलका मसूर दाल",
+      "en": "Masoor Dal (Orange)",
+      "hinglish": "Malka Masoor Dal"
+    },
+    "aliases": [
+      "masoor dal",
+      "malka dal",
+      "red lentil"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 1000,
+    "chips": [
+      500,
+      1000,
+      2000
+    ],
+    "minQty": 3000,
+    "packSize": 25000
+  },
+  {
+    "id": "kirana.chole_kabuli",
+    "pack": "kirana",
+    "category": "pulses",
+    "emoji": "🟤",
+    "names": {
+      "hi": "काबुली चना (छोले)",
+      "en": "Kabuli Chana (Chickpeas)",
+      "hinglish": "Kabuli Chole"
+    },
+    "aliases": [
+      "kabuli chana",
+      "chole",
+      "safed chana"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 1000,
+    "chips": [
+      500,
+      1000,
+      2000
+    ],
+    "minQty": 3000,
+    "packSize": 30000
+  },
+  {
+    "id": "kirana.kala_chana",
+    "pack": "kirana",
+    "category": "pulses",
+    "emoji": "🟤",
+    "names": {
+      "hi": "काला चना",
+      "en": "Black Chana",
+      "hinglish": "Kala Chana"
+    },
+    "aliases": [
+      "black gram",
+      "desi chana",
+      "kala chana"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 1000,
+    "chips": [
+      500,
+      1000,
+      2000
+    ],
+    "minQty": 3000,
+    "packSize": 30000
+  },
+  {
+    "id": "kirana.rajma_chitra",
+    "pack": "kirana",
+    "category": "pulses",
+    "emoji": "🫘",
+    "names": {
+      "hi": "राजमा चित्रा",
+      "en": "Rajma Chitra (Kidney Beans)",
+      "hinglish": "Rajma Chitra"
+    },
+    "aliases": [
+      "rajma",
+      "red kidney beans"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 500,
+    "chips": [
+      250,
+      500,
+      1000
+    ],
+    "minQty": 2000,
+    "packSize": 25000
+  },
+  {
+    "id": "kirana.rajma_red",
+    "pack": "kirana",
+    "category": "pulses",
+    "emoji": "🫘",
+    "names": {
+      "hi": "लाल राजमा (कश्मीरी)",
+      "en": "Red Rajma Kashmiri",
+      "hinglish": "Lal Rajma"
+    },
+    "aliases": [
+      "kashmiri rajma",
+      "red rajma"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 500,
+    "chips": [
+      250,
+      500,
+      1000
+    ],
+    "minQty": 1500,
+    "packSize": 20000
+  },
+  {
+    "id": "kirana.soya_chunks",
+    "pack": "kirana",
+    "category": "pulses",
+    "emoji": "🧆",
+    "names": {
+      "hi": "सोयाबीन बड़ी (Nutrela)",
+      "en": "Soya Chunks Nutrela",
+      "hinglish": "Soyabean Badi"
+    },
+    "aliases": [
+      "soya chunks",
+      "nutrela",
+      "soya badi"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 200,
+    "chips": [
+      100,
+      200,
+      500
+    ],
+    "minQty": 1000,
+    "packSize": 10000
+  },
+  {
+    "id": "kirana.haldi_powder",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "🟡",
+    "names": {
+      "hi": "हल्दी पाउडर",
+      "en": "Turmeric Powder (Haldi)",
+      "hinglish": "Haldi Powder"
+    },
+    "aliases": [
+      "turmeric",
+      "haldi",
+      "haldi powder"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 200,
+    "chips": [
+      100,
+      200,
+      500
+    ],
+    "minQty": 1000,
+    "packSize": 10000
+  },
+  {
+    "id": "kirana.mirchi_powder",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "🔴",
+    "names": {
+      "hi": "लाल मिर्च पाउडर",
+      "en": "Red Chilli Powder",
+      "hinglish": "Lal Mirchi Powder"
+    },
+    "aliases": [
+      "mirchi",
+      "lal mirch",
+      "chilli powder"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 200,
+    "chips": [
+      100,
+      200,
+      500
+    ],
+    "minQty": 1000,
+    "packSize": 10000
+  },
+  {
+    "id": "kirana.dhaniya_powder",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "🟢",
+    "names": {
+      "hi": "धनिया पाउडर",
+      "en": "Coriander Powder (Dhaniya)",
+      "hinglish": "Dhaniya Powder"
+    },
+    "aliases": [
+      "dhaniya",
+      "coriander powder"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 200,
+    "chips": [
+      100,
+      200,
+      500
+    ],
+    "minQty": 1000,
+    "packSize": 10000
+  },
+  {
+    "id": "kirana.jeera_whole",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "🟤",
+    "names": {
+      "hi": "जीरा साबुत",
+      "en": "Cumin Seeds (Jeera)",
+      "hinglish": "Jeera Sabut"
+    },
+    "aliases": [
+      "cumin",
+      "jeera",
+      "zeera"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 100,
+    "chips": [
+      50,
+      100,
+      250,
+      500
+    ],
+    "minQty": 500,
+    "packSize": 5000
+  },
+  {
+    "id": "kirana.garam_masala",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "🟤",
+    "names": {
+      "hi": "गरम मसाला (MDH)",
+      "en": "Garam Masala (MDH)",
+      "hinglish": "Garam Masala MDH"
+    },
+    "aliases": [
+      "garam masala",
+      "mdh masala",
+      "spices"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 100,
+    "chips": [
+      50,
+      100,
+      250
+    ],
+    "minQty": 400,
+    "packSize": 4000
+  },
+  {
+    "id": "kirana.sabzi_masala",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "🟤",
+    "names": {
+      "hi": "सब्ज़ी मसाला",
+      "en": "Sabzi Masala",
+      "hinglish": "Sabzi Masala"
+    },
+    "aliases": [
+      "sabji masala",
+      "kitchen king",
+      "everest"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 100,
+    "chips": [
+      50,
+      100,
+      200
+    ],
+    "minQty": 400,
+    "packSize": 4000
+  },
+  {
+    "id": "kirana.chaat_masala",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "🟤",
+    "names": {
+      "hi": "चाट मसाला (Catch)",
+      "en": "Chaat Masala",
+      "hinglish": "Chaat Masala Catch"
+    },
+    "aliases": [
+      "chaat masala",
+      "catch masala"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 100,
+    "chips": [
+      50,
+      100
+    ],
+    "minQty": 300,
+    "packSize": 3000
+  },
+  {
+    "id": "kirana.hing",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "🟡",
+    "names": {
+      "hi": "हींग (Catch/Bandhani)",
+      "en": "Asafoetida (Hing)",
+      "hinglish": "Hing Catch"
+    },
+    "aliases": [
+      "hing",
+      "asafoetida",
+      "bandhani hing"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 50,
+    "chips": [
+      25,
+      50,
+      100
+    ],
+    "minQty": 200,
+    "packSize": 2000
+  },
+  {
+    "id": "kirana.kali_mirch",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "⚫",
+    "names": {
+      "hi": "काली मिर्च साबुत",
+      "en": "Black Pepper Whole",
+      "hinglish": "Kali Mirch Sabut"
+    },
+    "aliases": [
+      "black pepper",
+      "kali mirch"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 50,
+    "chips": [
+      25,
+      50,
+      100
+    ],
+    "minQty": 200,
+    "packSize": 2000
+  },
+  {
+    "id": "kirana.laung_cloves",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "🟤",
+    "names": {
+      "hi": "लौंग",
+      "en": "Cloves (Laung)",
+      "hinglish": "Laung Cloves"
+    },
+    "aliases": [
+      "cloves",
+      "laung",
+      "lavang"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 50,
+    "chips": [
+      25,
+      50,
+      100
+    ],
+    "minQty": 200,
+    "packSize": 2000
+  },
+  {
+    "id": "kirana.elaichi_chhoti",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "🟢",
+    "names": {
+      "hi": "छोटी इलायची (हरी)",
+      "en": "Green Cardamom (Elaichi)",
+      "hinglish": "Chhoti Elaichi"
+    },
+    "aliases": [
+      "cardamom",
+      "green elaichi",
+      "chhoti elaichi"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 25,
+    "chips": [
+      10,
+      25,
+      50
+    ],
+    "minQty": 100,
+    "packSize": 1000
+  },
+  {
+    "id": "kirana.dalchini",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "🪵",
+    "names": {
+      "hi": "दालचीनी",
+      "en": "Cinnamon Sticks (Dalchini)",
+      "hinglish": "Dalchini"
+    },
+    "aliases": [
+      "cinnamon",
+      "dalchini"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 50,
+    "chips": [
+      25,
+      50,
+      100
+    ],
+    "minQty": 200,
+    "packSize": 2000
+  },
+  {
+    "id": "kirana.methi_dana",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "🟡",
+    "names": {
+      "hi": "मेथी दाना",
+      "en": "Fenugreek Seeds (Methi)",
+      "hinglish": "Methi Dana"
+    },
+    "aliases": [
+      "methi",
+      "fenugreek"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 100,
+    "chips": [
+      50,
+      100,
+      250
+    ],
+    "minQty": 300,
+    "packSize": 3000
+  },
+  {
+    "id": "kirana.sarson_rai",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "⚫",
+    "names": {
+      "hi": "राई / काली सरसों",
+      "en": "Mustard Seeds (Rai)",
+      "hinglish": "Rai Sarson"
+    },
+    "aliases": [
+      "rai",
+      "mustard seeds",
+      "sarson"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 100,
+    "chips": [
+      50,
+      100,
+      250
+    ],
+    "minQty": 300,
+    "packSize": 3000
+  },
+  {
+    "id": "kirana.amchur_powder",
+    "pack": "kirana",
+    "category": "spices",
+    "emoji": "🟤",
+    "names": {
+      "hi": "आमचूर पाउडर",
+      "en": "Dry Mango Powder (Amchur)",
+      "hinglish": "Amchur Powder"
+    },
+    "aliases": [
+      "amchur",
+      "dry mango powder",
+      "khatai"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 100,
+    "chips": [
+      50,
+      100,
+      200
+    ],
+    "minQty": 300,
+    "packSize": 3000
+  },
+  {
+    "id": "kirana.maggi_single",
+    "pack": "kirana",
+    "category": "snacks",
+    "emoji": "🍜",
+    "names": {
+      "hi": "मैगी नूडल्स (छोटा)",
+      "en": "Maggi 2-Minute Noodles",
+      "hinglish": "Maggi Noodles Chhota"
+    },
+    "aliases": [
+      "maggi",
+      "noodles",
+      "maggi packet"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4,
+      6,
+      12
+    ],
+    "minQty": 24,
+    "packSize": 96
+  },
+  {
+    "id": "kirana.maggi_4pack",
+    "pack": "kirana",
+    "category": "snacks",
+    "emoji": "🍜",
+    "names": {
+      "hi": "मैगी 4-पैक",
+      "en": "Maggi 4-Pack Family",
+      "hinglish": "Maggi 4 Pack"
+    },
+    "aliases": [
+      "maggi family pack",
+      "maggi 4 pack"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 6,
+    "packSize": 24
+  },
+  {
+    "id": "kirana.kurkure_masala",
+    "pack": "kirana",
+    "category": "snacks",
+    "emoji": "🍿",
+    "names": {
+      "hi": "कुरकुरे मसाला मंची",
+      "en": "Kurkure Masala Munch",
+      "hinglish": "Kurkure Masala Munch"
+    },
+    "aliases": [
+      "kurkure",
+      "namkeen",
+      "chips"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "minQty": 15,
+    "packSize": 60
+  },
+  {
+    "id": "kirana.lays_classic_salted",
+    "pack": "kirana",
+    "category": "snacks",
+    "emoji": "🥔",
+    "names": {
+      "hi": "लेज सॉल्टेड (नीला)",
+      "en": "Lay's Classic Salted Blue",
+      "hinglish": "Lays Salted Blue"
+    },
+    "aliases": [
+      "lays",
+      "potato chips",
+      "lays blue"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "minQty": 15,
+    "packSize": 60
+  },
+  {
+    "id": "kirana.lays_magic_masala",
+    "pack": "kirana",
+    "category": "snacks",
+    "emoji": "🥔",
+    "names": {
+      "hi": "लेज मैजिक मसाला (हरा)",
+      "en": "Lay's Magic Masala Green",
+      "hinglish": "Lays Masala Green"
+    },
+    "aliases": [
+      "lays green",
+      "magic masala",
+      "lays"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "minQty": 15,
+    "packSize": 60
+  },
+  {
+    "id": "kirana.bingo_mad_angles",
+    "pack": "kirana",
+    "category": "snacks",
+    "emoji": "🔺",
+    "names": {
+      "hi": "बिंगो मैड एंगल्स",
+      "en": "Bingo Mad Angles Achaari",
+      "hinglish": "Bingo Mad Angles"
+    },
+    "aliases": [
+      "bingo",
+      "mad angles",
+      "triangle chips"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "kirana.bhujia_haldiram",
+    "pack": "kirana",
+    "category": "snacks",
+    "emoji": "🥨",
+    "names": {
+      "hi": "हल्दीराम भुजिया सेव",
+      "en": "Haldiram Aloo Bhujia 200g",
+      "hinglish": "Haldiram Aloo Bhujia"
+    },
+    "aliases": [
+      "aloo bhujia",
+      "bhujia",
+      "haldiram namkeen"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "kirana.khatta_meetha_haldiram",
+    "pack": "kirana",
+    "category": "snacks",
+    "emoji": "🥨",
+    "names": {
+      "hi": "हल्दीराम खट्टा मीठा",
+      "en": "Haldiram Khatta Meetha 200g",
+      "hinglish": "Haldiram Khatta Meetha"
+    },
+    "aliases": [
+      "khatta meetha",
+      "haldiram namkeen"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "kirana.navratan_bikaji",
+    "pack": "kirana",
+    "category": "snacks",
+    "emoji": "🥨",
+    "names": {
+      "hi": "बीकाजी नवरतन मिक्स",
+      "en": "Bikaji Navratan Mixture",
+      "hinglish": "Bikaji Navratan Mix"
+    },
+    "aliases": [
+      "navratan mix",
+      "bikaji namkeen"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "kirana.moong_dal_namkeen",
+    "pack": "kirana",
+    "category": "snacks",
+    "emoji": "🟡",
+    "names": {
+      "hi": "हल्दीराम मूंग दाल",
+      "en": "Haldiram Salted Moong Dal",
+      "hinglish": "Haldiram Moong Dal"
+    },
+    "aliases": [
+      "moong dal namkeen",
+      "haldiram"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "kirana.roasted_chana_namkeen",
+    "pack": "kirana",
+    "category": "snacks",
+    "emoji": "🟤",
+    "names": {
+      "hi": "भुना चना (छिलका उतरा)",
+      "en": "Roasted Chana Pack",
+      "hinglish": "Bhuna Chana Namkeen"
+    },
+    "aliases": [
+      "bhuna chana",
+      "roasted gram"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 250,
+    "chips": [
+      100,
+      250,
+      500
+    ],
+    "minQty": 1000,
+    "packSize": 10000
+  },
+  {
+    "id": "kirana.peanut_chikki",
+    "pack": "kirana",
+    "category": "snacks",
+    "emoji": "🥜",
+    "names": {
+      "hi": "मूंगफली चिक्की / पट्टी",
+      "en": "Peanut Chikki Bar",
+      "hinglish": "Moongphali Chikki"
+    },
+    "aliases": [
+      "chikki",
+      "gud patti",
+      "peanut bar"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "minQty": 20,
+    "packSize": 100
+  },
+  {
+    "id": "kirana.parle_g_small",
+    "pack": "kirana",
+    "category": "biscuits",
+    "emoji": "🍪",
+    "names": {
+      "hi": "पारले-जी (₹5/₹10)",
+      "en": "Parle-G Glucose Biscuit",
+      "hinglish": "Parle-G Biscuit"
+    },
+    "aliases": [
+      "parle g",
+      "glucose biscuit",
+      "chai biscuit"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5,
+      10,
+      24
+    ],
+    "minQty": 24,
+    "packSize": 144
+  },
+  {
+    "id": "kirana.good_day_butter",
+    "pack": "kirana",
+    "category": "biscuits",
+    "emoji": "🍪",
+    "names": {
+      "hi": "गुड डे बटर (Britannia)",
+      "en": "Britannia Good Day Butter",
+      "hinglish": "Good Day Butter"
+    },
+    "aliases": [
+      "good day",
+      "butter biscuit",
+      "britannia"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "minQty": 15,
+    "packSize": 60
+  },
+  {
+    "id": "kirana.good_day_cashew",
+    "pack": "kirana",
+    "category": "biscuits",
+    "emoji": "🍪",
+    "names": {
+      "hi": "गुड डे काजू",
+      "en": "Good Day Cashew",
+      "hinglish": "Good Day Kaju"
+    },
+    "aliases": [
+      "good day kaju",
+      "cashew biscuit"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "kirana.marie_gold",
+    "pack": "kirana",
+    "category": "biscuits",
+    "emoji": "🍪",
+    "names": {
+      "hi": "मैरी गोल्ड (Britannia)",
+      "en": "Britannia Marie Gold",
+      "hinglish": "Marie Gold Biscuit"
+    },
+    "aliases": [
+      "marie gold",
+      "chai biscuit",
+      "sugar free biscuit"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 12,
+    "packSize": 48
+  },
+  {
+    "id": "kirana.monaco_salted",
+    "pack": "kirana",
+    "category": "biscuits",
+    "emoji": "🍪",
+    "names": {
+      "hi": "मोनाको सॉल्टेड",
+      "en": "Parle Monaco Salted",
+      "hinglish": "Monaco Salted"
+    },
+    "aliases": [
+      "monaco",
+      "salted biscuit"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 12,
+    "packSize": 48
+  },
+  {
+    "id": "kirana.krackjack",
+    "pack": "kirana",
+    "category": "biscuits",
+    "emoji": "🍪",
+    "names": {
+      "hi": "क्रैकजैक मीठा-नमकीन",
+      "en": "Parle Krackjack Sweet & Salty",
+      "hinglish": "Krackjack Biscuit"
+    },
+    "aliases": [
+      "krackjack",
+      "sweet salty biscuit"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 12,
+    "packSize": 48
+  },
+  {
+    "id": "kirana.oreo_vanilla",
+    "pack": "kirana",
+    "category": "biscuits",
+    "emoji": "🍪",
+    "names": {
+      "hi": "ओरियो वैनिला क्रीम",
+      "en": "Cadbury Oreo Vanilla Cream",
+      "hinglish": "Oreo Vanilla Cream"
+    },
+    "aliases": [
+      "oreo",
+      "cream biscuit",
+      "chocolate biscuit"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "kirana.bourbon_britannia",
+    "pack": "kirana",
+    "category": "biscuits",
+    "emoji": "🍫",
+    "names": {
+      "hi": "बॉर्बन चॉकलेट क्रीम",
+      "en": "Britannia Bourbon Chocolate",
+      "hinglish": "Bourbon Chocolate"
+    },
+    "aliases": [
+      "bourbon",
+      "chocolate cream"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "kirana.hide_and_seek",
+    "pack": "kirana",
+    "category": "biscuits",
+    "emoji": "🍫",
+    "names": {
+      "hi": "हाइड एंड सीक (Parle)",
+      "en": "Parle Hide & Seek Choco Chip",
+      "hinglish": "Hide and Seek Biscuit"
+    },
+    "aliases": [
+      "hide and seek",
+      "choco chip"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 8,
+    "packSize": 32
+  },
+  {
+    "id": "kirana.rusk_britannia",
+    "pack": "kirana",
+    "category": "biscuits",
+    "emoji": "🍞",
+    "names": {
+      "hi": "टोस्ट / रस्क (Britannia)",
+      "en": "Britannia Toastea Premium Rusk",
+      "hinglish": "Britannia Rusk Toast"
+    },
+    "aliases": [
+      "rusk",
+      "toast",
+      "chai toast",
+      "sooji rusk"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "kirana.bread_white",
+    "pack": "kirana",
+    "category": "biscuits",
+    "emoji": "🍞",
+    "names": {
+      "hi": "सफेद ब्रेड (स्लाइस)",
+      "en": "White Sliced Bread",
+      "hinglish": "White Bread Slice"
+    },
+    "aliases": [
+      "bread",
+      "sandwich bread",
+      "pav bread"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      3
+    ],
+    "minQty": 6,
+    "packSize": 20
+  },
+  {
+    "id": "kirana.cream_roll",
+    "pack": "kirana",
+    "category": "biscuits",
+    "emoji": "🥐",
+    "names": {
+      "hi": "क्रीम रोल (बेकरी)",
+      "en": "Bakery Cream Roll",
+      "hinglish": "Bakery Cream Roll"
+    },
+    "aliases": [
+      "cream roll",
+      "puff roll"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "kirana.tea_red_label",
+    "pack": "kirana",
+    "category": "beverages",
+    "emoji": "☕",
+    "names": {
+      "hi": "रेड लेबल चाय (Brooke Bond)",
+      "en": "Brooke Bond Red Label Tea",
+      "hinglish": "Red Label Chai"
+    },
+    "aliases": [
+      "chai patti",
+      "tea",
+      "red label chai"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 250,
+    "chips": [
+      100,
+      250,
+      500,
+      1000
+    ],
+    "minQty": 1000,
+    "packSize": 10000
+  },
+  {
+    "id": "kirana.tea_tata_tea_gold",
+    "pack": "kirana",
+    "category": "beverages",
+    "emoji": "☕",
+    "names": {
+      "hi": "टाटा टी गोल्ड",
+      "en": "Tata Tea Gold",
+      "hinglish": "Tata Tea Gold"
+    },
+    "aliases": [
+      "tata tea",
+      "tata gold",
+      "chai patti"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 250,
+    "chips": [
+      100,
+      250,
+      500
+    ],
+    "minQty": 1000,
+    "packSize": 10000
+  },
+  {
+    "id": "kirana.tea_taj_mahal",
+    "pack": "kirana",
+    "category": "beverages",
+    "emoji": "☕",
+    "names": {
+      "hi": "ताज महल चाय पत्ती",
+      "en": "Taj Mahal Premium Tea",
+      "hinglish": "Taj Mahal Chai"
+    },
+    "aliases": [
+      "taj mahal tea",
+      "premium tea"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 250,
+    "chips": [
+      100,
+      250,
+      500
+    ],
+    "minQty": 500,
+    "packSize": 5000
+  },
+  {
+    "id": "kirana.coffee_nescafe_pouch",
+    "pack": "kirana",
+    "category": "beverages",
+    "emoji": "☕",
+    "names": {
+      "hi": "नेस्कैफे कॉफी (₹2/₹10 पाउच)",
+      "en": "Nescafe Classic Sachet",
+      "hinglish": "Nescafe Coffee Pouch"
+    },
+    "aliases": [
+      "nescafe",
+      "coffee pouch",
+      "instant coffee"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5,
+      10,
+      20
+    ],
+    "minQty": 30,
+    "packSize": 120
+  },
+  {
+    "id": "kirana.coffee_nescafe_jar",
+    "pack": "kirana",
+    "category": "beverages",
+    "emoji": "☕",
+    "names": {
+      "hi": "नेस्कैफे जार 50g",
+      "en": "Nescafe Classic Jar 50g",
+      "hinglish": "Nescafe Jar 50g"
+    },
+    "aliases": [
+      "coffee jar",
+      "nescafe classic"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 4,
+    "packSize": 16
+  },
+  {
+    "id": "kirana.horlicks_classic",
+    "pack": "kirana",
+    "category": "beverages",
+    "emoji": "🥛",
+    "names": {
+      "hi": "हॉर्लिक्स माल्ट 500g",
+      "en": "Horlicks Classic Malt Refill",
+      "hinglish": "Horlicks Malt Refill"
+    },
+    "aliases": [
+      "horlicks",
+      "health drink",
+      "malt"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 4,
+    "packSize": 16
+  },
+  {
+    "id": "kirana.bournvita",
+    "pack": "kirana",
+    "category": "beverages",
+    "emoji": "🥛",
+    "names": {
+      "hi": "बॉर्नविटा चॉकलेट 500g",
+      "en": "Cadbury Bournvita Jar",
+      "hinglish": "Bournvita Jar"
+    },
+    "aliases": [
+      "bournvita",
+      "chocolate drink"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 4,
+    "packSize": 16
+  },
+  {
+    "id": "kirana.roohafza",
+    "pack": "kirana",
+    "category": "beverages",
+    "emoji": "🌹",
+    "names": {
+      "hi": "रूह अफ़ज़ा शर्बत (Hamdard)",
+      "en": "Hamdard Rooh Afza 750ml",
+      "hinglish": "Rooh Afza Sharbat"
+    },
+    "aliases": [
+      "roohafza",
+      "gulab sharbat",
+      "summer drink"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 750,
+    "chips": [
+      750,
+      1500
+    ],
+    "minQty": 1500,
+    "packSize": 9000
+  },
+  {
+    "id": "kirana.glucose_d",
+    "pack": "kirana",
+    "category": "beverages",
+    "emoji": "⚡",
+    "names": {
+      "hi": "ग्लूकोज-डी 500g",
+      "en": "Dabur Glucose-D Orange/Regular",
+      "hinglish": "Glucose D Dabur"
+    },
+    "aliases": [
+      "glucose d",
+      "glucon d",
+      "energy drink"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      3
+    ],
+    "minQty": 6,
+    "packSize": 24
+  },
+  {
+    "id": "kirana.rasna_orange",
+    "pack": "kirana",
+    "category": "beverages",
+    "emoji": "🍊",
+    "names": {
+      "hi": "रसना ऑरेंज इंस्टेंट",
+      "en": "Rasna Instant Fruit Drink",
+      "hinglish": "Rasna Orange Pack"
+    },
+    "aliases": [
+      "rasna",
+      "orange drink"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "kirana.milk_amul_taaza",
+    "pack": "kirana",
+    "category": "dairy",
+    "emoji": "🥛",
+    "names": {
+      "hi": "अमूल ताज़ा दूध (500ml)",
+      "en": "Amul Taaza Toned Milk",
+      "hinglish": "Amul Taaza Doodh"
+    },
+    "aliases": [
+      "doodh",
+      "milk",
+      "amul taaza",
+      "toned milk"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 500,
+    "chips": [
+      500,
+      1000,
+      1500,
+      2000
+    ],
+    "minQty": 4000,
+    "packSize": 20000
+  },
+  {
+    "id": "kirana.milk_amul_gold",
+    "pack": "kirana",
+    "category": "dairy",
+    "emoji": "🥛",
+    "names": {
+      "hi": "अमूल गोल्ड फुल क्रीम (500ml)",
+      "en": "Amul Gold Full Cream Milk",
+      "hinglish": "Amul Gold Doodh"
+    },
+    "aliases": [
+      "amul gold",
+      "full cream milk",
+      "gold doodh"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 500,
+    "chips": [
+      500,
+      1000,
+      1500,
+      2000
+    ],
+    "minQty": 4000,
+    "packSize": 20000
+  },
+  {
+    "id": "kirana.curd_amul_masti",
+    "pack": "kirana",
+    "category": "dairy",
+    "emoji": "🥣",
+    "names": {
+      "hi": "अमूल मस्ती दही (400g)",
+      "en": "Amul Masti Dahi Pouch",
+      "hinglish": "Amul Masti Dahi"
+    },
+    "aliases": [
+      "dahi",
+      "curd",
+      "amul dahi"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 400,
+    "chips": [
+      400,
+      800,
+      1200
+    ],
+    "minQty": 2000,
+    "packSize": 12000
+  },
+  {
+    "id": "kirana.butter_amul_100g",
+    "pack": "kirana",
+    "category": "dairy",
+    "emoji": "🧈",
+    "names": {
+      "hi": "अमूल बटर (100g टिक्की)",
+      "en": "Amul Salted Butter 100g",
+      "hinglish": "Amul Butter 100g"
+    },
+    "aliases": [
+      "butter",
+      "makhan",
+      "amul butter"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "kirana.paneer_fresh_amul",
+    "pack": "kirana",
+    "category": "dairy",
+    "emoji": "🧀",
+    "names": {
+      "hi": "अमूल ताजा पनीर (200g)",
+      "en": "Amul Fresh Paneer 200g",
+      "hinglish": "Amul Fresh Paneer"
+    },
+    "aliases": [
+      "paneer",
+      "cottage cheese"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 6,
+    "packSize": 24
+  },
+  {
+    "id": "kirana.chaas_amul",
+    "pack": "kirana",
+    "category": "dairy",
+    "emoji": "🥛",
+    "names": {
+      "hi": "अमूल छाछ / मट्ठा (500ml)",
+      "en": "Amul Spiced Buttermilk (Chaas)",
+      "hinglish": "Amul Chaas Buttermilk"
+    },
+    "aliases": [
+      "chaas",
+      "mattha",
+      "buttermilk"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 500,
+    "chips": [
+      500,
+      1000,
+      2000
+    ],
+    "minQty": 3000,
+    "packSize": 15000
+  },
+  {
+    "id": "kirana.soap_dettol",
+    "pack": "kirana",
+    "category": "personal_care",
+    "emoji": "🧼",
+    "names": {
+      "hi": "डेटॉल ओरिजिनल साबुन",
+      "en": "Dettol Original Bath Soap",
+      "hinglish": "Dettol Sabun Original"
+    },
+    "aliases": [
+      "dettol soap",
+      "bath soap",
+      "sabun"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "minQty": 12,
+    "packSize": 48
+  },
+  {
+    "id": "kirana.soap_lifebuoy",
+    "pack": "kirana",
+    "category": "personal_care",
+    "emoji": "🧼",
+    "names": {
+      "hi": "लाइफबॉय लाल साबुन",
+      "en": "Lifebuoy Total Soap",
+      "hinglish": "Lifebuoy Lal Sabun"
+    },
+    "aliases": [
+      "lifebuoy",
+      "red soap",
+      "sabun"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "minQty": 12,
+    "packSize": 48
+  },
+  {
+    "id": "kirana.soap_lux",
+    "pack": "kirana",
+    "category": "personal_care",
+    "emoji": "🧼",
+    "names": {
+      "hi": "लक्स रोज़ साबुन",
+      "en": "Lux Rose Bath Soap",
+      "hinglish": "Lux Rose Sabun"
+    },
+    "aliases": [
+      "lux soap",
+      "beauty soap"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 10,
+    "packSize": 40
+  },
+  {
+    "id": "kirana.toothpaste_colgate",
+    "pack": "kirana",
+    "category": "personal_care",
+    "emoji": "🪥",
+    "names": {
+      "hi": "कोलगेट स्ट्रॉन्ग टीथ 100g",
+      "en": "Colgate Strong Teeth 100g",
+      "hinglish": "Colgate Strong Teeth"
+    },
+    "aliases": [
+      "colgate",
+      "toothpaste",
+      "dant manjan"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      3
+    ],
+    "minQty": 8,
+    "packSize": 36
+  },
+  {
+    "id": "kirana.toothpaste_sensodyne",
+    "pack": "kirana",
+    "category": "personal_care",
+    "emoji": "🪥",
+    "names": {
+      "hi": "सेंसोडाइन टूथपेस्ट",
+      "en": "Sensodyne Daily Care",
+      "hinglish": "Sensodyne Toothpaste"
+    },
+    "aliases": [
+      "sensodyne",
+      "sensitive toothpaste"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 4,
+    "packSize": 16
+  },
+  {
+    "id": "kirana.shampoo_clinic_plus",
+    "pack": "kirana",
+    "category": "personal_care",
+    "emoji": "🧴",
+    "names": {
+      "hi": "क्लिनिक प्लस शैम्पू पाउच (₹1)",
+      "en": "Clinic Plus Sachet",
+      "hinglish": "Clinic Plus Pouch"
+    },
+    "aliases": [
+      "clinic plus",
+      "shampoo sachet",
+      "pouch"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      5,
+      10,
+      20,
+      50
+    ],
+    "minQty": 50,
+    "packSize": 250
+  },
+  {
+    "id": "kirana.shampoo_head_shoulders",
+    "pack": "kirana",
+    "category": "personal_care",
+    "emoji": "🧴",
+    "names": {
+      "hi": "हेड एंड शोल्डर्स 72ml",
+      "en": "Head & Shoulders Anti-Dandruff",
+      "hinglish": "Head and Shoulders Bottle"
+    },
+    "aliases": [
+      "head and shoulders",
+      "dandruff shampoo"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2
+    ],
+    "minQty": 4,
+    "packSize": 16
+  },
+  {
+    "id": "kirana.hair_oil_parachute",
+    "pack": "kirana",
+    "category": "personal_care",
+    "emoji": "🥥",
+    "names": {
+      "hi": "पैराशूट नारियल तेल 100ml",
+      "en": "Parachute Pure Coconut Oil",
+      "hinglish": "Parachute Nariyal Tel"
+    },
+    "aliases": [
+      "parachute",
+      "hair oil",
+      "coconut oil blue bottle"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 100,
+    "chips": [
+      100,
+      200,
+      500
+    ],
+    "minQty": 500,
+    "packSize": 3000
+  },
+  {
+    "id": "kirana.hair_oil_bajaj_almond",
+    "pack": "kirana",
+    "category": "personal_care",
+    "emoji": "🌰",
+    "names": {
+      "hi": "बजाज बादाम ड्रॉप्स 100ml",
+      "en": "Bajaj Almond Drops Hair Oil",
+      "hinglish": "Bajaj Badam Drops"
+    },
+    "aliases": [
+      "bajaj almond",
+      "badam tel",
+      "hair oil"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 100,
+    "chips": [
+      100,
+      200
+    ],
+    "minQty": 400,
+    "packSize": 2000
+  },
+  {
+    "id": "kirana.sanitary_pads_whisper",
+    "pack": "kirana",
+    "category": "personal_care",
+    "emoji": "🌸",
+    "names": {
+      "hi": "व्हिस्पर चॉइस विंग्स (6 पैड)",
+      "en": "Whisper Choice Wings 6 Pads",
+      "hinglish": "Whisper Choice Wings"
+    },
+    "aliases": [
+      "whisper",
+      "sanitary pad",
+      "stayfree"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4
+    ],
+    "minQty": 8,
+    "packSize": 32
+  },
+  {
+    "id": "kirana.surf_excel_quick_wash",
+    "pack": "kirana",
+    "category": "household",
+    "emoji": "🧺",
+    "names": {
+      "hi": "सर्फ एक्सेल क्विक वॉश 1kg",
+      "en": "Surf Excel Quick Wash 1kg",
+      "hinglish": "Surf Excel Powder 1kg"
+    },
+    "aliases": [
+      "surf excel",
+      "detergent powder",
+      "washing powder"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 1000,
+    "chips": [
+      500,
+      1000,
+      2000
+    ],
+    "minQty": 3000,
+    "packSize": 20000
+  },
+  {
+    "id": "kirana.ghadi_detergent",
+    "pack": "kirana",
+    "category": "household",
+    "emoji": "🧺",
+    "names": {
+      "hi": "घड़ी डिटर्जेंट पाउडर 1kg",
+      "en": "Ghadi Detergent Powder 1kg",
+      "hinglish": "Ghadi Powder 1kg"
+    },
+    "aliases": [
+      "ghadi powder",
+      "detergent powder",
+      "sasta surf"
+    ],
+    "baseUnit": "g",
+    "defaultSaleQty": 1000,
+    "chips": [
+      500,
+      1000,
+      2000,
+      3000
+    ],
+    "minQty": 5000,
+    "packSize": 30000
+  },
+  {
+    "id": "kirana.rin_soap_bar",
+    "pack": "kirana",
+    "category": "household",
+    "emoji": "🧼",
+    "names": {
+      "hi": "रिन कपड़े धोने का साबुन",
+      "en": "Rin Fabric Bar (250g)",
+      "hinglish": "Rin Kapde Sabun"
+    },
+    "aliases": [
+      "rin bar",
+      "washing soap",
+      "rin sabun"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "minQty": 15,
+    "packSize": 60
+  },
+  {
+    "id": "kirana.vim_dishwash_bar",
+    "pack": "kirana",
+    "category": "household",
+    "emoji": "🍋",
+    "names": {
+      "hi": "विम बर्तन साबुन (₹10/₹20)",
+      "en": "Vim Dishwash Bar",
+      "hinglish": "Vim Bartan Sabun Bar"
+    },
+    "aliases": [
+      "vim bar",
+      "bartan sabun",
+      "dishwash"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "minQty": 20,
+    "packSize": 80
+  },
+  {
+    "id": "kirana.vim_liquid_gel",
+    "pack": "kirana",
+    "category": "household",
+    "emoji": "🍋",
+    "names": {
+      "hi": "विम जेल लिक्विड (250ml)",
+      "en": "Vim Dishwash Gel 250ml",
+      "hinglish": "Vim Liquid Gel"
+    },
+    "aliases": [
+      "vim liquid",
+      "dishwash gel"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 250,
+    "chips": [
+      250,
+      500
+    ],
+    "minQty": 1000,
+    "packSize": 6000
+  },
+  {
+    "id": "kirana.harpic_toilet_cleaner",
+    "pack": "kirana",
+    "category": "household",
+    "emoji": "🚽",
+    "names": {
+      "hi": "हार्पिक टॉयलेट क्लीनर 500ml",
+      "en": "Harpic Power Plus 500ml",
+      "hinglish": "Harpic Toilet Cleaner"
+    },
+    "aliases": [
+      "harpic",
+      "toilet cleaner",
+      "blue bottle"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 500,
+    "chips": [
+      500,
+      1000
+    ],
+    "minQty": 1500,
+    "packSize": 9000
+  },
+  {
+    "id": "kirana.lyzol_floor_cleaner",
+    "pack": "kirana",
+    "category": "household",
+    "emoji": "🧴",
+    "names": {
+      "hi": "लाइज़ोल पोछा फिनाइल 500ml",
+      "en": "Lizol Disinfectant Surface Cleaner",
+      "hinglish": "Lizol Floor Cleaner"
+    },
+    "aliases": [
+      "lizol",
+      "floor cleaner",
+      "pocha phenyl"
+    ],
+    "baseUnit": "ml",
+    "defaultSaleQty": 500,
+    "chips": [
+      500,
+      1000
+    ],
+    "minQty": 1500,
+    "packSize": 9000
+  },
+  {
+    "id": "kirana.all_out_refill",
+    "pack": "kirana",
+    "category": "household",
+    "emoji": "🦟",
+    "names": {
+      "hi": "ऑल आउट मच्छर रीफिल",
+      "en": "All Out Mosquito Liquid Refill",
+      "hinglish": "All Out Refill"
+    },
+    "aliases": [
+      "all out",
+      "machhar liquid",
+      "good knight"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      3
+    ],
+    "minQty": 8,
+    "packSize": 32
+  },
+  {
+    "id": "kirana.agarbatti_cycle",
+    "pack": "kirana",
+    "category": "household",
+    "emoji": "🪔",
+    "names": {
+      "hi": "साइकिल अगरबत्ती (धूप)",
+      "en": "Cycle Pure Agarbatti 3-in-1",
+      "hinglish": "Cycle Agarbatti Dhoop"
+    },
+    "aliases": [
+      "agarbatti",
+      "dhoop",
+      "puja samagri",
+      "cycle"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 15,
+    "packSize": 60
+  },
+  {
+    "id": "kirana.matchbox_cheeta",
+    "pack": "kirana",
+    "category": "household",
+    "emoji": "🔥",
+    "names": {
+      "hi": "माचिस का बंडल (10 डिब्बी)",
+      "en": "Safety Matches Bundle (10 Box)",
+      "hinglish": "Machis Bundle 10 Box"
+    },
+    "aliases": [
+      "machis",
+      "matchbox",
+      "aag"
+    ],
+    "baseUnit": "pcs",
+    "defaultSaleQty": 1,
+    "chips": [
+      1,
+      2,
+      5
+    ],
+    "minQty": 10,
+    "packSize": 50
+  }
+]
