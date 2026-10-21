@@ -17,9 +17,9 @@ export const StatusChip: React.FC<StatusChipProps> = ({ status, label, className
     case 'inStock':
       return (
         <span
-          className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold text-success bg-[#DDF5E9] border border-[#B5E9D2] ${className}`}
+          className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-black text-ink bg-lime border-[1.5px] border-ink shadow-[1.5px_1.5px_0px_#141413] ${className}`}
         >
-          <CheckCircle2 className="w-3.5 h-3.5" />
+          <CheckCircle2 className="w-3.5 h-3.5 stroke-[2.5]" />
           <span>{label || t('status.inStock')}</span>
         </span>
       );
@@ -27,9 +27,9 @@ export const StatusChip: React.FC<StatusChipProps> = ({ status, label, className
     case 'low':
       return (
         <span
-          className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold text-[#8A5000] bg-[#FFF5E5] border border-[#FFE0B2] ${className}`}
+          className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-black text-ink bg-saffron border-[1.5px] border-ink shadow-[1.5px_1.5px_0px_#141413] ${className}`}
         >
-          <AlertTriangle className="w-3.5 h-3.5" />
+          <AlertTriangle className="w-3.5 h-3.5 stroke-[2.5]" />
           <span>{label || t('status.low')}</span>
         </span>
       );
@@ -37,9 +37,9 @@ export const StatusChip: React.FC<StatusChipProps> = ({ status, label, className
     case 'out':
       return (
         <span
-          className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold text-[#A8322A] bg-[#FDEEED] border border-[#F8CBC8] ${className}`}
+          className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-black text-ink bg-pink border-[1.5px] border-ink shadow-[1.5px_1.5px_0px_#141413] ${className}`}
         >
-          <XCircle className="w-3.5 h-3.5" />
+          <XCircle className="w-3.5 h-3.5 stroke-[2.5]" />
           <span>{label || t('status.out')}</span>
         </span>
       );
@@ -47,9 +47,9 @@ export const StatusChip: React.FC<StatusChipProps> = ({ status, label, className
     case 'noMovement':
       return (
         <span
-          className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold text-ink bg-sky border border-sky-strong/30 ${className}`}
+          className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-black text-ink bg-mint border-[1.5px] border-ink shadow-[1.5px_1.5px_0px_#141413] ${className}`}
         >
-          <Clock className="w-3.5 h-3.5 text-ink-muted" />
+          <Clock className="w-3.5 h-3.5 stroke-[2.5]" />
           <span>{label || t('status.noMovement')}</span>
         </span>
       );

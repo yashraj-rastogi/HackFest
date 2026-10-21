@@ -23,8 +23,8 @@ export const SearchField: React.FC<SearchFieldProps> = ({
 
   return (
     <div className={`relative flex items-center w-full ${className}`}>
-      <div className="absolute left-3.5 pointer-events-none text-ink-muted">
-        <Search className="w-5 h-5 stroke-[2.25]" />
+      <div className="absolute left-3.5 pointer-events-none text-ink">
+        <Search className="w-5 h-5 stroke-[2.75]" />
       </div>
 
       <input
@@ -36,7 +36,7 @@ export const SearchField: React.FC<SearchFieldProps> = ({
         autoCorrect="off"
         autoCapitalize="none"
         enterKeyHint="search"
-        className="w-full min-h-[50px] pl-11 pr-11 py-2.5 rounded-2xl bg-surface border border-line text-ink text-base placeholder:text-ink-muted/70 focus:outline-none focus:border-brand focus:ring-4 focus:ring-brand/10 transition-all shadow-xs"
+        className="w-full min-h-[50px] pl-11 pr-12 py-2.5 rounded-2xl bg-white border-2 border-ink shadow-[2.5px_2.5px_0px_#141413] text-ink font-bold text-base placeholder:text-ink-muted/70 focus:outline-none focus:bg-yellow-50 focus:shadow-[4px_4px_0px_#141413] transition-all"
       />
 
       {value ? (
@@ -44,18 +44,18 @@ export const SearchField: React.FC<SearchFieldProps> = ({
           type="button"
           onClick={() => onChange('')}
           aria-label="Clear search"
-          className="absolute right-2.5 w-9 h-9 flex items-center justify-center rounded-xl text-ink-muted hover:text-ink active:scale-90"
+          className="absolute right-2.5 w-9 h-9 flex items-center justify-center rounded-xl text-ink hover:bg-yellow-50 active:scale-90"
         >
-          <X className="w-4 h-4 stroke-[2.5]" />
+          <X className="w-4 h-4 stroke-[2.75]" />
         </button>
       ) : onScanClick ? (
         <button
           type="button"
           onClick={onScanClick}
           aria-label="Scan barcode"
-          className="absolute right-2.5 w-9 h-9 flex items-center justify-center rounded-xl bg-canvas border border-line text-ink-muted hover:text-brand hover:border-brand/40 active:scale-90 shadow-xs"
+          className="absolute right-2 w-9 h-9 flex items-center justify-center rounded-xl bg-saffron border-2 border-ink shadow-[1.5px_1.5px_0px_#141413] text-ink active:translate-x-0.5 active:translate-y-0.5 active:shadow-[0.5px_0.5px_0px_#141413]"
         >
-          <ScanBarcode className="w-4.5 h-4.5 text-brand" />
+          <ScanBarcode className="w-4.5 h-4.5 stroke-[2.5]" />
         </button>
       ) : null}
     </div>

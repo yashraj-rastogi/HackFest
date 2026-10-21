@@ -22,22 +22,19 @@ export const ActionCard: React.FC<ActionCardProps> = ({
 }) => {
   const styles = {
     green: {
-      card: 'bg-surface hover:border-brand/50 border-line/80',
-      iconBg: 'bg-brand-soft text-brand-dark',
-      title: 'text-ink',
-      badge: 'bg-brand-soft text-brand-dark',
+      iconBg: 'bg-lime text-ink',
+      title: 'text-ink font-display font-extrabold',
+      badge: 'bg-tangy text-white border-1.5 border-ink shadow-[1.5px_1.5px_0px_#141413]',
     },
     blue: {
-      card: 'bg-surface hover:border-blue/50 border-line/80',
-      iconBg: 'bg-blue-soft text-blue',
-      title: 'text-ink',
-      badge: 'bg-blue-soft text-blue',
+      iconBg: 'bg-cobalt text-white',
+      title: 'text-ink font-display font-extrabold',
+      badge: 'bg-cobalt text-white border-1.5 border-ink shadow-[1.5px_1.5px_0px_#141413]',
     },
     lilac: {
-      card: 'bg-surface hover:border-lilac/50 border-line/80',
-      iconBg: 'bg-[#F2EFFF] text-lilac',
-      title: 'text-ink',
-      badge: 'bg-[#F2EFFF] text-lilac',
+      iconBg: 'bg-pink text-ink',
+      title: 'text-ink font-display font-extrabold',
+      badge: 'bg-pink text-ink border-1.5 border-ink shadow-[1.5px_1.5px_0px_#141413]',
     },
   }[variant];
 
@@ -45,31 +42,31 @@ export const ActionCard: React.FC<ActionCardProps> = ({
     <button
       type="button"
       onClick={onClick}
-      className={`w-full text-left p-4 rounded-3xl border shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-between gap-3 active:scale-[0.98] ${styles.card} ${className}`}
+      className={`w-full text-left p-4 rounded-3xl comic-card hover:bg-yellow-50/40 transition-all duration-150 flex items-center justify-between gap-3 active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_0px_#141413] cursor-pointer ${className}`}
     >
       <div className="flex items-center gap-3.5 min-w-0">
-        <div className={`w-13 h-13 rounded-2xl flex items-center justify-center shrink-0 ${styles.iconBg}`}>
+        <div className={`w-13 h-13 rounded-2xl flex items-center justify-center shrink-0 border-2 border-ink shadow-[2.5px_2.5px_0px_#141413] ${styles.iconBg}`}>
           {icon}
         </div>
         <div className="min-w-0">
           <div className="flex items-center gap-2">
-            <h3 className={`text-base font-bold leading-tight truncate ${styles.title}`}>
+            <h3 className={`text-base leading-tight truncate ${styles.title}`}>
               {title}
             </h3>
             {badge && (
-              <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full ${styles.badge}`}>
+              <span className={`text-[11px] font-black px-2.5 py-0.5 rounded-full ${styles.badge}`}>
                 {badge}
               </span>
             )}
           </div>
-          <p className="text-xs text-ink-muted mt-0.5 truncate leading-tight">
+          <p className="text-xs font-semibold text-ink-muted mt-0.5 truncate leading-tight">
             {subtitle}
           </p>
         </div>
       </div>
 
-      <div className="w-8 h-8 rounded-full bg-canvas flex items-center justify-center text-ink-muted shrink-0">
-        <ChevronRight className="w-4 h-4 stroke-[2.5]" />
+      <div className="w-9 h-9 rounded-full bg-saffron border-2 border-ink shadow-[2px_2px_0px_#141413] flex items-center justify-center text-ink shrink-0">
+        <ChevronRight className="w-5 h-5 stroke-[2.75]" />
       </div>
     </button>
   );

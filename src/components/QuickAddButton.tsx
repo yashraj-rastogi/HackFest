@@ -22,9 +22,9 @@ export const QuickAddButton: React.FC<QuickAddButtonProps> = ({
       type="button"
       onClick={onClick}
       aria-label={ariaLabel}
-      className={`relative inline-flex items-center justify-center shrink-0 ${dimensions} rounded-2xl bg-brand-dark hover:bg-brand text-white shadow-sm active:scale-92 transition-transform duration-100 focus:outline-none focus:ring-4 focus:ring-brand/20 ${className}`}
+      className={`relative inline-flex items-center justify-center shrink-0 ${dimensions} rounded-2xl bg-tangy hover:bg-orange text-white btn-comic font-black cursor-pointer ${className}`}
     >
-      <Plus className={`${iconSize} stroke-[2.75]`} />
+      <Plus className={`${iconSize} stroke-[3]`} />
     </button>
   );
 };

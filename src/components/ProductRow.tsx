@@ -65,27 +65,27 @@ export const ProductRow: React.FC<ProductRowProps> = ({
   return (
     <div
       onClick={() => onClickRow && onClickRow(item)}
-      className={`relative flex items-center gap-3.5 p-3 rounded-2xl bg-surface border transition-all duration-200 cursor-pointer ${
+      className={`relative flex items-center gap-3.5 p-3.5 comic-card-sm transition-all duration-150 cursor-pointer ${
         isFlashing
-          ? 'bg-brand-soft border-brand scale-[1.01] shadow-md ring-2 ring-brand/30'
-          : 'border-line/70 hover:border-brand/30 shadow-xs'
+          ? 'bg-saffron/50 scale-[1.01] shadow-[4px_4px_0px_#141413]'
+          : 'bg-white hover:bg-yellow-50/50'
       }`}
     >
       {/* Emoji Thumbnail */}
-      <div className="w-13 h-13 shrink-0 rounded-2xl bg-canvas flex items-center justify-center text-3xl select-none border border-line/40">
+      <div className="w-13 h-13 shrink-0 rounded-2xl bg-cream flex items-center justify-center text-3xl select-none border-2 border-ink shadow-[2px_2px_0px_#141413]">
         {item.emoji || '📦'}
       </div>
 
       {/* Product Details */}
       <div className="flex-1 min-w-0 pr-1">
         <div className="flex items-baseline gap-2">
-          <h3 className="text-base font-bold text-ink truncate leading-tight">
+          <h3 className="text-base font-display font-extrabold text-ink truncate leading-tight">
             {localizedName}
           </h3>
           {stockState && <ConfidenceDot confidence={stockState.confidence} />}
         </div>
 
-        <div className="flex items-center gap-2 mt-0.5 text-xs text-ink-muted truncate">
+        <div className="flex items-center gap-2 mt-0.5 text-xs font-semibold text-ink-muted truncate">
           <span>{secondaryName}</span>
           {showCategory && (
             <>
@@ -98,11 +98,11 @@ export const ProductRow: React.FC<ProductRowProps> = ({
         {/* Stock info strip */}
         <div className="flex items-center gap-2 mt-1.5 flex-wrap">
           {stockState && stockState.qty !== null ? (
-            <span className="text-sm font-bold text-ink tabular-nums">
+            <span className="text-sm font-extrabold text-ink tabular-nums font-pixel">
               {formatQty(stockState.qty, item.baseUnit, lang)}
             </span>
           ) : (
-            <span className="text-xs text-ink-muted italic">
+            <span className="text-xs text-ink-muted font-bold italic">
               {formatQty(null, item.baseUnit, lang)}
             </span>
           )}
@@ -110,7 +110,7 @@ export const ProductRow: React.FC<ProductRowProps> = ({
           <StatusChip status={status} />
 
           {stockState?.negative && (
-            <span className="text-[11px] font-semibold text-danger bg-danger/10 px-1.5 py-0.5 rounded">
+            <span className="text-[11px] font-black text-ink bg-pink border border-ink shadow-[1px_1px_0px_#141413] px-2 py-0.5 rounded-full">
               Ginti kar lo
             </span>
           )}
@@ -132,7 +132,7 @@ export const ProductRow: React.FC<ProductRowProps> = ({
                 aria-label="More actions"
                 className="w-10 h-14 flex items-center justify-center text-ink-muted hover:text-ink active:scale-90"
               >
-                <MoreVertical className="w-5 h-5" />
+                <MoreVertical className="w-5 h-5 stroke-[2.5]" />
               </button>
             )}
           </>
@@ -143,7 +143,7 @@ export const ProductRow: React.FC<ProductRowProps> = ({
             <button
               type="button"
               onClick={handleMoreClick}
-              className="min-h-[44px] px-3.5 py-2 rounded-xl bg-blue-soft text-blue font-semibold text-sm hover:bg-blue/20 active:scale-95 transition-transform"
+              className="min-h-[44px] px-3.5 py-2 rounded-xl bg-lime text-ink btn-comic-sm font-extrabold text-sm"
             >
               + Stock
             </button>
@@ -153,7 +153,7 @@ export const ProductRow: React.FC<ProductRowProps> = ({
               aria-label="Edit product details"
               className="w-10 h-11 flex items-center justify-center text-ink-muted hover:text-ink active:scale-90"
             >
-              <MoreVertical className="w-5 h-5" />
+              <MoreVertical className="w-5 h-5 stroke-[2.5]" />
             </button>
           </div>
         )}

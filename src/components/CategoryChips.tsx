@@ -61,10 +61,10 @@ export const CategoryChips: React.FC<CategoryChipsProps> = ({
             role="tab"
             aria-selected={isSelected}
             onClick={() => onSelect(cat.id)}
-            className={`flex items-center gap-1.5 min-h-[42px] px-3.5 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap transition-all duration-100 shrink-0 border active:scale-95 ${
+            className={`flex items-center gap-1.5 min-h-[42px] px-3.5 py-1.5 rounded-full text-sm font-extrabold whitespace-nowrap transition-all duration-100 shrink-0 border-2 border-ink cursor-pointer ${
               isSelected
-                ? 'bg-brand text-white border-brand shadow-xs'
-                : 'bg-surface text-ink-muted border-line hover:border-brand/40 hover:text-ink'
+                ? 'bg-tangy text-white shadow-[2.5px_2.5px_0px_#141413]'
+                : 'bg-white text-ink shadow-[2px_2px_0px_#141413] hover:bg-yellow-50 active:translate-x-0.5 active:translate-y-0.5 active:shadow-[0.5px_0.5px_0px_#141413]'
             }`}
           >
             <span>{cat.emoji}</span>

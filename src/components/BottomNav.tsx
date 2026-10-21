@@ -17,7 +17,7 @@ export const BottomNav: React.FC = () => {
   return (
     <nav
       aria-label="Bottom Navigation"
-      className="fixed bottom-0 left-0 right-0 z-40 bg-surface/98 backdrop-blur-lg border-t border-line/80 pb-[env(safe-area-inset-bottom)]"
+      className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t-[2.5px] border-ink pb-[env(safe-area-inset-bottom)] shadow-[0px_-3px_0px_#141413]"
     >
       <div className="max-w-md mx-auto grid grid-cols-4 h-16 px-1">
         {tabs.map((tab) => {
@@ -28,23 +28,25 @@ export const BottomNav: React.FC = () => {
               to={tab.to}
               onClick={() => triggerHaptic(8)}
               className={({ isActive }) =>
-                `flex flex-col items-center justify-center gap-1 transition-colors touch-target-secondary select-none ${
+                `flex flex-col items-center justify-center gap-1 transition-all touch-target-secondary select-none ${
                   isActive
-                    ? 'text-brand-dark font-bold'
-                    : 'text-ink-muted hover:text-ink font-medium'
+                    ? 'text-ink font-black scale-[1.02]'
+                    : 'text-ink-muted hover:text-ink font-bold'
                 }`
               }
             >
               {({ isActive }) => (
                 <>
                   <div
-                    className={`relative p-1 rounded-xl transition-transform ${
-                      isActive ? 'bg-brand-soft/70 scale-105' : ''
+                    className={`relative p-1 rounded-full transition-transform ${
+                      isActive
+                        ? 'bg-saffron border-2 border-ink shadow-[2px_2px_0px_#141413] px-3'
+                        : 'p-1 hover:bg-yellow-50'
                     }`}
                   >
-                    <Icon className="w-5 h-5 stroke-[2.25]" />
+                    <Icon className="w-5 h-5 stroke-[2.5]" />
                   </div>
-                  <span className="text-[11px] tracking-tight leading-none">
+                  <span className={`text-[11px] tracking-tight leading-none ${isActive ? 'font-display font-black text-ink' : 'font-bold text-ink-muted'}`}>
                     {tab.label}
                   </span>
                 </>
