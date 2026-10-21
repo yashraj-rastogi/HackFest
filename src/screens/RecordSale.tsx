@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db, type Item, type Movement } from '../db/schema';
 import { recordSale, voidMovement, recordStockIn, recordCount, recordKhatam, recordMissed } from '../db/ledger';
@@ -15,6 +16,7 @@ import { QuickActionSheet } from '../components/QuickActionSheet';
 import { RotateCcw } from 'lucide-react';
 
 export const RecordSale: React.FC = () => {
+  const navigate = useNavigate();
   const { lang, t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -130,6 +132,7 @@ export const RecordSale: React.FC = () => {
           value={searchQuery}
           onChange={setSearchQuery}
           placeholder={t('search.placeholder')}
+          onScanClick={() => navigate('/scan?mode=sale')}
         />
 
         {/* Category Chips Bar */}

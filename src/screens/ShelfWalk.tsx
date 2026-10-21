@@ -74,6 +74,16 @@ export const ShelfWalk: React.FC = () => {
     navigate('/');
   };
 
+  const handleMarkAllSufficient = async () => {
+    triggerHaptic(15);
+    for (let i = currentIndex; i < items.length; i++) {
+      const it = items[i];
+      await recordCount(it.id, it.minQty * 2, 'shelfwalk');
+    }
+    await setSetting('onboardingDone', true);
+    navigate('/');
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-canvas">
@@ -172,24 +182,35 @@ export const ShelfWalk: React.FC = () => {
       </div>
 
       {/* Bottom Actions */}
-      <div className="grid grid-cols-2 gap-3 pt-6 pb-2">
+      <div className="space-y-2 pt-5 pb-2">
         <button
           type="button"
-          onClick={handleSkip}
-          className="min-h-[52px] py-3 px-4 rounded-2xl border border-line bg-surface text-ink hover:bg-line/20 font-bold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform"
+          onClick={handleMarkAllSufficient}
+          className="w-full min-h-[48px] py-2.5 px-4 rounded-2xl bg-brand-soft border border-brand/30 text-brand-dark font-bold text-sm flex items-center justify-center gap-2 active:scale-98 shadow-xs"
         >
-          <FastForward className="w-4 h-4 text-ink-muted" />
-          <span>{t('action.dontKnow')}</span>
+          <CheckCircle2 className="w-4 h-4 text-brand" />
+          <span>Sab Kaafi Hai · Finish Setup (सब ठीक है)</span>
         </button>
 
-        <button
-          type="button"
-          onClick={handleFinishLater}
-          className="min-h-[52px] py-3 px-4 rounded-2xl border border-line bg-surface text-ink hover:bg-line/20 font-bold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform"
-        >
-          <Home className="w-4 h-4 text-ink-muted" />
-          <span>{t('action.later')}</span>
-        </button>
+        <div className="grid grid-cols-2 gap-2.5">
+          <button
+            type="button"
+            onClick={handleSkip}
+            className="min-h-[46px] py-2 px-3 rounded-xl border border-line bg-surface text-ink hover:bg-line/20 font-semibold text-xs flex items-center justify-center gap-1.5 active:scale-95"
+          >
+            <FastForward className="w-3.5 h-3.5 text-ink-muted" />
+            <span>{t('action.dontKnow')} (Skip)</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={handleFinishLater}
+            className="min-h-[46px] py-2 px-3 rounded-xl border border-line bg-surface text-ink hover:bg-line/20 font-semibold text-xs flex items-center justify-center gap-1.5 active:scale-95"
+          >
+            <Home className="w-3.5 h-3.5 text-ink-muted" />
+            <span>{t('action.later')} (Go Home)</span>
+          </button>
+        </div>
       </div>
     </div>
   );

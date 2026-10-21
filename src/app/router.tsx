@@ -12,6 +12,7 @@ import { PickItems } from '../screens/PickItems';
 import { ShelfWalk } from '../screens/ShelfWalk';
 import { Suppliers } from '../screens/Suppliers';
 import { SnapToStock } from '../screens/SnapToStock';
+import { ScanBarcode } from '../screens/ScanBarcode';
 
 export const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
   { path: '/stock/new', element: <AddProduct /> },
   { path: '/stock/:id', element: <ProductDetails /> },
   { path: '/snap', element: <SnapToStock /> },
+  { path: '/scan', element: <ScanBarcode /> },
   { path: '/lists', element: <Lists /> },
   { path: '/more', element: <Settings /> },
   { path: '/settings/suppliers', element: <Suppliers /> },

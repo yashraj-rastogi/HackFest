@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { db, type Item, type BaseUnit, type Category } from '../db/schema';
 import { generateId } from '../lib/uuid';
+import { linkBarcode } from '../db/repos';
 import { useTranslation } from '../i18n';
 import { AppShell } from '../components/AppShell';
 import { triggerHaptic } from '../lib/haptics';
-import { ArrowLeft, Plus, Sparkles, Loader2 } from 'lucide-react';
+import { ArrowLeft, Plus, Sparkles, Loader2, ScanBarcode } from 'lucide-react';
 import { suggestItem } from '../services/gemmaClient';
 
 export const AddProduct: React.FC = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const barcodeParam = searchParams.get('barcode');
   const { t } = useTranslation();
 
   const [name, setName] = useState('');
@@ -81,6 +84,12 @@ export const AddProduct: React.FC = () => {
     };
 
     await db.items.put(newItem);
+
+    // Link barcode if this item was created from an unknown barcode scan
+    if (barcodeParam) {
+      await linkBarcode(barcodeParam, newItem.id);
+    }
+
     navigate('/stock');
   };
 
@@ -98,6 +107,16 @@ export const AddProduct: React.FC = () => {
       }
     >
       <form onSubmit={handleSave} className="space-y-4 pb-20">
+        {/* Barcode Link Badge */}
+        {barcodeParam && (
+          <div className="p-3.5 rounded-2xl bg-brand-soft border border-brand/30 flex items-center gap-2.5">
+            <ScanBarcode className="w-5 h-5 text-brand shrink-0" />
+            <div className="text-xs">
+              <span className="font-bold text-ink">Linking Barcode: </span>
+              <span className="font-mono font-semibold text-brand-dark">{barcodeParam}</span>
+            </div>
+          </div>
+        )}
         {/* Name input */}
         <div className="p-4 rounded-3xl bg-surface border border-line space-y-2">
           <div className="flex items-center justify-between">

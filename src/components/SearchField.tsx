@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, X } from 'lucide-react';
+import { Search, X, ScanBarcode } from 'lucide-react';
 import { useTranslation } from '../i18n';
 
 interface SearchFieldProps {
@@ -8,6 +8,7 @@ interface SearchFieldProps {
   placeholder?: string;
   autoFocus?: boolean;
   className?: string;
+  onScanClick?: () => void;
 }
 
 export const SearchField: React.FC<SearchFieldProps> = ({
@@ -16,6 +17,7 @@ export const SearchField: React.FC<SearchFieldProps> = ({
   placeholder,
   autoFocus = false,
   className = '',
+  onScanClick,
 }) => {
   const { t } = useTranslation();
 
@@ -37,7 +39,7 @@ export const SearchField: React.FC<SearchFieldProps> = ({
         className="w-full min-h-[50px] pl-11 pr-11 py-2.5 rounded-2xl bg-surface border border-line text-ink text-base placeholder:text-ink-muted/70 focus:outline-none focus:border-brand focus:ring-4 focus:ring-brand/10 transition-all shadow-xs"
       />
 
-      {value && (
+      {value ? (
         <button
           type="button"
           onClick={() => onChange('')}
@@ -46,7 +48,16 @@ export const SearchField: React.FC<SearchFieldProps> = ({
         >
           <X className="w-4 h-4 stroke-[2.5]" />
         </button>
-      )}
+      ) : onScanClick ? (
+        <button
+          type="button"
+          onClick={onScanClick}
+          aria-label="Scan barcode"
+          className="absolute right-2.5 w-9 h-9 flex items-center justify-center rounded-xl bg-canvas border border-line text-ink-muted hover:text-brand hover:border-brand/40 active:scale-90 shadow-xs"
+        >
+          <ScanBarcode className="w-4.5 h-4.5 text-brand" />
+        </button>
+      ) : null}
     </div>
   );
 };

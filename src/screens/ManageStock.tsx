@@ -70,6 +70,7 @@ export const ManageStock: React.FC = () => {
           value={searchQuery}
           onChange={setSearchQuery}
           placeholder={t('search.placeholder')}
+          onScanClick={() => navigate('/scan?mode=stock')}
         />
 
         {/* Filter Chips Bar */}

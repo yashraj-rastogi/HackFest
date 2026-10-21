@@ -84,6 +84,8 @@ In accordance with hackathon guidelines, all external libraries, icons, fonts, a
 - **Fuse.js** — Kiro Risk (Apache-2.0)
 - **Lucide Icons** — Lucide Contributors (ISC)
 - **Zod** — Colin McDonnell (MIT)
+- **@zxing/library** — ZXing Authors (Apache-2.0)
+- **Google Gemma 4 & Gemini API** — Google DeepMind (Custom/Terms)
 - **Vite Plugin PWA** — Anthony Fu & vite-pwa team (MIT)
 - **Vitest** — Vitest team (MIT)
 - **Google Fonts (Inter & Noto Sans Devanagari)** — Google Fonts (OFL)
