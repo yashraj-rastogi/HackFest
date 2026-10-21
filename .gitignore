@@ -7,30 +7,54 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependencies
+node_modules/
+
+# Production build outputs
+dist/
+dist-ssr/
+
+# Coverage and test outputs
+coverage/
+*.lcov
+
+# Environment files and secrets
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 *.local
+!.env.example
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.swp
+*.swo
 
-# Environment files
-.env
-.env.local
-.env.production
-.env.development
+# Windows system files
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# Tooling and build cache
+*.tsbuildinfo
+.eslintcache
+.oxlintcache
+vite.config.ts.timestamp*
+vitest.config.ts.timestamp*
 
 # Vercel
-.vercel
+.vercel/
 
 # Temporary scaffold files
 temp-scaffold/
