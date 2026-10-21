@@ -14,5 +14,42 @@ Thank you for your interest in contributing to KiranaSaathi!
 - Fork the repository.
 - Create a feature branch: `git checkout -b feat/my-feature`.
 - Follow conventional commit messages: `feat:`, `fix:`, `docs:`, `test:`, `chore:`.
-- Ensure tests pass: `npm test`.
+- Ensure tests pass: `npm test` and build succeeds: `npm run build`.
 - Open a Pull Request.
+
+## Adding a Catalogue Starter Item
+Catalogue items live in `src/catalogue/` (`kirana.json`, `stationery.json`, `hardware.json`).
+Each item must follow this schema:
+```json
+{
+  "id": "kirana.item_name",
+  "pack": "kirana",
+  "category": "staples",
+  "emoji": "📦",
+  "names": {
+    "hi": "हिन्दी नाम",
+    "en": "English Name",
+    "hinglish": "Hinglish Name"
+  },
+  "aliases": ["alias1", "alias2"],
+  "baseUnit": "g",
+  "defaultSaleQty": 1000,
+  "chips": [250, 500, 1000, 2000, 5000],
+  "minQty": 5000,
+  "packSize": 50000
+}
+```
+
+## Adding Translations or Languages
+1. Translation dictionaries are in `src/i18n/` (`hi.json`, `en.json`, `hinglish.json`).
+2. Add corresponding keys to all three dictionaries simultaneously to prevent missing string warnings.
+3. Access strings in components using `const { t } = useTranslation();` and `{t('key.name')}`.
+
+## Running Tests & Auditing
+```bash
+# Run unit tests across all domain calculation suites
+npm test
+
+# Build production bundle with PWA service worker precache
+npm run build
+```

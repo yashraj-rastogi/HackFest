@@ -22,9 +22,22 @@ export const Home: React.FC = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [shopName, setShopName] = useState<string>('');
+  const [installPrompt, setInstallPrompt] = useState<any>(null);
+  const [dismissedInstall, setDismissedInstall] = useState(false);
 
-  // Check onboarding on mount
+  // Check onboarding and request durable storage on mount
   useEffect(() => {
+    // Request durable storage (FR-1.17)
+    if (typeof navigator !== 'undefined' && navigator.storage?.persist) {
+      navigator.storage.persist().catch(() => {});
+    }
+
+    const installHandler = (e: Event) => {
+      e.preventDefault();
+      setInstallPrompt(e);
+    };
+    window.addEventListener('beforeinstallprompt', installHandler);
+
     getSetting<boolean>('onboardingDone', false).then((done) => {
       if (!done) {
         // If not onboarded and no items exist, navigate to welcome
@@ -39,6 +52,10 @@ export const Home: React.FC = () => {
     getSetting<string>('shopName', '').then((name) => {
       if (name) setShopName(name);
     });
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', installHandler);
+    };
   }, [navigate]);
 
   // Reactive Dexie query for items and movements
@@ -98,6 +115,41 @@ export const Home: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* PWA Install Banner */}
+        {installPrompt && !dismissedInstall && (
+          <div className="p-3.5 rounded-2xl bg-gradient-to-r from-brand-soft to-surface border border-brand/30 flex items-center justify-between gap-3 shadow-xs">
+            <div className="flex items-center gap-2.5 min-w-0">
+              <span className="text-2xl shrink-0">📲</span>
+              <div className="truncate">
+                <h4 className="text-xs font-bold text-ink truncate leading-tight">Install KiranaSaathi</h4>
+                <p className="text-[10px] text-ink-muted truncate">Works offline on home screen</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-1.5 shrink-0">
+              <button
+                type="button"
+                onClick={async () => {
+                  if (installPrompt) {
+                    installPrompt.prompt();
+                    const { outcome } = await installPrompt.userChoice;
+                    if (outcome === 'accepted') setInstallPrompt(null);
+                  }
+                }}
+                className="px-3 py-1.5 rounded-xl bg-brand text-white font-bold text-xs active:scale-95 shadow-xs"
+              >
+                Install
+              </button>
+              <button
+                type="button"
+                onClick={() => setDismissedInstall(true)}
+                className="w-7 h-7 rounded-lg text-ink-muted hover:text-ink flex items-center justify-center text-xs"
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Quick Alerts Section */}
         <div className="space-y-2.5">
