@@ -60,24 +60,24 @@ export const UndoSnackbar: React.FC<UndoSnackbarProps> = ({
       aria-label="Undo action"
       className="fixed left-3 right-3 bottom-22 z-40 max-w-md mx-auto animate-slide-up shadow-xl"
     >
-      <div className="relative overflow-hidden rounded-2xl bg-ink text-white p-3.5 flex items-center justify-between gap-3 border border-white/10">
+      <div className="relative overflow-hidden rounded-2xl bg-ink text-white p-3.5 flex items-center justify-between gap-3 border-[2.5px] border-white shadow-[4px_4px_0px_#141413]">
         {/* Progress bar */}
         <div
-          className="absolute bottom-0 left-0 h-1 bg-brand transition-all ease-linear"
+          className="absolute bottom-0 left-0 h-1.5 bg-saffron transition-all ease-linear"
           style={{ width: `${progress}%` }}
         />
 
         <div className="flex-1 min-w-0 pr-2">
-          <p className="text-sm font-semibold truncate leading-snug">
+          <p className="text-sm font-black truncate leading-snug">
             {payload.message}
           </p>
         </div>
 
-        <div className="flex items-center gap-1.5 shrink-0">
+        <div className="flex items-center gap-2 shrink-0">
           <button
             type="button"
             onClick={handleUndoClick}
-            className="min-h-[48px] px-4 py-2 rounded-xl bg-brand hover:bg-brand-dark text-white font-bold text-sm tracking-wide flex items-center gap-1.5 active:scale-95 transition-transform"
+            className="btn-comic-sm bg-saffron text-ink px-4 py-2 text-sm font-black tracking-wide flex items-center gap-1.5 active:translate-x-0.5 active:translate-y-0.5"
           >
             <RotateCcw className="w-4 h-4 stroke-[2.5]" />
             <span>{t('action.undo')}</span>
@@ -87,9 +87,9 @@ export const UndoSnackbar: React.FC<UndoSnackbarProps> = ({
             type="button"
             onClick={onDismiss}
             aria-label="Dismiss"
-            className="w-10 h-10 flex items-center justify-center rounded-xl text-white/70 hover:text-white active:scale-90"
+            className="w-9 h-9 flex items-center justify-center rounded-xl bg-ink-muted text-white hover:text-white border border-white/20 active:scale-90"
           >
-            <X className="w-4 h-4" />
+            <X className="w-4 h-4 stroke-[2.5]" />
           </button>
         </div>
       </div>

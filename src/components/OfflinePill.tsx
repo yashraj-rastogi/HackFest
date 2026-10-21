@@ -13,12 +13,13 @@ export const OfflinePill: React.FC = () => {
 
   return (
     <div
-      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-ink/10 border border-ink/20 text-ink text-xs font-medium tracking-tight animate-fade-in"
+      className="comic-pill px-2.5 py-1 bg-saffron text-ink text-xs font-black flex items-center gap-1.5 animate-fade-in"
       role="status"
       aria-label={t('state.offline')}
     >
-      <WifiOff className="w-3.5 h-3.5 text-ink-muted" />
-      <span>{t('state.offline')}</span>
+      <WifiOff className="w-3.5 h-3.5 text-ink stroke-[2.5]" />
+      <span className="text-[11px] font-black">{t('state.offline')}</span>
     </div>
   );
 };
+

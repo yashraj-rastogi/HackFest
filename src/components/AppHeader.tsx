@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Store, Settings as SettingsIcon, Languages, ChevronDown } from 'lucide-react';
+import { Store, Settings as SettingsIcon, Languages, ChevronDown, ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from '../i18n';
 import { OfflinePill } from './OfflinePill';
@@ -16,6 +16,8 @@ interface AppHeaderProps {
 export const AppHeader: React.FC<AppHeaderProps> = ({
   title,
   subtitle,
+  showBack,
+  onBack,
   rightAction,
 }) => {
   const navigate = useNavigate();
@@ -24,7 +26,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
 
   const langLabels: Record<Lang, string> = {
     hi: 'हिन्दी',
-    en: 'English',
+    en: 'EN',
     hinglish: 'Hinglish',
   };
 
@@ -34,18 +36,36 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-30 w-full bg-cream border-b-[2.5px] border-ink px-4 py-2.5 shadow-[0px_3px_0px_#141413]">
+    <header className="sticky top-0 z-30 w-full bg-plaid-green text-white border-b-[2.5px] border-ink px-4 py-2.5 shadow-[0px_4px_0px_#141413]">
       <div className="max-w-md mx-auto flex items-center justify-between gap-2">
-        {/* Brand / Title */}
+        {/* Brand / Back & Title */}
         <div className="flex items-center gap-2.5 min-w-0">
-          <div className="w-9 h-9 rounded-xl bg-saffron text-ink border-2 border-ink shadow-[2px_2px_0px_#141413] flex items-center justify-center shrink-0">
-            <Store className="w-5 h-5 stroke-[2.5]" />
-          </div>
+          {showBack ? (
+            <button
+              type="button"
+              onClick={onBack || (() => navigate(-1))}
+              className="w-9 h-9 rounded-xl bg-saffron text-ink border-2 border-ink shadow-[2px_2px_0px_#141413] flex items-center justify-center shrink-0 active:translate-x-0.5 active:translate-y-0.5 transition-all"
+              aria-label="Go Back"
+            >
+              <ArrowLeft className="w-5 h-5 stroke-[2.5]" />
+            </button>
+          ) : (
+            <div className="w-9 h-9 rounded-xl bg-saffron text-ink border-2 border-ink shadow-[2px_2px_0px_#141413] flex items-center justify-center shrink-0">
+              <Store className="w-5 h-5 stroke-[2.5]" />
+            </div>
+          )}
           <div className="min-w-0">
-            <h1 className="text-base font-display font-extrabold text-ink leading-tight truncate">
-              {title || t('app.title')}
-            </h1>
-            <p className="text-[11px] font-bold text-ink-muted leading-tight truncate">
+            <div className="flex items-center gap-1.5">
+              <h1 className="text-base font-display font-black text-white leading-tight truncate drop-shadow-[1px_1px_0px_#141413]">
+                {title || t('app.title')}
+              </h1>
+              {!showBack && (
+                <span className="px-1.5 py-0.5 rounded-md bg-lime text-ink font-black text-[9px] uppercase tracking-wider border border-ink shadow-[1px_1px_0px_#141413]">
+                  DESI
+                </span>
+              )}
+            </div>
+            <p className="text-[11px] font-bold text-mint leading-tight truncate drop-shadow-[0.5px_0.5px_0px_#141413]">
               {subtitle || t('app.subtitle')}
             </p>
           </div>
@@ -60,10 +80,10 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
             <button
               type="button"
               onClick={() => setLangMenuOpen(!langMenuOpen)}
-              className="h-8.5 px-2.5 rounded-full bg-white hover:bg-yellow-50 border-2 border-ink shadow-[2px_2px_0px_#141413] text-xs font-extrabold text-ink flex items-center gap-1 active:translate-x-0.5 active:translate-y-0.5 active:shadow-[0.5px_0.5px_0px_#141413] transition-all"
+              className="comic-pill px-2.5 py-1 bg-saffron text-ink text-xs font-black flex items-center gap-1 active:translate-x-0.5 active:translate-y-0.5 transition-all"
             >
-              <Languages className="w-3.5 h-3.5 text-tangy stroke-[2.5]" />
-              <span>{langLabels[lang]}</span>
+              <Languages className="w-3.5 h-3.5 text-ink stroke-[2.5]" />
+              <span className="text-[11px] uppercase">{langLabels[lang]}</span>
               <ChevronDown className="w-3 h-3 text-ink stroke-[2.5]" />
             </button>
 
@@ -75,10 +95,12 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
                     type="button"
                     onClick={() => handleLangSelect(l)}
                     className={`w-full text-left px-3 py-2 text-xs font-extrabold rounded-xl flex items-center justify-between ${
-                      lang === l ? 'bg-saffron text-ink border-1.5 border-ink shadow-[1px_1px_0px_#141413]' : 'text-ink hover:bg-yellow-50'
+                      lang === l
+                        ? 'bg-saffron text-ink border-1.5 border-ink shadow-[1px_1px_0px_#141413]'
+                        : 'text-ink hover:bg-yellow-50'
                     }`}
                   >
-                    <span>{langLabels[l]}</span>
+                    <span>{l === 'hi' ? 'हिन्दी' : l === 'en' ? 'English' : 'Hinglish'}</span>
                     {lang === l && <span className="text-ink font-black">✓</span>}
                   </button>
                 ))}
@@ -91,7 +113,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
               type="button"
               onClick={() => navigate('/more')}
               aria-label="Settings and More"
-              className="w-8.5 h-8.5 rounded-xl bg-white hover:bg-yellow-50 border-2 border-ink shadow-[2px_2px_0px_#141413] flex items-center justify-center text-ink active:translate-x-0.5 active:translate-y-0.5 active:shadow-[0.5px_0.5px_0px_#141413] transition-all"
+              className="w-8.5 h-8.5 rounded-xl bg-white hover:bg-yellow-50 border-2 border-ink shadow-[2px_2px_0px_#141413] flex items-center justify-center text-ink active:translate-x-0.5 active:translate-y-0.5 transition-all"
             >
               <SettingsIcon className="w-4 h-4 stroke-[2.25]" />
             </button>

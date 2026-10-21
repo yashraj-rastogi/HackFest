@@ -9,6 +9,7 @@ interface AppShellProps {
   headerTitle?: string;
   headerSubtitle?: string;
   headerRightAction?: React.ReactNode;
+  noPadding?: boolean;
 }
 
 export const AppShell: React.FC<AppShellProps> = ({
@@ -18,9 +19,10 @@ export const AppShell: React.FC<AppShellProps> = ({
   headerTitle,
   headerSubtitle,
   headerRightAction,
+  noPadding = false,
 }) => {
   return (
-    <div className="min-h-screen bg-canvas text-ink flex flex-col antialiased selection:bg-brand-soft">
+    <div className="min-h-screen bg-cream-dots text-ink flex flex-col antialiased selection:bg-saffron">
       {showHeader && (
         <AppHeader
           title={headerTitle}
@@ -29,7 +31,11 @@ export const AppShell: React.FC<AppShellProps> = ({
         />
       )}
 
-      <main className={`flex-1 w-full max-w-md mx-auto px-4 pt-3 ${showNav ? 'pb-28' : 'pb-8'}`}>
+      <main
+        className={`flex-1 w-full max-w-md mx-auto ${
+          noPadding ? '' : 'px-4 pt-3'
+        } ${showNav ? 'pb-28' : 'pb-8'}`}
+      >
         {children}
       </main>
 
@@ -37,3 +43,4 @@ export const AppShell: React.FC<AppShellProps> = ({
     </div>
   );
 };
+
