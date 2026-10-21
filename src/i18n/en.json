@@ -1,11 +1,10 @@
 {
-  "app.title": "KiranaSaathi",
+  "app.title": "MuneemJi",
   "app.subtitle": "Dukaan Saathi",
   "nav.home": "Home",
   "nav.sale": "Sale",
   "nav.stock": "Stock",
   "nav.more": "More",
-  
   "home.greeting": "Namaste!",
   "home.greetingSub": "Ready for today's transactions",
   "home.recordSale": "Record Sale",
@@ -14,21 +13,17 @@
   "home.manageStock.sub": "Add, edit and track",
   "home.reorder": "What Should I Reorder?",
   "home.reorder.sub": "Get smart suggestions",
-  
   "alerts.title": "Quick Alerts",
   "alerts.lowStock": "{n} Low Stock",
   "alerts.noMovement": "{n} No Movement",
   "alerts.allGood": "Everything is in stock. Nothing is running low.",
-  
   "status.inStock": "In Stock",
   "status.low": "Low Stock",
   "status.out": "Out of Stock",
   "status.noMovement": "No Movement",
-  
   "confidence.counted": "Counted",
   "confidence.estimated": "Estimated",
   "confidence.unknown": "Unknown",
-  
   "action.save": "Save",
   "action.cancel": "Cancel",
   "action.undo": "Undo",
@@ -50,7 +45,6 @@
   "action.proceed": "Proceed",
   "action.selectAll": "Select All",
   "action.deselectAll": "Deselect All",
-  
   "prompt.howMany": "How many on shelf?",
   "prompt.currentStock": "Current stock",
   "prompt.minStock": "Low stock alert at",
@@ -59,19 +53,15 @@
   "prompt.pickItems": "Pick items you stock in your shop",
   "prompt.shelfWalk": "Quick shelf walk",
   "prompt.shelfWalkDesc": "Tap quantity if you know it, or skip to finish later.",
-  
   "shopType.kirana": "Kirana & Grocery",
   "shopType.stationery": "Stationery & Books",
   "shopType.hardware": "Hardware & Electrical",
   "shopType.general": "General Store",
-  
   "search.placeholder": "Search product or scan barcode...",
   "search.noResults": "No products found",
-  
   "sale.todayStrip": "Today: {n} sales",
   "sale.undoLast": "Undo last",
   "sale.flashRecorded": "{name} -{qty} recorded",
-  
   "stock.allProducts": "All Products",
   "stock.lowStock": "Low Stock",
   "stock.noMovement": "No Movement",
@@ -80,7 +70,6 @@
   "stock.gintiKaro": "Recount suggested",
   "stock.lastSold": "Last sold: {date}",
   "stock.neverSold": "No sales recorded yet",
-  
   "reorder.tabs.low": "Low Stock",
   "reorder.tabs.noMovement": "No Movement",
   "reorder.suggested": "Order {qty}",
@@ -89,7 +78,6 @@
   "reorder.supplier": "Supplier: {name}",
   "reorder.noSupplier": "No supplier assigned",
   "reorder.empty": "Nothing needs reordering right now!",
-  
   "settings.title": "More",
   "settings.storeProfile": "Store Profile",
   "settings.storeName": "Store Name",
@@ -99,9 +87,8 @@
   "settings.clearDemo": "Clear Demo Data",
   "settings.demoSeeded": "Demo data generated with 60-day history",
   "settings.demoCleared": "Demo data removed",
-  "settings.about": "About KiranaSaathi",
+  "settings.about": "About MuneemJi",
   "settings.credits": "Open Source Credits",
-  
   "msg.saleRecorded": "Sale recorded. Stock updated.",
   "msg.savedDevice": "Saved on this device",
   "msg.savedOffline": "Saved offline",
@@ -109,13 +96,10 @@
   "msg.lowRunning": "Running low. Review reorder quantity.",
   "msg.noMovement": "No sales in the last {n} days",
   "msg.notEnoughHistory": "Not enough sales history yet. Showing your minimum-stock rule.",
-  
   "basis.sales": "Based on your sales ({n} days)",
   "basis.threshold": "Based on your minimum-stock rule",
-  
   "state.offline": "Offline",
   "offline.headline": "You are offline",
   "offline.body": "Sales and stock updates are saved on this device. The app works without internet.",
-  
   "empty.firstProduct": "Add your first product to get started"
 }

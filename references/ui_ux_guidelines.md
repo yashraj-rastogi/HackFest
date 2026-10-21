@@ -1,4 +1,4 @@
-# ui_ux_guidelines.md — KiranaSaathi
+# ui_ux_guidelines.md — MuneemJi
 
 Sources: `docs/design.md` (the visual system, which wins for look and feel) and `docs/reference/ui_reference.png` (the ten-screen collage, which is visual direction, not a pixel-perfect spec). This file turns them into build rules and **reconciles them with the hackathon brief** (Track 1: The Kirana Problem) and our plan.
 
@@ -39,7 +39,7 @@ These override any visual preference.
 | Dialogs | Only for discard and clear-data | Same. Everything else is undo. | Brief and design agree. |
 | Illustration | Shop hero on Home, leaves on empty states | Same, contained and small. **No** product photos: use emoji thumbnails. | No time for image assets, and it stays fast offline. |
 | Fonts | Inter + Noto Sans Devanagari | Same, bundled and subset (section 4). | Works offline, small payload. |
-| App name | KiranaSaathi | **KiranaSaathi** in the UI and docs. | Taken from the design. |
+| App name | MuneemJi | **MuneemJi** in the UI and docs. | Taken from the design. |
 | Languages | English / हिन्दी with Hinglish-friendly copy | **Three modes**: हिन्दी, English, Hinglish. | Decision made for the MVP. |
 
 ## 3. Visual tokens (from design.md)

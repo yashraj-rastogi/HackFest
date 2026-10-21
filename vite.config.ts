@@ -152,8 +152,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'icon.svg'],
       manifest: {
-        name: 'KiranaSaathi — Dukaan Saathi',
-        short_name: 'KiranaSaathi',
+        name: 'MuneemJi — Dukaan Saathi',
+        short_name: 'MuneemJi',
         description: 'Phone-first, offline-first retail assistant for small shopkeepers',
         theme_color: '#0AA66B',
         background_color: '#F7F9F8',

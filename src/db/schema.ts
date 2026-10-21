@@ -85,7 +85,7 @@ export interface StockState {
   baselineAt: number | null;
 }
 
-export class KiranaSaathiDB extends Dexie {
+export class MuneemJiDB extends Dexie {
   items!: Table<Item, string>;
   movements!: Table<Movement, string>;
   suppliers!: Table<Supplier, string>;
@@ -94,7 +94,7 @@ export class KiranaSaathiDB extends Dexie {
   settings!: Table<Setting, string>;
 
   constructor() {
-    super('KiranaSaathiDB');
+    super('MuneemJiDB');
     this.version(1).stores({
       items: 'id, shopId, category, supplierId',
       movements: 'id, shopId, itemId, [itemId+at], at, type',
@@ -106,4 +106,4 @@ export class KiranaSaathiDB extends Dexie {
   }
 }
 
-export const db = new KiranaSaathiDB();
+export const db = new MuneemJiDB();

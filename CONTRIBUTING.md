@@ -1,6 +1,6 @@
-# Contributing to KiranaSaathi
+# Contributing to MuneemJi
 
-Thank you for your interest in contributing to KiranaSaathi!
+Thank you for your interest in contributing to MuneemJi!
 
 ## Core Tenets
 1. **Offline First:** Every core screen and operation must work with zero network connection. Local IndexedDB is the source of truth.

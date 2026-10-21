@@ -9,10 +9,10 @@ if ('serviceWorker' in navigator && import.meta.env.PROD) {
     registerSW({
       immediate: true,
       onNeedRefresh() {
-        console.log('KiranaSaathi update available');
+        console.log('MuneemJi update available');
       },
       onOfflineReady() {
-        console.log('KiranaSaathi ready to work offline');
+        console.log('MuneemJi ready to work offline');
       },
     });
   }).catch(() => {

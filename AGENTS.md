@@ -1,6 +1,6 @@
 # AGENTS.md — read this first
 
-Project: **KiranaSaathi**. A phone-first, offline-first PWA that replaces a small shopkeeper's notebook: log sales and stock in a tap, see what is running low and what has not moved. Built solo for the GDG on Campus SRMCEM Hackfest (Track 1: The Kirana Problem, plus the Best Use of Gemma 4 track), 21 Oct 2026.
+Project: **MuneemJi**. A phone-first, offline-first PWA that replaces a small shopkeeper's notebook: log sales and stock in a tap, see what is running low and what has not moved. Built solo for the GDG on Campus SRMCEM Hackfest (Track 1: The Kirana Problem, plus the Best Use of Gemma 4 track), 21 Oct 2026.
 
 You are the coding agent. The human is a solo developer with about five hours. Be fast, small-step and honest.
 

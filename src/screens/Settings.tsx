@@ -121,11 +121,10 @@ export const Settings: React.FC = () => {
                 key={l.id}
                 type="button"
                 onClick={() => handleLangChange(l.id as Lang)}
-                className={`min-h-[46px] px-2 py-2.5 rounded-xl text-xs font-bold border transition-all ${
-                  lang === l.id
+                className={`min-h-[46px] px-2 py-2.5 rounded-xl text-xs font-bold border transition-all ${lang === l.id
                     ? 'bg-brand text-white border-brand shadow-xs'
                     : 'bg-canvas text-ink border-line hover:border-brand/30'
-                }`}
+                  }`}
               >
                 {l.label}
               </button>
@@ -227,7 +226,7 @@ export const Settings: React.FC = () => {
           </div>
 
           <p className="text-xs text-ink-muted leading-relaxed">
-            KiranaSaathi is a phone-first, offline-first companion replacing the shopkeeper's notebook. Built for the GDG on Campus SRMCEM × MLH Hackfest (Track 1: The Kirana Problem & Best Use of Gemma 4).
+            MuneemJi is a phone-first, offline-first companion replacing the shopkeeper's notebook. Built for the GDG on Campus SRMCEM × MLH Hackfest (Track 1: The Kirana Problem & Best Use of Gemma 4).
           </p>
 
           <div className="pt-2 border-t border-line/60">

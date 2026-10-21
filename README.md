@@ -1,4 +1,4 @@
-# KiranaSaathi (किराना साथी) — Dukaan Saathi
+# MuneemJi (किराना साथी) — Dukaan Saathi
 
 > **A phone-first, offline-first PWA that replaces a small shopkeeper's notebook.**  
 > Built for GDG on Campus SRMCEM × MLH Hackfest (Track 1: The Kirana Problem & Best Use of Gemma 4).
@@ -16,7 +16,7 @@ Meanwhile, the real danger isn't billing—it's **stockouts and dead stock**:
 
 ## 💡 The Solution
 
-**KiranaSaathi** is designed under real-world constraint:
+**MuneemJi** is designed under real-world constraint:
 - **One-Tap Sale:** No carts, no invoices, no customer phone numbers. A single tap on a product row records a default quantity with instant haptic feedback and an 8-second undo snackbar.
 - **Forgiving Numbers:** Real grocery items are sold in fractions (½ kg, 250 g, 1 dozen, 3 loose packets). Never forces integers or whole kilograms.
 - **100% Offline-First:** Dexie.js (IndexedDB) on-device storage. Service worker precaches the entire app shell. Works completely in aeroplane mode.
@@ -133,7 +133,7 @@ npm run preview
 
 ## ✈️ Testing Offline (Aeroplane Mode)
 
-KiranaSaathi is designed to work completely without an internet connection:
+MuneemJi is designed to work completely without an internet connection:
 1. Open the app in your mobile browser or install it as a PWA.
 2. Turn on **Aeroplane Mode** (disconnect Wi-Fi and mobile data).
 3. Test the core workflows:
@@ -154,7 +154,7 @@ KiranaSaathi is designed to work completely without an internet connection:
 
 ## 📜 Credits & Attributions
 
-In accordance with hackathon guidelines, all external libraries, icons, fonts, and frameworks used in KiranaSaathi are gratefully acknowledged:
+In accordance with hackathon guidelines, all external libraries, icons, fonts, and frameworks used in MuneemJi are gratefully acknowledged:
 
 - **React & React DOM** — Meta Open Source (MIT)
 - **Vite & @vitejs/plugin-react** — Evan You & Vite contributors (MIT)

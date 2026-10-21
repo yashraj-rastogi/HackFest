@@ -1,4 +1,4 @@
-# KiranaSaathi — UI/UX Design System
+# MuneemJi — UI/UX Design System
 
 > **Design direction:** Friendly, illustrated, mobile-first, offline-first retail assistant for neighbourhood kirana stores.  
 > **Reference:** The supplied ten-screen UI collage: Home, Record Sale, Cart/Checkout, Manage Stock, Reorder Suggestions, Product Details, Stock Saathi (Gemma 4), Optional Self Checkout, Offline Mode, and More/Settings.
@@ -7,7 +7,7 @@
 
 ## 1. Product Design Intent
 
-KiranaSaathi helps a shopkeeper answer three questions quickly:
+MuneemJi helps a shopkeeper answer three questions quickly:
 
 1. **What did I sell?** — Record a sale in as few taps as possible.
 2. **What do I have?** — Check and update stock without navigating complex software.
@@ -324,7 +324,7 @@ Use dialogs only for decisions that need confirmation (for example, discarding a
 **Purpose:** Provide a friendly entry point and fast access to the three core tasks.
 
 **Structure:**
-1. Compact header with KiranaSaathi name, small shop icon, store subtitle, and settings shortcut.
+1. Compact header with MuneemJi name, small shop icon, store subtitle, and settings shortcut.
 2. Greeting such as “Namaste!” with a short practical line.
 3. Shop illustration in a contained hero area. On small screens, reduce the illustration height rather than shrinking core actions.
 4. Three prominent action cards:
@@ -546,7 +546,7 @@ Use dialogs only for decisions that need confirmation (for example, discarding a
 - Language (English / हिन्दी, with Hinglish-friendly copy where useful)
 - Sync status (only when sync exists)
 - Help & Support
-- About KiranaSaathi
+- About MuneemJi
 - Logout only if authentication exists
 
 **Behavior:**
@@ -853,4 +853,4 @@ Do not start P2 work until core P0 flows pass offline and fractional-quantity te
 
 ## 20. Final Design Principle
 
-**Make the next useful action obvious.** KiranaSaathi should look warm and welcoming, but its success is measured by how quickly and reliably a busy shopkeeper can record a sale, understand current stock, and prepare a sensible reorder list—even with no internet connection.
+**Make the next useful action obvious.** MuneemJi should look warm and welcoming, but its success is measured by how quickly and reliably a busy shopkeeper can record a sale, understand current stock, and prepare a sensible reorder list—even with no internet connection.

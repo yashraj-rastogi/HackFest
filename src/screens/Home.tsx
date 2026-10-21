@@ -29,7 +29,7 @@ export const Home: React.FC = () => {
   useEffect(() => {
     // Request durable storage (FR-1.17)
     if (typeof navigator !== 'undefined' && navigator.storage?.persist) {
-      navigator.storage.persist().catch(() => {});
+      navigator.storage.persist().catch(() => { });
     }
 
     const installHandler = (e: Event) => {
@@ -122,7 +122,7 @@ export const Home: React.FC = () => {
             <div className="flex items-center gap-2.5 min-w-0">
               <span className="text-2xl shrink-0">📲</span>
               <div className="truncate">
-                <h4 className="text-xs font-bold text-ink truncate leading-tight">Install KiranaSaathi</h4>
+                <h4 className="text-xs font-bold text-ink truncate leading-tight">Install MuneemJi</h4>
                 <p className="text-[10px] text-ink-muted truncate">Works offline on home screen</p>
               </div>
             </div>
@@ -164,16 +164,14 @@ export const Home: React.FC = () => {
             <button
               type="button"
               onClick={() => navigate('/lists?tab=low')}
-              className={`p-3.5 rounded-2xl border text-left flex items-center gap-3 transition-all duration-150 active:scale-98 ${
-                lowStockCount > 0
+              className={`p-3.5 rounded-2xl border text-left flex items-center gap-3 transition-all duration-150 active:scale-98 ${lowStockCount > 0
                   ? 'bg-[#FFF5E5] border-[#FFE0B2] text-[#8A5000] shadow-xs hover:border-[#FFD08A]'
                   : 'bg-surface border-line text-ink-muted'
-              }`}
+                }`}
             >
               <div
-                className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
-                  lowStockCount > 0 ? 'bg-[#FFE8CC] text-[#8A5000]' : 'bg-canvas text-ink-muted'
-                }`}
+                className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${lowStockCount > 0 ? 'bg-[#FFE8CC] text-[#8A5000]' : 'bg-canvas text-ink-muted'
+                  }`}
               >
                 <AlertTriangle className="w-5 h-5 stroke-[2.25]" />
               </div>
@@ -191,16 +189,14 @@ export const Home: React.FC = () => {
             <button
               type="button"
               onClick={() => navigate('/lists?tab=noMovement')}
-              className={`p-3.5 rounded-2xl border text-left flex items-center gap-3 transition-all duration-150 active:scale-98 ${
-                noMovementCount > 0
+              className={`p-3.5 rounded-2xl border text-left flex items-center gap-3 transition-all duration-150 active:scale-98 ${noMovementCount > 0
                   ? 'bg-sky/60 border-sky-strong/30 text-ink shadow-xs hover:border-sky-strong/50'
                   : 'bg-surface border-line text-ink-muted'
-              }`}
+                }`}
             >
               <div
-                className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
-                  noMovementCount > 0 ? 'bg-sky text-ink' : 'bg-canvas text-ink-muted'
-                }`}
+                className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${noMovementCount > 0 ? 'bg-sky text-ink' : 'bg-canvas text-ink-muted'
+                  }`}
               >
                 <Clock className="w-5 h-5 stroke-[2.25]" />
               </div>

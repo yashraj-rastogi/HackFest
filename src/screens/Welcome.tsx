@@ -44,7 +44,7 @@ export const Welcome: React.FC = () => {
           🏪
         </div>
         <h1 className="text-2xl font-bold text-ink mt-5 leading-tight">
-          किराना साथी · KiranaSaathi
+          किराना साथी · MuneemJi
         </h1>
         <p className="text-sm text-ink-muted mt-2">
           Choose your preferred language / अपनी भाषा चुनें
@@ -60,11 +60,10 @@ export const Welcome: React.FC = () => {
               key={opt.lang}
               type="button"
               onClick={() => handleSelectLanguage(opt.lang)}
-              className={`w-full p-4.5 rounded-3xl border text-left transition-all duration-150 flex items-center justify-between gap-3 active:scale-98 ${
-                isSelected
+              className={`w-full p-4.5 rounded-3xl border text-left transition-all duration-150 flex items-center justify-between gap-3 active:scale-98 ${isSelected
                   ? 'bg-surface border-brand ring-2 ring-brand/30 shadow-md'
                   : 'bg-surface border-line hover:border-brand/40 shadow-xs'
-              }`}
+                }`}
             >
               <div>
                 <div className="text-xl font-bold text-ink flex items-center gap-2">
@@ -79,11 +78,10 @@ export const Welcome: React.FC = () => {
               </div>
 
               <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 border ${
-                  isSelected
+                className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 border ${isSelected
                     ? 'bg-brand border-brand text-white'
                     : 'bg-canvas border-line text-transparent'
-                }`}
+                  }`}
               >
                 <Check className="w-4 h-4 stroke-[3]" />
               </div>
