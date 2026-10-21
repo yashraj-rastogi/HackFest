@@ -9,6 +9,7 @@ import { AppShell } from '../components/AppShell';
 import { MunimJiAvatar } from '../components/MunimJiAvatar';
 import { getSetting } from '../db/repos';
 import { useOnlineStatus } from '../services/online';
+import { getItemSalePricePaise } from '../domain/pricing';
 import {
   Store,
   Languages,
@@ -109,7 +110,7 @@ export const Home: React.FC = () => {
     return { lowStockCount: lowCount, noMovementCount: deadCount };
   }, [items, movementsByItem]);
 
-  // Calculate today's sales count and estimated revenue
+  // Calculate today's REAL sales count and REAL sales revenue from movements
   const { todaySalesCount, todaySalesAmount } = React.useMemo(() => {
     const startOfDay = new Date();
     startOfDay.setHours(0, 0, 0, 0);
@@ -124,7 +125,7 @@ export const Home: React.FC = () => {
     }
 
     let count = 0;
-    let totalEstimated = 0;
+    let totalPaise = 0;
     const itemsMap = new Map<string, (typeof items)[0]>();
     for (const it of items) itemsMap.set(it.id, it);
 
@@ -132,19 +133,60 @@ export const Home: React.FC = () => {
       if (m.type === 'SALE' && m.at >= startMs && !voidedIds.has(m.id)) {
         count++;
         const it = itemsMap.get(m.itemId);
-        if (it?.sellPricePaise) {
-          totalEstimated += (it.sellPricePaise / 100) * (m.qty / (it.defaultSaleQty || 1));
-        } else {
-          totalEstimated += 45; // typical kirana item value estimate
+        if (it) {
+          totalPaise += getItemSalePricePaise(it, m.qty);
         }
       }
     }
 
     return {
-      todaySalesCount: count > 0 ? count : 2,
-      todaySalesAmount: count > 0 ? Math.round(totalEstimated) : 497,
+      todaySalesCount: count,
+      todaySalesAmount: Math.round(totalPaise / 100),
     };
   }, [movements, items]);
+
+  // Real dynamic advice from Munim Ji based on shop's live state
+  const munimJiMessage = React.useMemo(() => {
+    if (lowStockCount > 0) {
+      if (lang === 'hi') {
+        return `“दुकान में ${lowStockCount} सामान का स्टॉक कम है! री-ऑर्डर लिस्ट देखें।”`;
+      }
+      if (lang === 'en') {
+        return `“${lowStockCount} items are running low on stock! Check reorder list.”`;
+      }
+      return `“Dukaan me ${lowStockCount} items ka stock kam hai! Reorder list check karein.”`;
+    }
+
+    if (noMovementCount > 0) {
+      if (lang === 'hi') {
+        return `“${noMovementCount} सामान काफी दिनों से नहीं बिके हैं। इन्हें आगे रखें।”`;
+      }
+      if (lang === 'en') {
+        return `“${noMovementCount} items have not moved in a while.”`;
+      }
+      return `“${noMovementCount} items kaafi time se nahi bike hain. Aage display karein.”`;
+    }
+
+    if (todaySalesCount > 0) {
+      if (lang === 'hi') {
+        return `“आज ${todaySalesCount} बिक्री दर्ज हो चुकी हैं (₹${todaySalesAmount})। दुकान बढ़िया चल रही है!”`;
+      }
+      if (lang === 'en') {
+        return `“${todaySalesCount} sales recorded today (₹${todaySalesAmount}). Doing great!”`;
+      }
+      return `“Aaj ${todaySalesCount} sales record hui hain (₹${todaySalesAmount}). Badhiya chal raha hai!”`;
+    }
+
+    // Fresh / no sales yet
+    if (lang === 'hi') {
+      return '“सब स्टॉक सही है। नई बिक्री दर्ज करने के लिए नीचे टैप करें!”';
+    }
+    if (lang === 'en') {
+      return '“All stock is healthy. Tap below to record sales in 2 taps!”';
+    }
+    return '“Sab stock theek hai. Nayi sale record karne ke liye tap karein!”';
+  }, [lowStockCount, noMovementCount, todaySalesCount, todaySalesAmount, lang]);
+
 
   // Sync PWA App Badge with running-low item count
   useEffect(() => {
@@ -258,7 +300,7 @@ export const Home: React.FC = () => {
                 {/* Munim Ji Speech Bubble */}
                 <div className="comic-bubble p-2 sm:p-2.5 mt-2 max-w-[270px]">
                   <p className="text-[11px] sm:text-xs font-bold text-ink leading-snug">
-                    <span className="text-tangy font-extrabold">💬 मुनीम जी:</span> “Record sales & track stock in just 2 taps!”
+                    <span className="text-tangy font-extrabold">💬 मुनीम जी:</span> {munimJiMessage}
                   </p>
                 </div>
               </div>
@@ -274,7 +316,7 @@ export const Home: React.FC = () => {
               {/* Card 1: Today's Sales (Saffron) */}
               <div className="comic-card-sm bg-saffron p-2.5 text-center flex flex-col justify-center">
                 <span className="text-[9px] font-black text-ink uppercase tracking-wider block">
-                  TODAY'S SALES
+                  {lang === 'hi' ? 'आज की बिक्री' : "TODAY'S SALES"}
                 </span>
                 <span className="text-lg sm:text-xl font-display font-black text-ink tabular-nums leading-tight mt-0.5">
                   ₹{todaySalesAmount}
@@ -284,7 +326,7 @@ export const Home: React.FC = () => {
               {/* Card 2: Total Bills (White) */}
               <div className="comic-card-sm bg-white p-2.5 text-center flex flex-col justify-center">
                 <span className="text-[9px] font-black text-ink-muted uppercase tracking-wider block">
-                  TOTAL BILLS
+                  {lang === 'hi' ? 'कुल बिक्री' : 'TOTAL BILLS'}
                 </span>
                 <span className="text-lg sm:text-xl font-display font-black text-ink tabular-nums leading-tight mt-0.5">
                   {todaySalesCount}
@@ -294,11 +336,19 @@ export const Home: React.FC = () => {
               {/* Card 3: Network Mode (Mint) */}
               <div className="comic-card-sm bg-mint p-2.5 text-center flex flex-col justify-center">
                 <span className="text-[9px] font-black text-emerald uppercase tracking-wider block">
-                  NETWORK MODE
+                  {lang === 'hi' ? 'नेटवर्क' : 'NETWORK MODE'}
                 </span>
                 <span className="text-xs sm:text-sm font-display font-black text-emerald leading-tight mt-1 flex items-center justify-center gap-1">
                   <span className="text-[10px]">▼</span>
-                  <span>{isOnline ? 'Online' : 'Offline'}</span>
+                  <span>
+                    {isOnline
+                      ? lang === 'hi'
+                        ? 'ऑनलाइन'
+                        : 'Online'
+                      : lang === 'hi'
+                      ? 'ऑफलाइन'
+                      : 'Offline'}
+                  </span>
                 </span>
               </div>
             </div>
