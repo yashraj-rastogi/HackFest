@@ -28,8 +28,10 @@ export const ProductDetails: React.FC = () => {
 
   const stockState = React.useMemo(() => getStockState(movements), [movements]);
 
+  const suppliers = useLiveQuery(() => db.suppliers.toArray()) || [];
   const [currentQty, setCurrentQty] = useState<number>(0);
   const [minQty, setMinQty] = useState<number>(1000);
+  const [supplierId, setSupplierId] = useState<string | undefined>(undefined);
   const [isSaved, setIsSaved] = useState(false);
 
   useEffect(() => {
@@ -40,6 +42,7 @@ export const ProductDetails: React.FC = () => {
     }
     if (item) {
       setMinQty(item.minQty);
+      setSupplierId(item.supplierId);
     }
   }, [item, stockState?.qty]);
 
@@ -65,10 +68,11 @@ export const ProductDetails: React.FC = () => {
     // 1. Record COUNT movement with new stock
     await recordCount(item.id, currentQty, 'shelfwalk');
 
-    // 2. Update item minQty if modified
-    if (minQty !== item.minQty) {
-      await db.items.update(item.id, { minQty });
-    }
+    // 2. Update item minQty and supplierId if modified
+    await db.items.update(item.id, {
+      minQty,
+      supplierId: supplierId || undefined,
+    });
 
     setIsSaved(true);
     setTimeout(() => {
@@ -179,6 +183,29 @@ export const ProductDetails: React.FC = () => {
             selectedQty={minQty}
             onSelect={setMinQty}
           />
+        </div>
+
+        {/* Assigned Supplier */}
+        <div className="p-5 rounded-3xl bg-surface border border-line space-y-2 shadow-xs">
+          <label
+            htmlFor="supplierSelect"
+            className="block text-xs font-bold text-ink-muted uppercase tracking-wider"
+          >
+            Assigned Supplier (सप्लायर)
+          </label>
+          <select
+            id="supplierSelect"
+            value={supplierId || ''}
+            onChange={(e) => setSupplierId(e.target.value || undefined)}
+            className="w-full min-h-[46px] px-3.5 rounded-xl bg-canvas border border-line text-sm font-semibold text-ink focus:outline-none focus:border-brand"
+          >
+            <option value="">No supplier assigned (General)</option>
+            {suppliers.map((s) => (
+              <option key={s.id} value={s.id}>
+                {s.name} ({s.whatsapp || 'No WhatsApp'})
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Sales History Info */}

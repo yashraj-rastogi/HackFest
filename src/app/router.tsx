@@ -10,6 +10,7 @@ import { Welcome } from '../screens/Welcome';
 import { ShopType } from '../screens/ShopType';
 import { PickItems } from '../screens/PickItems';
 import { ShelfWalk } from '../screens/ShelfWalk';
+import { Suppliers } from '../screens/Suppliers';
 
 export const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -19,6 +20,7 @@ export const router = createBrowserRouter([
   { path: '/stock/:id', element: <ProductDetails /> },
   { path: '/lists', element: <Lists /> },
   { path: '/more', element: <Settings /> },
+  { path: '/settings/suppliers', element: <Suppliers /> },
   { path: '/welcome', element: <Welcome /> },
   { path: '/setup/type', element: <ShopType /> },
   { path: '/setup/pick', element: <PickItems /> },

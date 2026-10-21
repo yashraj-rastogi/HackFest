@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from '../i18n';
 import type { Lang } from '../db/schema';
 import { getSetting, setSetting } from '../db/repos';
@@ -16,6 +17,7 @@ import {
 } from 'lucide-react';
 
 export const Settings: React.FC = () => {
+  const navigate = useNavigate();
   const { lang, setLang, t } = useTranslation();
   const [shopName, setShopName] = useState('');
   const [demoStatus, setDemoStatus] = useState<string>('');
@@ -130,6 +132,24 @@ export const Settings: React.FC = () => {
             ))}
           </div>
         </div>
+
+        {/* Wholesale Suppliers Shortcut */}
+        <button
+          type="button"
+          onClick={() => navigate('/settings/suppliers')}
+          className="w-full p-4 rounded-3xl bg-surface border border-line shadow-xs flex items-center justify-between text-left active:scale-98 transition-transform"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-brand-soft text-brand-dark flex items-center justify-center">
+              <span>🚚</span>
+            </div>
+            <div>
+              <div className="text-sm font-bold text-ink">Suppliers & Wholesale Contacts</div>
+              <div className="text-xs text-ink-muted">Set distributor WhatsApp numbers and lead times</div>
+            </div>
+          </div>
+          <span className="text-brand-dark font-bold text-xs">Manage →</span>
+        </button>
 
         {/* Demo Data Management */}
         <div className="p-4 rounded-3xl bg-surface border border-line shadow-xs space-y-3">
