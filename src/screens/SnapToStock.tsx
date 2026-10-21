@@ -176,14 +176,27 @@ export const SnapToStock: React.FC = () => {
   return (
     <AppShell
       headerTitle="Snap to Stock · Gemma 4"
+      showNav={false}
       headerRightAction={
-        <button
-          type="button"
-          onClick={() => navigate('/stock')}
-          className="w-8.5 h-8.5 rounded-xl bg-canvas border border-line flex items-center justify-center text-ink-muted active:scale-90"
-        >
-          <ArrowLeft className="w-4 h-4" />
-        </button>
+        snapState === 'review' ? (
+          <button
+            type="button"
+            onClick={handleConfirmAll}
+            disabled={confirmedCount === 0}
+            className="px-3 py-1.5 rounded-xl bg-brand text-white font-bold text-xs flex items-center gap-1 active:scale-95 shadow-xs"
+          >
+            <CheckCircle2 className="w-3.5 h-3.5" />
+            <span>Confirm ({confirmedCount})</span>
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={() => navigate('/stock')}
+            className="w-8.5 h-8.5 rounded-xl bg-canvas border border-line flex items-center justify-center text-ink-muted active:scale-90"
+          >
+            <ArrowLeft className="w-4 h-4" />
+          </button>
+        )
       }
     >
       <div className="space-y-4 pb-24">
@@ -424,7 +437,7 @@ export const SnapToStock: React.FC = () => {
 
       {/* Pinned Bottom Confirm Action */}
       {snapState === 'review' && (
-        <div className="fixed bottom-0 left-0 right-0 z-30 bg-surface/98 backdrop-blur-lg border-t border-line p-4 pb-[env(safe-area-inset-bottom)]">
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-surface/98 backdrop-blur-lg border-t border-line p-4 pb-[calc(14px+env(safe-area-inset-bottom))] shadow-lg">
           <div className="max-w-md mx-auto">
             <button
               type="button"
@@ -434,7 +447,7 @@ export const SnapToStock: React.FC = () => {
             >
               <CheckCircle2 className="w-5 h-5 stroke-[2.5]" />
               <span>
-                + Add to Stock ({confirmedCount} items)
+                Confirm All & Add to Stock ({confirmedCount} items)
               </span>
             </button>
           </div>

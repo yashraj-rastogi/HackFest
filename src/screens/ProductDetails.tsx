@@ -102,6 +102,7 @@ export const ProductDetails: React.FC = () => {
   return (
     <AppShell
       headerTitle={t('stock.editProduct')}
+      showNav={false}
       headerRightAction={
         <button
           type="button"
@@ -254,7 +255,7 @@ export const ProductDetails: React.FC = () => {
       </div>
 
       {/* Pinned Bottom Primary Button (56px target) */}
-      <div className="fixed bottom-0 left-0 right-0 z-30 bg-surface/98 backdrop-blur-lg border-t border-line p-4 pb-[env(safe-area-inset-bottom)]">
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-surface/98 backdrop-blur-lg border-t border-line p-4 pb-[calc(14px+env(safe-area-inset-bottom))] shadow-lg">
         <div className="max-w-md mx-auto">
           <button
             type="button"
