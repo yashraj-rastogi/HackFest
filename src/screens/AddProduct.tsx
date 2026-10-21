@@ -92,6 +92,29 @@ export const AddProduct: React.FC = () => {
           />
         </div>
 
+        {/* Category dropdown */}
+        <div className="p-4 rounded-3xl bg-surface border border-line space-y-2">
+          <label className="block text-xs font-bold text-ink-muted uppercase tracking-wider">
+            Category (विभाग)
+          </label>
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value as Category)}
+            className="w-full min-h-[46px] px-3.5 rounded-xl bg-canvas border border-line text-sm font-semibold text-ink focus:outline-none focus:border-brand capitalize"
+          >
+            {[
+              'staples', 'oil_ghee', 'pulses', 'spices', 'snacks', 'biscuits',
+              'beverages', 'dairy', 'personal_care', 'household',
+              'stationery_paper', 'stationery_writing',
+              'hardware_tools', 'hardware_fasteners', 'electrical', 'other'
+            ].map((cat) => (
+              <option key={cat} value={cat}>
+                {cat.replace('_', ' ')}
+              </option>
+            ))}
+          </select>
+        </div>
+
         {/* Emoji Selector */}
         <div className="p-4 rounded-3xl bg-surface border border-line space-y-2">
           <label className="block text-xs font-bold text-ink-muted uppercase tracking-wider">

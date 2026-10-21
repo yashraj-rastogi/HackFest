@@ -12,7 +12,6 @@ import {
   Heart,
   HardDrive,
   CheckCircle2,
-  AlertTriangle,
   RotateCcw,
 } from 'lucide-react';
 

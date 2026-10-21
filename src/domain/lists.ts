@@ -50,7 +50,7 @@ export function getDaysSinceLastSale(
  * Rule: stock > 0, and at least 30 days without any sale (or since baseline).
  */
 export function isNotMoving(
-  item: Item,
+  _item: Item,
   state: StockState,
   movements: Movement[],
   now: number = Date.now(),

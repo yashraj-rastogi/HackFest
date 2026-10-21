@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getStockState, filterVoidMovements } from './stock';
+import { getStockState } from './stock';
 import type { Movement } from '../db/schema';
 
 describe('getStockState', () => {

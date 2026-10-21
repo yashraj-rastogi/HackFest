@@ -1,4 +1,4 @@
-import { db, type Item, type Supplier, type BarcodeMap, type Setting } from './schema';
+import { db, type Item, type Supplier, type BarcodeMap } from './schema';
 import { generateId } from '../lib/uuid';
 
 const DEFAULT_SHOP_ID = 'local';

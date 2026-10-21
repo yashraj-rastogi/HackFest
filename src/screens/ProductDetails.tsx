@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { db, type Item } from '../db/schema';
+import { db } from '../db/schema';
 import { recordCount, recordKhatam, recordMissed } from '../db/ledger';
 import { getStockState } from '../domain/stock';
 import { getDaysSinceLastSale } from '../domain/lists';
