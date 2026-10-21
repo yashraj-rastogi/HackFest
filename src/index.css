@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #0AA66B;
+  --color-brand-dark: #078456;
+  --color-brand-soft: #DDF5E9;
+  
+  --color-sky: #DFF3FC;
+  --color-sky-strong: #72B9E8;
+  
+  --color-blue: #378CF4;
+  --color-blue-soft: #E8F2FF;
+  
+  --color-lilac: #9987F5;
+  --color-yellow: #FFD34F;
+  --color-orange: #FF875D;
+  
+  --color-canvas: #F7F9F8;
+  --color-surface: #FFFFFF;
+  --color-surface-warm: #FFFDF7;
+  
+  --color-ink: #12304F;
+  --color-ink-muted: #5D7185;
+  --color-line: #DCE7EC;
+  
+  --color-success: #16865D;
+  --color-warning: #B66A00;
+  --color-danger: #C84135;
+  --color-info: #2469B5;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 9999px;
+
+  --font-sans: 'Inter', 'Noto Sans Devanagari', 'Nirmala UI', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --color-brand-green: #0AA66B;
+  --color-brand-green-dark: #078456;
+  --color-brand-green-soft: #DDF5E9;
+  --color-sky: #DFF3FC;
+  --color-sky-strong: #72B9E8;
+  --color-blue: #378CF4;
+  --color-blue-soft: #E8F2FF;
+  --color-lilac: #9987F5;
+  --color-canvas: #F7F9F8;
+  --color-surface: #FFFFFF;
+  --color-surface-warm: #FFFDF7;
+  --color-text: #12304F;
+  --color-text-muted: #5D7185;
+  --color-border: #DCE7EC;
+  --color-success: #16865D;
+  --color-warning: #B66A00;
+  --color-danger: #C84135;
+}
+
+/* One-handed mobile ergonomics */
+html, body {
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  font-family: var(--font-sans);
+  background-color: #F7F9F8;
+  color: #12304F;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure minimum touch target height */
+.touch-target-primary {
+  min-height: 56px;
+  min-width: 56px;
+}
+
+.touch-target-secondary {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* Tabular numerals for aligned quantities */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tap active scale effect */
+.active-press {
+  transition: transform 0.08s ease;
+}
+.active-press:active {
+  transform: scale(0.96);
+}
